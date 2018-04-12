@@ -17,6 +17,7 @@ import { environment } from '../../environments/environment';
 
 export class HomeComponent implements OnInit {
   private anc;
+  private abc;
   ranksLists = "";
 	private Swiper;
 	private banners;
