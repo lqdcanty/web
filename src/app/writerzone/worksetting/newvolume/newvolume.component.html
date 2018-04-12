@@ -1,0 +1,20 @@
+<div class="volume mt24">
+	<h1 class="title">第{{volumeNumber}}卷</h1>
+	<div class="volumeContent">
+		<div class="lineBox mt16 clearfix">
+			<span class="fl">分卷名称</span>
+			<input id="volume" class="fl ml16" type="text" placeholder="请输入分卷名称，新建分卷后，以后章节自动放在盖卷中" />
+		</div>
+		<p class="redTip">添加新卷后，以后编辑章节都默认发布在新的分卷下</p>
+		<div class="lineBox mt60 clearfix">
+			<span class="fl"></span>
+			<button class="fl ml16" (click)="save()">保存</button>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

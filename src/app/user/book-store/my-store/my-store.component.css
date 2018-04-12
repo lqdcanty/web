@@ -1,0 +1,329 @@
+.mystore{
+	border:1px solid #e5e5e5;
+}
+.bookStore{
+	border: 1px solid #e5e5e5;
+}
+.bookStore .bookStoreNav{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 0;
+	height: 50px;
+}
+.bookStore .bookStoreNav a{
+	display: inline-block;
+	font-size: 22px;
+	line-height: 47px;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+	padding:0 5px;
+}
+.bookStore .bookStoreNav a+a{
+	margin-left: 30px;
+}
+.bookStore .bookStoreNav a.on{
+	border-bottom: 3px solid rgb(11,195,147);
+}
+.recommend{
+	border-bottom: 1px solid #e5e5e5;
+}
+.recommend .recommendList li{
+	width: 134px;
+}
+.recommend .recommendList li a{
+	display: block;
+	width: 134px;
+}
+.recommend .recommendList li a:hover .bookCover .coverTop{
+	display: block;
+}
+.recommend .recommendList li+li{
+	margin-left: 50px;
+}
+.recommend .recommendList li a:hover .bookName{
+	color: rgb(11,195,147);
+}
+.recommend .recommendList li .bookCover{
+	width: 134px;
+	height: 188px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+.recommend .recommendList li .bookCover .coverTop{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 134px;
+	height: 188px;
+	background:rgba(0,0,0,0.4);
+	display:block;
+	text-align:center;
+	display: none;
+}
+.recommend .recommendList li .bookCover .coverTop span{
+	display:inline-block;
+    vertical-align: middle;
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 10px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+.recommend .recommendList li .bookName{
+	font-size: 16px;
+	display: block;
+	color: rgb(68,68,68);
+	line-height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.recommend .collect{
+	width: 108px;
+	height: 36px;
+	color: rgb(11,195,147);
+	border: 1px solid rgb(11,195,147);
+	outline: none;
+	background: #fff;
+}
+.recommend .collect:active{
+	background-color: rgba(11,195,147,0.1);
+}
+
+
+.bookDescribe{
+	position: relative;
+	border-bottom: 1px solid #e5e5e5;
+}
+.bookDescribe:hover{
+	border-color:rgb(11,195,147); 
+}
+.bookDescribe .bookLeftCover{
+	width: 134px;
+	height: 188px;
+}
+.bookDescribe:hover .bookLeftCover a{
+	box-shadow: 3px 3px 3px rgba(11,195,147,0.2);
+}
+.bookDescribe .bookLeftCover a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-size: cover;
+	position: relative;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+.bookDescribe .bookLeftCover .rankIndex{
+	position: absolute;
+	width: 36px;
+	height: 30px;
+	color: #fff;
+	line-height: 24px;
+	left: 0;
+	top: -3px;
+	font-size: 12px;
+	padding-left: 8px;
+}
+.bookDescribe.green .bookLeftCover .rankIndex{
+	background: url(../../../../assets/images/tag1.png) no-repeat center center/cover;
+}
+.bookDescribe .bookLeftCover .rankIndex{
+	background: url(../../../../assets/images/tag2.png) no-repeat center center/cover;
+}
+.bookDescribe .bookCenterDetail{
+	width:485px;
+	height: 188px; 
+	
+}
+.bookDescribe .bookCenterDetail .bookTitle{
+	width: 100%;
+	line-height: 22px;
+	font-size: 0px;
+	font-weight: 900;
+}
+.bookDescribe .bookCenterDetail .bookTitle a{
+	display: inline-block;
+	line-height: 22px;
+	font-size: 18px;
+	color: rgb(68,68,68);
+}
+.bookDescribe .bookCenterDetail .bookTitle a:hover{
+	color: rgb(11,195,147);
+}
+.bookDescribe .bookCenterDetail .bookMessage{
+	font-size: 0;
+}
+.bookDescribe .bookCenterDetail .dict,
+.bookDescribe .bookCenterDetail .bookMessage span,
+.bookDescribe .bookCenterDetail .bookMessage i{
+	display: inline-block;
+	vertical-align: middle;
+}
+.bookDescribe .bookCenterDetail .bookMessage span.author{
+	cursor: pointer;
+}
+.bookDescribe .bookCenterDetail .bookMessage span.author:hover{
+	color: rgb(11,195,147);
+}
+.bookDescribe .bookCenterDetail .bookMessage .icon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../../../assets/images/icon_user.png) no-repeat center center/cover;
+}
+.bookDescribe .bookCenterDetail .bookMessage span{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	display: inline-block;
+	margin-left: 8px;
+}
+.bookDescribe .bookCenterDetail .dict{
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background:rgb( 129,129,129);
+	margin:0 5px; 
+}
+.bookDescribe .bookCenterDetail .bookIntroduction{
+	font-size: 16px;
+	line-height: 28px;
+	color: rgb(102,102,102);
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.bookDescribe .bookCenterDetail .wordAndTime span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 16px;
+}
+.bookDescribe .bookRightButton{
+	width: 108px;
+	position: absolute;
+	bottom: 28px;
+	right: 0;
+}
+.bookDescribe .bookRightButton button{
+	display: block;
+	width: 108px;
+	height: 36px;
+	border: 1px solid rgb(11,195,147);
+	font-size:14px; 
+	background: #fff;
+	color: rgb(11,195,147);
+	outline: none;
+}
+.bookDescribe .bookRightButton button.on{
+	background: rgb(11,195,147);
+	color: #fff;
+}
+.bookDescribe .bookRightButton button.on:active{
+	background: rgba(11,195,147,0.8);
+}
+.bookDescribe .select{
+	width: 16px;
+	height: 16px;
+}
+.bookDescribe .select.selectBook{
+	position: relative;
+}
+.bookDescribe .select.selectBook b{
+	width: 16px;
+	height: 16px;
+	border:1px solid #e5e5e5;
+	display: inline-block;
+}
+.bookDescribe .select.selectBook b.on{
+	background:url(../../../../assets/images/gou.png) no-repeat center center/cover;
+}
+.bookDescribe .select.selectBook input{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #e5e5e5;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+.bookDescribe .select input{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #e5e5e5;
+}
+.bookDescribe .select{
+	margin-top: 85px;
+}
+.bookRightButton .zAnds{
+	font-size: 0;
+	width: 108px;
+	height: 36px; 
+}
+.bookRightButton .zAnds a{
+	font-size: 14px;
+	color: rgb(68,68,68);
+	text-align: center;
+	display:none;
+	padding: 0 5px;
+	margin:0 8px;
+}
+.bookDescribe:hover .zAnds a{
+	display: inline-block;
+}
+.bookRightButton .zAnds a:hover{
+	color: rgb(11,195,147);
+}
+.allDelect{
+	height: 60px;
+	border:1px solid #e5e5e5;
+	padding: 20px;
+	font-size: 0;
+}
+.allDelect .text{
+	font-size: 14px;
+	color: rgb(37,37,37);
+	line-height: 16px;
+	cursor:pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+.allDelect .text:hover{
+	color: rgb(11,195,147);
+}
+.allDelect .select{
+	position: relative;
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.allDelect .select b{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border:1px solid #e5e5e5;
+}
+.allDelect .select b.on{
+	background:url(../../../../assets/images/gou.png) no-repeat center center/cover;
+}
+.allDelect .select input{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 0;
+}

@@ -1,0 +1,135 @@
+.top{
+	width: 240px;
+	height: 180px;
+	background: rgb(11,195,147);
+}
+.top .photo{
+	width: 88px;
+	height: 88px;
+	display: block;
+	margin:0 auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	outline: none;
+	border:2px solid #ccc;
+	border-radius: 100%;
+}
+.top .userId{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size:16px;
+	color: #fff;
+}
+
+.leftNav{
+	width: 240px;
+	border: 1px solid #e5e5e5;
+}
+.leftNav .navUl li{
+	width: 100%;
+	padding:  14px 0 14px 20px;
+	outline: none;
+}
+.leftNav .navUl li.bookstroe .icon:first-child{
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/tyuanqiA.png);
+}
+.leftNav .navUl li.bookstroe .icon:nth-child(2){
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/tyuanqi.png);
+}
+.leftNav .navUl li.subscribe .icon:first-child{
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/tcontactA.png);
+}
+.leftNav .navUl li.subscribe .icon:nth-child(2){
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/tcontact.png);
+}
+.leftNav .navUl li.userComment .icon:first-child{
+	width: 14px;
+	height: 18px;
+	background-image: url(../../../assets/images/taccountA.png);
+}
+.leftNav .navUl li.userComment .icon:nth-child(2){
+	width: 14px;
+	height: 18px;
+	background-image: url(../../../assets/images/taccount.png);
+}
+.leftNav .navUl li.account .icon:first-child{
+	width: 16px;
+	height: 18px;
+	background-image: url(../../../assets/images/tbanA.png);
+}
+.leftNav .navUl li.account .icon:nth-child(2){
+	width: 16px;
+	height: 18px;
+	background-image: url(../../../assets/images/tban.png);
+}
+.leftNav .navUl li.security .icon:first-child{
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/thelpA.png);
+}
+.leftNav .navUl li.security .icon:nth-child(2){
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/thelp.png);
+}
+.leftNav .navUl li.userMessage .icon:first-child{
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/tideaA.png);
+}
+.leftNav .navUl li.userMessage .icon:nth-child(2){
+	width: 18px;
+	height: 18px;
+	background-image: url(../../../assets/images/tidea.png);
+}
+
+.leftNav .navUl li a{
+	display: block;
+	font-size: 0;
+	line-height: 22px;
+	height: 22px;
+	outline: none;
+}
+.leftNav .navUl li a .icon,.leftNav .navUl li a span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.leftNav .navUl li a .icon{
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.leftNav .navUl li a span{
+	font-size: 16px;
+	color: rgb(68,68,68);
+	margin-left: 12px;
+}
+.leftNav .navUl li.on{
+	border-color:rgb(11,195,147);
+	background:rgb(11,195,147);
+	
+}
+.leftNav .navUl li.on a span{
+	color: #fff;
+}
+.leftNav .navUl li.on a i:nth-child(2){
+	display: inline-block;
+}
+.leftNav .navUl li.on a i:nth-child(1){
+	display: none;
+}
+.leftNav .navUl li a i:nth-child(2){
+	display: none;
+}

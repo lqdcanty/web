@@ -1,0 +1,201 @@
+.creatwork{
+	width: 100%;
+	border: 1px solid #e5e5e5;
+}
+.creatwork .title{
+	height: 50px;
+	line-height: 50px;
+	font-size: 22px;
+	color: rgb(68,68,68);
+	border-bottom: 1px solid #e5e5e5;
+}
+.creatworkContent{
+	padding: 30px 5px 30px 20px;
+}
+.creatworkContent .contentLeft{
+	width: 134px;
+	text-align: center;
+}
+.creatworkContent .contentLeft .bookCover{
+	width: 134px;
+	height: 188px;
+}
+.creatworkContent .contentLeft .bookCover img{
+	width: 134px;
+	height: 188px;
+}
+.creatworkContent .contentLeft .updataBtn{
+	width: 108px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	color: rgb(11,195,147);
+	border: 1px solid rgb(11,195,147);
+	display: inline-block;
+	position: relative;
+}
+.creatworkContent .contentLeft .updataBtn:active{
+	background-color: rgba(11,195,147,0.1);
+}
+.creatworkContent .contentLeft .updataBtn input{
+	display: inline-block;
+	width: 108px;
+	height: 36px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: none;
+}
+.creatworkContent .contentLeft p{
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 24px;
+	text-align: center;
+}
+.contentRight {
+	width: 690px;
+}
+.contentRight .lineBox .name{
+	width: 74px;
+	text-align: right;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 42px;
+	padding-right: 16px;
+	height: 42px;
+}
+#bookClass{
+	display: none;
+}
+.contentRight .lineBox .lineBoxRight{
+	position: relative;
+}
+.contentRight .lineBox .lineBoxRight .labelUl.hide{
+	display: none;
+}
+.contentRight .lineBox .lineBoxRight .labelUl{
+	width: 450px;
+	padding:10px;
+	position: absolute;
+	left: 0;
+	top: 42px;
+	max-height:300px;
+	overflow-y: scroll;
+	font-size: 0;
+	z-index: 9;
+	background-color: #fff;
+	border:1px solid #e5e5e5;
+}
+/*#labelId{
+	display: none;
+}*/
+.contentRight .lineBox .lineBoxRight .labelUl{
+	display: none;
+}
+.contentRight .lineBox .lineBoxRight .labelUl li{
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	border-bottom:1px solid #e5e5e5;
+}
+.contentRight .lineBox .lineBoxRight .labelUl li span,
+.contentRight .lineBox .lineBoxRight .labelUl li input,
+.contentRight .lineBox .lineBoxRight .labelUl li b{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	color: rgb(68,68,68);
+}
+.contentRight .lineBox .lineBoxRight .labelUl li b{
+	width: 16px;
+	height: 16px;
+	border:1px solid #ccc;
+	margin-right: 10px;
+	position: relative;
+}
+.contentRight .lineBox .lineBoxRight .labelUl li b.on{
+	background:url(../../../assets/images/gou.png) no-repeat center center/cover;
+}
+.contentRight .lineBox .lineBoxRight .labelUl li input{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 0;
+	top:0;
+	position: 10;
+}
+.contentRight .lineBox .lineBoxRight .labelUl li span{
+	font-size: 14px;
+	line-height: 36px;
+	color: rgb(68,68,68);
+}
+.contentRight .lineBox .lineBoxRight .long{
+	width: 450px;
+	border: 1px solid #e5e5e5;
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	padding: 0 20px;
+	
+} 
+.contentRight .lineBox .lineBoxRight textarea.long{
+	outline: none;
+	resize: none;
+	height: 42px;
+	overflow:hidden;
+}
+.contentRight .lineBox .lineBoxRight .select{
+	line-height: 40px;
+	border: 1px solid #e5e5e5;
+	padding: 0 20px;
+	font-size: 14px;
+	color: rgb(153,153,153);
+	outline: none;
+}
+.contentRight .lineBox .lineBoxRight .selectGril{
+	display: none;
+}
+.contentRight .lineBox .lineBoxRight .selectBoy{
+	display: none;
+}
+input,textarea{
+	outline: none;
+}
+.contentRight .lineBox .lineBoxRight .value{
+	line-height: 42px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+}
+.contentRight .lineBox .lineBoxRight .textarea{
+	padding: 10px 16px;
+	line-height: 26px;
+	color: rgb(153,153,153);
+	width: 450px;
+	border: 1px solid #e5e5e5;
+	height: 120px;
+	outline: none;
+	resize: none;
+}
+.contentRight .lineBox .lineBoxRight button{
+	width: 108px;
+	height: 36px;
+	font-size: 14px;
+}
+.contentRight .lineBox .lineBoxRight button.cancel{
+	border: 1px solid rgb(11,195,147);
+	color: rgb(11,195,147);
+	background-color: #fff;
+}
+.contentRight .lineBox .lineBoxRight button.cancel:active{
+	background-color: rgba(11,195,147,0.1);
+}
+.contentRight .lineBox .lineBoxRight button.submit{
+	border: 1px solid rgb(11,195.147);
+	color: #fff;
+	background-color: rgba(11,195,147,1);
+}
+.contentRight .lineBox .lineBoxRight button.submit:active{
+	background-color: rgba(11,195,147,0.8);
+}

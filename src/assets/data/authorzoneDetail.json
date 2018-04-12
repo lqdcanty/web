@@ -1,0 +1,16 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "bookName":"腐女的都市生活",
+            "bookId":11,
+            "bookCover":"../../../assets/images/zu29.png",
+            "bookCategory":"男频",
+            "bookClass":"都市现实",
+            "bookStatus":"1",
+            "bookMark":"标签2",
+            "bookDes":"声名狼藉的江夏郡主被九皇子瑞王爷设计退婚了，正在全京城都在为这位飞不上枝头的郡主惋惜的时候，倒霉郡主悠闲地坐在王府秋千上，一脸轻松地荡来荡去，笑靥如花，“轩辕瑞，你这蠢货，不是你设计了本郡主，是本郡主设计了你。”",
+            "subheading":"短简介短简介短简介"
+        }
+}

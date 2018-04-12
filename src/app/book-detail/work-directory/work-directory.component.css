@@ -1,0 +1,48 @@
+.workDirectory{
+	width: 880px;
+	border: 1px solid #e5e5e5;
+}
+.workDirectory .no_volume .volumeName{
+	font-size: 16px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e5e5e5;
+	font-weight: bold;
+}
+.workDirectory .no_volume .volumeName span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.volumeNameImg{
+	width: 34px;
+	height: 16px;
+	vertical-align: middle;
+	display: none;
+	background: url(../../../assets/images/vip.png) no-repeat center center/cover;
+}
+.volumeNameImg.on{
+	display: inline-block;
+	vertical-align: middle;
+}
+.workDirectory .no_volume .charpter li{
+	padding-right: 10px;
+	width: 402px;
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	border-bottom: 1px solid #e5e5e5;
+} 
+.workDirectory .no_volume .charpter li a{
+	display: inline-block;
+	width: 320px;
+	vertical-align: middle;
+	color: rgb(68,68,68);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

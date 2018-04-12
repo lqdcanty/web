@@ -1,0 +1,17 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "penName":"笔名",
+            "realName":"真实姓名",
+            "idCard":"身份证号",
+            "qq":"qq",
+            "email":"email",
+            "phone":"18500240710",
+            "bank":"",
+            "bankName":"",
+            "bankCard":"",
+            "signature":"签名"
+        }
+}

@@ -1,0 +1,246 @@
+.workInteraction {
+	width: 880px;
+}
+.workInteraction .exceptional{
+	width: 100%;
+	border: 1px solid #e5e5e5;
+}
+.workInteraction .exceptional .exceptionalbox {
+	width: 310px;
+	padding: 16px 0 32px 0;
+}
+.workInteraction .exceptional .exceptionalbox h1{
+	font-size: 18px;
+	color: rgb(11,195,147);
+	line-height: 22px;
+	text-align: center;
+	font-weight: bold;
+}
+.workInteraction .exceptional .exceptionalbox .border{
+	border-right: 1px solid #e5e5e5;
+	width: 100%;
+}
+.workInteraction .exceptional .exceptionalbox .border img{
+	display: block;
+	margin:0 auto;
+	width: 101px;
+	height: 103px;
+}
+.workInteraction .exceptional .exceptionalbox .border button{
+	display: block;
+	margin:32px auto 0;
+	width: 128px;
+	height: 36px;
+	color: #fff;
+	background:rgb(11,195,147); 
+	border: none;
+	outline: none;
+}
+.workInteraction .exceptional .exceptionalbox .border button:active{
+	background:rgba(11,195,147,0.8); 
+}
+.workInteraction .exceptional .exceptionalRank{
+	width: 522px;
+}
+.workInteraction .exceptional .exceptionalRank h1{
+	font-size: 18px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	text-align: center;
+	font-weight: bold;
+}
+.workInteraction .exceptional .exceptionalRank .photo{
+	text-align: center;
+	min-height: 56px;
+}
+.workInteraction .exceptional .exceptionalRank .photo .phoneBox{
+	width: 56px;
+	height: 56px;
+	border: 2px solid #fff;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 100%;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.workInteraction .exceptional .exceptionalRank .photo .phoneBox:nth-child(1){
+	border-color: rgb(239,157,89)
+}
+.workInteraction .exceptional .exceptionalRank .photo .phoneBox:nth-child(2){
+	border-color: rgb(252,99,55)
+}
+.workInteraction .exceptional .exceptionalRank .photo .phoneBox:nth-child(3){
+	border-color: rgb(246,201,79)
+}
+.workInteraction .exceptional .exceptionalRank .photo .phoneBox+.phoneBox{
+	margin-left: 56px;
+}
+.workInteraction .exceptional .exceptionalRank .photo .phoneBox img{
+	position: absolute;
+	right: -2px;
+	top: -1px;
+}
+.workInteraction .exceptional .exceptionalRank #slide2 {
+	width: 100%;
+	height: 136px;
+}
+#slide2 a{
+	border-bottom: 1px solid #e5e5e5;
+	display: block;
+	height: 34px;
+	width: 100%;
+	line-height: 34px;
+}
+#slide2 .swiper-slide{
+	width: 100%;
+}
+#slide2 a span:nth-child(1){
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 34px;
+}
+#slide2 a span:nth-child(2){
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 34px;
+}
+.comment{
+	border: 1px solid #e5e5e5;
+	width: 100%;
+	padding: 10px 20px 30px;
+}
+.comment .title{
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+	padding: 10px;
+	border-bottom: 1px solid #e5e5e5;
+	color: rgb(68,68,68);
+	position: relative;
+}
+.comment .title .writeComment{
+	position: absolute;
+	line-height:22px; 
+	font-size: 14px;
+	color: rgb(153,153,153);
+	right: 0;
+	top: 10px;
+	font-weight: 100;
+	cursor: pointer;
+}
+.comment .title .writeComment .icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 14px;
+	height: 14px;
+	background: url(../../../assets/images/writeComment.png) no-repeat center center/cover;
+}
+.comment .title .writeComment:hover{
+	color: rgb(11,195,147);
+}
+.comment .title .writeComment:hover .icon{
+	background: url(../../../assets/images/writeCommentA.png) no-repeat center center/cover;
+}
+.comment .commentBox .commentPhoto{
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+} 
+.comment .commentBox .commentPhoto img{
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	display: block;
+}
+.comment .commentBox .commentContent{
+	width: 776px;
+}
+.comment .commentBox .commentContent h1{
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 22px;
+}
+.comment .commentBox .commentContent .commentWord{
+	font-size: 14px;
+	line-height: 22px;
+	color: rgb(68,68,68);
+}
+.comment .commentBox .commentContent .time .commentTime{
+	font-size: 12px;
+	color: rgb(153,153,153);
+	margin-right: 40px;
+}
+.comment .commentBox .commentContent .time{
+	font-size: 0;
+}
+.comment .commentBox .commentContent .time span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 22px;
+}
+.comment .commentBox .commentContent .time .commentZan b{
+	font-weight: 100;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 22px;
+}
+.comment .commentBox .commentContent .time .commentZan img{
+	width: 14px;
+	height: 14px;
+	display:none;
+	vertical-align: middle;
+	margin-top: -3px;
+	margin-right: 3px;
+	cursor: pointer;
+} 
+.comment .commentBox .commentContent .time .commentZan img.on{
+	display:inline-block;
+}
+.comment .write .commentBox .commentContent{
+	width:672px;
+}
+.comment .write {
+	background: rgb(245,245,245);
+}
+
+
+.slide2 {
+	width: 100%;
+	height: 136px;
+	overflow:hidden;
+	position: relative;
+}
+.slide2 a{
+	border-bottom: 1px solid #e5e5e5;
+	display: block;
+	height: 34px;
+	width: 100%;
+	line-height: 34px;
+}
+.slide2 .swiperWrapper{
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+.slide2 .swiperSlide{
+	width: 100%;
+	display: block;
+	/* display: none; */
+}
+.slide2 .swiperSlide.on{
+	display: block;
+}
+.slide2 a span:nth-child(1){
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 34px;
+}
+.slide2 a span:nth-child(2){
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 34px;
+}

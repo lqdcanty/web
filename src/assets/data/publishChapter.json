@@ -1,0 +1,58 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "list":[
+               {
+                    "volumeName":"上册",
+                    "chapterId":1,
+                    "chapterName":"第一章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                },
+                {
+                    "volumeName":"上册",
+                    "chapterId":1,
+                    "chapterName":"第二章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                },
+                {
+                    "volumeName":"上册",
+                    "chapterId":1,
+                    "chapterName":"第三章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                },
+                {
+                    "volumeName":"上册",
+                    "chapterId":1,
+                    "chapterName":"第四章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                },
+                {
+                    "volumeName":"下册",
+                    "chapterId":1,
+                    "chapterName":"第一章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                },
+                {
+                    "volumeName":"下册",
+                    "chapterId":1,
+                    "chapterName":"第二章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                },
+                {
+                    "volumeName":"下册",
+                    "chapterId":1,
+                    "chapterName":"第三章 涅槃归来",
+                    "readPermission":"all",
+                    "applyVip":"1"
+                }
+            ]
+        }
+}

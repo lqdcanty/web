@@ -1,0 +1,28 @@
+<div class="account">
+	<div class="myYQ">
+		<h1 class="plr20 title">我的元气</h1>
+		<div class="YQBox pd20 clearfix">
+			<div class="left fl">
+				<h1 class="">账户余额（元气）</h1>
+				<b class="mt24">{{balance1+balance2}}</b>
+				<p class="mt24">含赠送{{balance2}}元气</p>
+			</div>
+			<div class="right fr">
+				<button class="mt50" (click)="rechange()">充值</button>
+			</div>
+		</div>
+	</div>
+	<div class="accountBox mt24">
+		<div class="accountNav plr20">
+			<a class="" routerLink="./consumptionRecords" routerLinkActive="on">消费记录</a>
+			<a class="" routerLink="./toupRecords" routerLinkActive="on">充值记录</a>
+		</div>
+		<router-outlet></router-outlet>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

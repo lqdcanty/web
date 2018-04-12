@@ -1,0 +1,28 @@
+<div class="bookreview">
+	<h1 class="title plr20">我的书评</h1>
+	<div class="content plr20">
+		<ul class="workTitle clearfix">
+			<li>作品名称</li>
+			<li>评论内容</li>
+			<li>作者回复</li>
+			<li>更新时间</li>
+		</ul>
+		<ul class="workContent">
+			<li class="clearfix" *ngFor="let comment of commentList">
+				<div class="bookName"><a href="javascript:void(0)">{{comment.bookName}}</a></div>
+				<div class="comment">{{comment.comment}}</div>
+				<div class="authorContent">{{comment.authorReply==''?'-':comment.authorReply}}</div>
+				<div class="updataTime">{{comment.updateTime}}</div>
+			</li>
+		</ul>
+		<div class="mt24 mb24">
+			<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

@@ -1,0 +1,83 @@
+<div class="top">
+	<p class="tips">
+		<span class="all">总稿酬(元）</span>
+		<span class="fr time">截至{{monthNumber}}数据</span>
+	</p>
+	<p class="allAmount mt24">{{remuneration}}</p>
+	<!-- <div class="amountDetail mt16">
+		<span>已经结算</span>
+		<span class="ml8">0.00元</span>
+		<span class="ml32">存余</span>
+		<span class="ml8">0.00元</span>
+	</div> -->
+</div>
+<div class="timeSelect mt40 clearfix">
+	<form action="post" [formGroup]="authorCome">
+		<span>查看方式</span>
+		<select name="" id="queryType" [(ngModel)]="queryType" class="ml20" formControlName="queryType" (change)="typeChange()">
+			<option value="month" selected="selected">按月份</option>
+			<option value="book" >按作品</option>
+		</select>
+		<span class="ml80" *ngIf="queryTypeBoolean">选择月份</span>
+		<span class="ml80" *ngIf="!queryTypeBoolean">填写作品</span>
+		<div class="selectType">
+			<input type="text" [(ngModel)]="month" *ngIf="queryTypeBoolean" formControlName="month" id="test" (click)="timeClike()"/>
+			<input type="hidden" id="timeMonth" />
+			<input type="text" [(ngModel)]="bookName" *ngIf="!queryTypeBoolean" formControlName="bookName" />
+		</div>
+		<button class="fr query" (click)="queryButton()">查询</button>
+	</form>
+</div>
+<div class="table mt24">
+	<table>
+		<thead>
+			<tr>
+				<td class="td1"></td>
+				<td class="td2"></td>
+				<td class="td3"></td>
+				<td class="td4"></td>
+				<td class="td5"></td>
+				<td class="td6">福利收入</td>
+				<td class="td7">福利收入</td>
+				<td class="td8">福利收入</td>
+				<td class="td9">福利收入</td>
+				<td class="td10"></td>
+			</tr>
+			<tr>
+				<td>作品名称</td>
+				<td>类型</td>
+				<td>月份</td>
+				<td>已支付稿费</td>
+				<td>订阅收入</td>
+				<td>签约奖</td>
+				<td>打赏收入</td>
+				<td>完结奖</td>
+				<td>全勤奖</td>
+				<td>汇总金额</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let list of comeList">
+				<td>{{list.bookName}}</td>
+				<td>{{list.cooperationType}}</td>
+				<td>{{list.month}}</td>
+				<td>{{list.remuneration}}</td>
+				<td>{{list.sincome}}</td>
+				<td>{{list.signAward}}</td>
+				<td>{{list.spareIncome}}</td>
+				<td>{{list.completeAward}}</td>
+				<td>{{list.attendanceAward}}</td>
+				<td>{{list.totalSum}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="mt24 mb24">
+		<app-page [pageParams]="{pageSize:pageSize,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login> 
+</div>

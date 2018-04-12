@@ -1,0 +1,44 @@
+<div class="subscription">
+	<h1 class="title plr20">我的订阅</h1>
+	<div class="subscriptionList plr24">
+		<div class="bookDescribe ptb24 clearfix" *ngFor="let book of subscribeList">
+			<div class="bookLeftCover fl">
+				<a [ngStyle]="{'backgroundImage':'url('+book.bookCover+')'}" ></a>
+			</div>
+			<div class="bookCenterDetail pl15 fl">
+				<h1 class="bookTitle mb10"><a [routerLink]="['/bookDetail',book.bookId]">{{book.bookName}}</a></h1>
+				<div class="bookMessage mb16">
+					<i class="icon"></i>
+					<span class="author" [routerLink]="['/author',book.authorCode]">{{book.author}}</span>
+					<b class="dict"></b>
+					<span>{{book.bookClass}}</span>
+					<b class="dict"></b>
+					<span>{{book.bookStatus=='1'?'连载中':'已完结'}}</span>
+				</div>
+				<div class="bookIntroduction">
+					{{book.introduction}}
+				</div>
+				<div class="wordAndTime mt10">
+					<span>{{book.wordNum}}字</span>
+					<b class="dict"></b>
+					<span>{{book.updateTime}}更新</span>
+				</div>
+			</div>
+			<div class="bookRightButton fr mr50">
+				<button class="on"  [routerLink]="['/bookContent',book.bookId+'_-1']">继续阅读</button>
+				<div class="zAnds mt20">
+					<a (click)="toTop(book.bookId)">置顶</a>
+				</div>
+			</div>
+		</div>
+		<div class="mt24 mb24">
+			<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

@@ -1,0 +1,48 @@
+<div class="chapter mt24">
+	<div class="chapterContent">
+		<form [formGroup]="chapter">
+			<div class="buttonList">
+				<button *ngIf="(!chapterParam)||btnShow" (click)="reset()">删除</button>
+				<button *ngIf="(!chapterParam)||btnShow" (click)="saveChapterFunction()">保存</button>
+				<div class="timeButton" *ngIf="(!chapterParam)||btnShow">
+				    <a class="sendSet" (click)="setTimeSend()">定时发布</a>
+			        <div class="timeButtonInner">
+				        <div class="test5">
+				            设置时间
+				        	<span id="test5" (click)="setTime()"></span>
+				        </div>
+			        </div>
+			    </div>
+				<button class="ljrelise" (click)="immediateClick()">立即发布</button>
+				<input type="hidden" value="{{chapterParam}}" />
+			</div>
+			<div class="lineBox mt24 clearfix">
+				<span class="fl name"><b class="red">*</b>章节名称</span>
+				<input class="fl long" type="text" formControlName="chapterName" placeholder="请输入章节名" [(ngModel)]="chapterName" />
+			</div>
+			<div class="errorBox fl"><span class="timeTrue" id="timeTrue"></span><span [class.errorl]="chapter.get('chapterName').invalid && chapter.get('chapterName').touched">章节名称位1-50个字符</span></div>
+			
+			<div class="lineBox clearfix">
+				<span class="fl name"><b class="red">*</b>正文内容</span>
+				<textarea formControlName="content" class="contentText long fl" [(ngModel)]="content"></textarea>
+			</div>
+			<div class="errorBox fl"><span [class.errorl]="chapter.get('content').invalid && chapter.get('content').touched">正文内容必填</span></div>
+			<div class="lineBox tar clearfix">
+				<span class="name">字数统计</span>
+				<span class="number ml8">{{content.length}}</span>
+			</div>
+			<div class="lineBox clearfix mt16">
+				<span class="fl name">作者有话说</span>
+				<textarea formControlName="remark" class="contentArea long" [(ngModel)]="remark"></textarea>
+			</div>
+			<div class="errorBox fl"><span [class.errorl]="chapter.get('remark').invalid && chapter.get('remark').touched">作品简介为1-300个字符</span></div>
+			<input type="hidden" formControlName="time" id="time"  />
+		</form>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

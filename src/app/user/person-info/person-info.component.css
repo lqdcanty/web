@@ -1,0 +1,124 @@
+.info{
+	border: 1px solid #e5e5e5;
+}
+.info .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	height: 50px;
+	font-size: 22px;
+	color: rgb(68,68,68);
+	line-height: 50px;
+
+}
+
+.lineBox .leftName{
+	display: inline-block;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 42px;
+	height: 42px;
+	width:100px;
+	text-align: right;
+	vertical-align: top;
+	margin-right: 16px;
+}
+.lineBox .rightBox {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font-size: 14px;
+	color: rgb(153,153,153);
+	min-height: 42px;
+	width: 380px;
+}
+/* .lineBox .rightBox .longInput{
+	color: rgb(153,153,153);
+	min-height: 42px;
+	width: 380px;
+	border:1px solid #e5e5e5;
+} */
+
+.lineBox .rightBox .yqh{
+    display: inline-block;
+	vertical-align: middle;
+	line-height: 42px;
+}
+.lineBox .longInput{
+	width:360px;
+	height: 40px;
+	border:1px solid #e5e5e5;
+	line-height:40px; 
+	padding:0 10px;
+}
+.lineBox .rightBox .img{
+	width: 88px;
+	height: 88px;
+	display: block;
+	border: 1px solid #e5e5e5;
+}
+.lineBox .rightBox .tipp{
+	font-size: 12px;
+	color: rgb(153,153,153);
+}
+.lineBox .rightBox .updataBtn{
+	width: 104px;
+	height: 36px;
+	color: rgb(153,153,153); 
+	font-size: 14px;
+	text-align: center;
+	line-height: 36px;
+	position: relative;
+	border:1px solid #e5e5e5;
+	cursor: pointer;
+	display: block;
+}
+.lineBox .rightBox .updataBtn .file{
+	width: 104px;
+	height: 36px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 100;
+}
+.lineBox .rightBox .sameSex{
+	display:  inline-block;
+	vertical-align: middle;
+	line-height: 42px;
+}
+.lineBox .rightBox .sameSex b{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+	background: url(../../../assets/images/sel1.png) no-repeat center center/cover;
+}
+.lineBox .rightBox .sameSex b.on{
+	background: url(../../../assets/images/sel2.png) no-repeat center center/cover;
+}
+.lineBox .rightBox .sameSex span{
+	font-size: 14px;
+	color: rgb(153,153,153);
+	line-height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.lineBox .rightBox .sign{
+	width: 360px;
+	height: 100px;
+	border:1px solid #e5e5e5;
+	outline: none;
+	resize: none;
+	padding: 8px 10px;
+}
+.lineBox .rightBox  .btn{
+	background-color: rgb(11,195,147);
+	font-size: 14px;
+	color: #fff;
+	width: 108px;
+	height: 36px;
+}
+
+

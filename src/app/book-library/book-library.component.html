@@ -1,0 +1,122 @@
+<app-nav></app-nav>
+<section>
+	<div class="contentArea clearfix">
+		<div class="leftContent fl">
+			<div class="allType mt40 pd20">
+				<div class="allTypeNav">
+					<a href="javascript:void(0);" [class.on]="flage=='F'" (click)="girlboyFunvtion($event)" data-type="F">女频</a>
+					<a href="javascript:void(0);" [class.on]="flage=='M'" (click)="girlboyFunvtion($event)" data-type="M">男频</a>
+				</div>
+				<ul class="classAll">
+					<li>
+						<b>分类：</b>      
+						<a *ngFor="let clitem of girlClassNumber let i=index" (click)="classClick(clitem,i)" href="javascript:void(0);" [class.on]="i==classIndex">{{clitem.bookClassName}}</a>
+					</li>
+					<li>
+						<b class="fl">热门标签：</b>     
+						<div class="labelDiv fl">
+						    <div class="labelHide" [class.show]="labelMoreFlage">
+						    	<a [class.on]="classLabel==-1" href="javascript:void(0)" (click)="labelClick(-1,-1)">全部</a>
+								<a href="javascript:void(0)" [class.on]="i==classLabel" *ngFor="let label of labelList let i=index" (click)="labelClick(label,i)">
+									{{label}}
+								</a>
+						    </div><!-- [class.on]="labelMoreFlage" -->
+							<span (click)="labelMore()" class="labelMore" *ngIf="labelListLength>12">{{labelMoreFlage?'收起':'更多'}}</span>
+						</div>
+					</li>
+					<li>
+						<b>是否完结：</b>                
+						<a [class.on]="bookStatusOn=='-1'" href="javascript:void(0)" (click)="bookStatusClick($event,'-1')" data-type="-1">全部</a>
+						<a [class.on]="bookStatusOn=='1'" href="javascript:void(0)" (click)="bookStatusClick($event,'1')" data-type="1">连载中</a>
+						<a [class.on]="bookStatusOn=='2'" href="javascript:void(0)" (click)="bookStatusClick($event,'2')" data-type="2">完本</a>
+					</li>
+					<li>
+						<b>字数：</b>                          
+						<a [class.on]="wordNumOn=='-1'" href="javascript:void(0)" (click)="wordNumClick($event,'-1')" data-type="-1">全部</a>
+						<a [class.on]="wordNumOn=='0-30'" href="javascript:void(0)" (click)="wordNumClick($event,'0-30')" data-type="0-30">30万以下</a>
+						<a [class.on]="wordNumOn=='30-50'" href="javascript:void(0)" (click)="wordNumClick($event,'30-50')" data-type="30-50">30-50万 </a>
+						<a [class.on]="wordNumOn=='50-100'" href="javascript:void(0)" (click)="wordNumClick($event,'50-100')" data-type="50-100">50-100万 </a>
+						<a [class.on]="wordNumOn=='100-200'" href="javascript:void(0)" (click)="wordNumClick($event,'100-200')" data-type="100-200">100-200万</a>
+						<a [class.on]="wordNumOn=='200-999'" href="javascript:void(0)" (click)="wordNumClick($event,'200-999')" data-type="200-999">200万以上</a>
+					</li>
+					<li>
+						<b>排序：</b>  
+						<a [class.on]="sortByOn=='-1'" href="javascript:void(0)" (click)="sortByClick($event,'-1')" data-type="-1">全部</a>
+						<a [class.on]="sortByOn=='1'" href="javascript:void(0)" (click)="sortByClick($event,'1')" data-type="1">按点击</a>
+						<a [class.on]="sortByOn=='2'" href="javascript:void(0)" (click)="sortByClick($event,'2')" data-type="2">按更新</a>
+					</li>
+				</ul>
+			</div>
+			<div class="allBookList mt32">
+				<ul class="clearfix">
+					<li class="pr20" *ngFor="let bookList of bookLists">
+						<div class="leftImg fl">
+							<a href="javascript:void(0)" [ngStyle]="{'backgroundImage':'url('+bookList.bookCover+')'}" [routerLink]="['/bookDetail',bookList.bookId]"></a>
+						</div>
+						<div class="rightContent1 ml16 fl">
+							<h1 class="title mb8"><a href="javascript:void(0)" [routerLink]="['/bookDetail',bookList.bookId]">{{bookList.bookName}}</a></h1>
+							<div class="authorWord mb16">
+								<i class="icon"></i>
+								<span><a [routerLink]="['/author',bookList.authorCode]">{{bookList.author}}</a></span>
+								<b class="dict"></b>
+								<span>{{bookList.bookMark}}</span>
+								<b class="dict"></b>
+								<span>{{bookList.bookStatus==="1"?"连载中":"已完结"}}</span>
+							</div>
+							<div class="descript">{{bookList.introduction}}</div>
+							<div class="wordAndTime mt12">
+								<span>{{bookList.wordNum}}字</span>
+								<b class="dict"></b>
+								<span class="time">{{bookList.updateTime}}更新</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="mt24 mb24">
+					<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+				</div>
+			</div>
+		</div>
+		<div class="rightContent  no_rank1 fr mt40">
+			<div class="rankList fl">
+				<h1 class="title">推荐榜单</h1>
+				<ul>
+			        <li class="bookList" [class.green]='i<3?true:false' [class.on]='currindex==i' *ngFor="let list of likeList;let i=index" (mouseenter)="mouseenterON(i)">
+			            <a href="javascript:void(0)" target="_blank" class="line-a" [routerLink]="['/bookDetail',list.bookId]">
+			                <div class="l-view">
+			                    <span class="Index no_1">{{i+1}}</span>
+			                    <span class="bookName">{{list.bookName}}</span>
+			                </div>
+			            </a>
+			            <div class="b-view clearfix"> 
+			                <a  class="bookCover fl" [style.background-image]="'url(' + list.bookCover+ ')'" [routerLink]="['/bookDetail',list.bookId]">
+				                <div class="bookIndex">
+				                	{{i<9?'0'+(i+1):i+1}}
+				                </div>
+			                </a>
+			                <a class="bookDetailBox fl">
+			                    <h1 class="mb15"><a [routerLink]="['/bookDetail',list.bookId]">{{list.bookName}}</a></h1>
+			                    <p class="textAuthor">
+			                    	<i class="icon"></i>
+			                    	<span class="author"><a [routerLink]="['/author',list.authorCode]">{{list.author}}</a></span>
+			                    </p>
+			                    <p class="type mt10">
+			                    	<span>{{list.bookMark}}</span>
+			                    </p>
+			                </a>
+			            </div>
+			        </li>              
+			    </ul>
+			</div>
+		</div>
+	</div>
+	<div class="mt40">
+		<app-foot></app-foot>
+	</div>
+</section>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

@@ -1,0 +1,58 @@
+<div class="content">
+	<div class="top pd16 clearfix">
+		<i class="phone" [style.background-image]="'url('+ imgCover +')'"></i>
+		<p class="plr24">亲爱的{{penName}}大大，欢迎回来！<span *ngIf="noLoginDays>2">已您已经有{{noLoginDays-1}}天未登录了</span></p>
+	</div>
+	<div class="workManageBox">
+		<p class="title clearfix">
+			<b>作品管理</b>
+			<span class="ml2">当前作品总数 <span class="number">{{workNumber}}</span> 本</span>
+			<a class="create fr" routerLink="../creatework">
+				<img src="../../../assets/images/jia.png" alt="" />
+				<span class="ml8">创建作品</span>
+			</a>
+		</p>
+		<div class="workBox plr20">
+			<table class="worksTable">
+				<tr class="titleTable">
+					<th style="width: 200px;">作品名称</th>
+					<th style="width: 130px;">作品编号</th>
+					<th style="width:180px;">最新章节</th>
+					<th style="width: 85px;">v标</th>
+					<th style="width:160px;">更新时间</th>
+					<th style="width: 70px;">状态</th>
+					<th>操作</th>
+				</tr>
+				<tr *ngFor="let work of authorWorkList">
+					<td>
+						<a class="bookCoverA">
+							<div class="bookCover" [ngStyle]="{'backgroundImage':'url('+work.bookCover+')'}"></div>
+							<p class="bookName ml10">{{work.bookName}}</p>
+						</a>
+					</td>
+					<td>
+						{{work.bookCode}}
+					</td>
+					<td class="chapterName">{{work.chapterName}}</td>
+					<td>{{work.readPermission=='all'?'免费':'VIP'}}</td>
+					<td>{{work.updateTime}}</td>
+					<td>{{work.bookStatus=='1'?'连载中':'已完结'}}</td>
+					<td>
+						<a [routerLink]="['/writerzone/worksetting/'+work.bookId+'/publishedChapter',work.bookId]">管理</a>
+					</td>
+				</tr>
+				
+			</table>
+			<!-- <div class="page" id="page"></div> -->
+			<div class="mt24 mb24">
+				<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+			</div>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

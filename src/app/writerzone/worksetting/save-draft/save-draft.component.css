@@ -1,0 +1,67 @@
+.chapters{
+	min-height: 400px;
+}
+.chapters .volumeList li{
+	width: 50%;
+	float: left;
+	height: 42px;
+	line-height: 40px;
+	font-size:0;
+	border-bottom: 1px solid #e5e5e5;
+}
+.chapters .volumeList li span,
+.chapters .volumeList li a{
+	font-size: 14px;
+	color: rgb(68,68,68);
+}
+.chapters .volumeList li a {
+	color: rgb(11,195,147);
+	text-decoration: underline;
+	display: inline-block;
+	vertical-align: middle;
+}
+.chapters .volumeList li .chapter{
+	width: 220px;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.chapters .volumeList li .timeBox{
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.chapters .volumeList li .timeBox img{
+	display: inline-block;
+	vertical-align: middle;
+	width: 14px;
+}
+.chapters .volumeList li .timeBox .time{
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.tipsLayer{
+	position: fixed;
+	width: 400px;
+	height: 240px;
+	top: 250px;
+	left: 50%;
+	margin-left: -200px;
+	background:#fff;
+}
+.tipsLayer p.tips{
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	padding: 0 40px;
+	width: 100%;
+	color: rgb(102,102,102);
+}
+.tipsLayer p.btnBox{
+	text-align: center;
+}

@@ -1,0 +1,28 @@
+<div class="modle-wrap">
+	<div class="modle-container">
+		<form [formGroup]="commentForm" (ngSubmit)="postData()">
+			<div class="commentLayer">
+				<h1 class="clearfix">发表评论 <img (click)="sendToParent()" class="fr mt5" src="../../../assets/images/close.png" alt="" /></h1>
+				<textarea class="textareaBox mt16" formControlName="content" placeholder="请输入评论内容"></textarea>  
+				<div class="errorBox fl"><span [class.errorl]="commentForm.get('content').invalid && commentForm.get('content').touched">评论内容必填</span></div>
+				<div class="validation">
+					<span class="validationWord">验证码</span>
+					<input class="validationInput ml10" formControlName="verifyCode" type="text" />
+					<span class="validationValue ml10">
+					<!-- /pc/api/verifycode/pic?userId={{userId}} -->
+						<img style="width:80px;" src="{{imgYz}}" alt="" />
+					</span>
+					<div  [class.error20]="commentForm.get('verifyCode').invalid && commentForm.get('verifyCode').touched">验证码必填</div>
+					<p class="btnP mt16 clearfix"><button class="fl">发表</button></p>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+

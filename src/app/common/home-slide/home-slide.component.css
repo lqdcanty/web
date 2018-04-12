@@ -1,0 +1,66 @@
+
+.banner{position: relative;width: 1200px;height: 112px;margin-top: 48px;}
+.banner .b_main{position: relative;width: 1200px;height: 112px;}
+.banner .b_main .b_m_pic{position: relative;width: 1200px;height: 112px;overflow:hidden;}
+.b_main .b_m_pic li{width: 1200px;height: 112px;display: none;}/*里给绝对定位，是为了把li叠在一起*/
+.b_main .b_m_pic li a{
+	display: block;
+	width: 1200px;height: 112px;
+}
+.b_main .b_m_pic li a img{
+	display: block;
+	width: 1200px;height: 112px;
+	opacity:1;
+}
+.b_main .b_m_pic li.on{
+	display: block;
+}
+.b_main .b_m_pic li.on img{
+	display: block;
+-webkit-animation-name: fadeIn; /*动画名称*/
+ -webkit-animation-duration: 3s; /*动画持续时间*/
+-webkit-animation-delay: 0s; /*延迟时间*/
+}
+/*  .b_main .b_m_pic li.an img{
+ 
+ 	-webkit-animation-name: fadeOut; 
+ 	 -webkit-animation-duration: 1s; 
+ 	-webkit-animation-delay: 2s; 
+ } */ 
+
+@-webkit-keyframes fadeIn {
+	0% {
+	   opacity: 0.5; /*初始状态 透明度为0*/
+	}
+	50% {
+	   opacity: 1; /*初始状态 透明度为0*/
+	}
+	100% {
+		opacity: 1; /*结尾状态 透明度为1*/
+	}
+}
+@-webkit-keyframes fadeOut {
+	0% {
+	   opacity: 1; /*初始状态 透明度为0*/
+	}
+	100% {
+		opacity: 0.5; /*结尾状态 透明度为1*/
+	}
+}
+.b_main .b_m_pic li.on img{
+	transition:opacity 1s ease;
+}
+.b_list ul{position:absolute;right: 0px;bottom: 6px;width:100%;text-align: center;}/*这里的ul根据banner定位*/
+.b_list ul li{
+	width: 8px;
+    height: 8px;
+    display: inline-block;
+    background: #000;
+    opacity: .3;
+    margin: 0 4px;
+}
+.b_list ul .l_hover,.b_list ul li.l_click{opacity: 1;background: #fff!important;}
+/*两边耳朵的样式*/
+.b_btn div{position: absolute;width: 100px;height: 100px;background: rgba(0,0,0,0.7);font-size: 60px;color: white;text-align: center;line-height: 100px;top: 50%;margin-top: -80px;cursor: pointer;}
+.b_btn .b_left{left:0;border-radius: 50%}/*移到左边*/
+.b_btn .b_right{right:0;border-radius: 50%}/*移到右边*/

@@ -1,0 +1,43 @@
+.volume{
+	min-height: 400px;
+}
+.volume .title{
+	font-size: 16px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	font-weight: bold;
+}
+.volumeContent span{
+	display: inline-block;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 42px;
+	height: 42px;
+	min-width:60px;
+}
+.volumeContent input{
+	display: inline-block;
+	width: 680px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	padding-left: 20px;
+	color: rgb(153,153,153);
+	line-height: 40px;
+	border: 1px solid #e5e5e5;
+}
+.volumeContent button{
+	width: 108px;
+	height: 36px;
+	color: #fff;
+	font-size: 14px;
+	background:rgb(11,195,147);
+}
+.volumeContent button:active{
+	background:rgba(11,195,147,0.8);
+}
+.redTip{
+	font-size: 12px;
+	line-height: 24px;
+	color: red;
+	margin-left: 80px;
+}

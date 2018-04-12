@@ -1,0 +1,44 @@
+#index_tpic{float:left;width:396px; position:relative;}
+#index_tpic_big{width:324px;height:458px;float:left; overflow:hidden}
+#index_tpic_big a{position:absolute;left:0;top:0; display:none}
+#index_tpic_big a.on{display: block;}
+#index_tpic_big a img{
+	opacity: 1;
+}
+#index_tpic_big a.on img{
+	-webkit-animation-name: fadeIn; /*动画名称*/
+ -webkit-animation-duration: 5s; /*动画持续时间*/
+}
+#index_tpic_big img{width:324px;height:458px}
+#index_tpic_tab{ float:right;width:56px;height:458px; overflow:hidden}
+#index_tpic_tab img{ opacity:0.3;filter:alpha(opacity=30);width:56px;height:78px}
+#index_tpic_tab a.active img,#index_tpic_tab a:hover img{ float:right;width:56px;height:78px;
+	margin-bottom:57px; opacity:1;filter:alpha(opacity=100)}
+#index_tpic_tab a{float:right;width:56px;height:78px; overflow:hidden;margin-bottom:17px;}
+#index_tpic_tab a.active,#index_tpic_tab a:hover{width:56px;height:78px;border:2px solid rgb(11,195,147);}
+
+#index_tpic_binfo{padding-top: 24px;height:124px;display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;}
+/* #index_tpic_binfo .index_tpic_info{
+	display: none;
+} */
+#index_tpic_binfo .index_tpic_info.on{
+	display: block;
+}
+#index_tpic_binfo p{line-height:22px;color:#787878; text-indent:2em;padding-top:5px;font-size: 14px;color: rgb(68,68,68)}
+#index_tpic_binfo h3 a{color:rgb(68,68,68); line-height:24px;font-weight: 900;display: inline-block;}
+.cl10{clear: both;overflow: hidden;font-size: 0;line-height: 0;}
+#index_tpic_binfo h3{text-align: center;}
+@-webkit-keyframes fadeIn {
+	0% {
+	   opacity: 0.5; 
+	}
+	40% {
+	   opacity: 1; 
+	}
+	100% {
+		opacity: 1; 
+	}
+}

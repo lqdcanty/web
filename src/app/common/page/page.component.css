@@ -1,0 +1,36 @@
+.pageCss .btn{
+	width:34px;
+	height: 34px;
+	border:0;
+	margin:0 2px;
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(68,68,68)!important;
+}
+.pageCss .btn.over{
+	border:1px solid #e5e5e5!important;
+	text-align: center;
+}
+.pageCss .btn.on {
+	background-color: rgb(11,195,147);
+	color:#fff!important;
+	font-weight: bold;
+}
+.pageCss .btn.prev{
+	background:url(../../../assets/images/arrow_n.png) no-repeat center center;
+}
+.pageCss .btn.right{
+	background:url(../../../assets/images/arrow_nh.png) no-repeat center center;
+}
+.pageCss .inputBox{
+	border:1px solid #e5e5e5!important;
+	text-align: center;
+}
+.pageCss{
+	text-align: center;
+}
+.pageCss .all{
+	line-height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+}

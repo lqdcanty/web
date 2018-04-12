@@ -1,0 +1,80 @@
+<section>
+	<div class="headerSection contentArea">
+		<div class="headerContent">
+			<img src="../assets/images/logo.png" alt="" class="logo b-v-m" routerLink="/home" />
+			<div class="searchBox b-v-m">
+				<form [formGroup]="search">
+					<input type="text" formControlName="keyword" [(ngModel)]="paramskeyword" class="search" placeholder="热搜：非常神话" />
+					<button class="searchBtn" (click)="postCreat()"></button>
+				</form>
+			</div>
+			<div class="loginAndRegister b-v-m fr" *ngIf="!loginSuccess">
+				<a class="login" (click)="login()">登录</a><span></span><a class="register" routerLink="/register">注册</a>
+			</div>
+			<div class="loginAndRegister b-v-m fr" *ngIf="loginSuccess" (mouseleave)="imgMouserOut()">
+				<a href="javascript:void(0)" class="newsNuber" routerLink="/user/news">消息({{meassageCount}})</a>
+				<span></span>
+				<a href="javascript:void(0)" class="userName" routerLink="/user">{{userInfo.userName}}</a>
+				<a href="javascript:void(0)" (mouseenter)="imgMouser()"  class="userImage" routerLink="/user" [ngStyle]="{'backgroundImage':'url('+userInfo.imgUrl+')'}"></a>
+				<div class="back" *ngIf="cancelBoolean" (mouseenter)="imgMouser()" (mouseleave)="imgMouserOut()" (click)="backFunction()">退出</div>
+			</div>
+		</div>
+	</div>
+	<nav>
+	    <div class="nav clearfix contentArea">
+	  		<div class="navLeft fl">
+		  		<a id="homeEnter" routerLink="/home" routerLinkActive="on">首页</a>
+			    <a routerLink="/rank" routerLinkActive="on">排行榜</a>
+			    <a routerLink="/bookLibrary" routerLinkActive="on">书库</a>
+			    <a [routerLink]="['/topUp','']" routerLinkActive="on">充值</a>
+			    <!-- <a (click)="goTopUp()">充值</a> -->
+		    </div>
+		    <div class="navHomeLayerBox">
+		        <div class="sjx"></div>
+	   		    <div class="navHomeLayer clearfix">
+		   		 	<div class="girlBox navHomeLayerSame fl">
+		   		 		<span>女频</span>
+		   		 		<ul>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'F',bookClass:'DSYQ'}">都市言情</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'F',bookClass:'CYJK'}">穿越架空</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'F',bookClass:'GDYQ'}">古代言情</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'F',bookClass:'LMQC'}">浪漫青春</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'F',bookClass:'XYLYF'}">悬疑灵异</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'F',bookClass:'QTFLF'}">其他分类</a></li>
+		   		 		</ul>
+		   		 	</div>
+		   		 	<div class="boyBox navHomeLayerSame fl">
+		   		 		<span>男频</span>
+		   		 		<ul>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'M',bookClass:'DSXS'}">都市现实</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'M',bookClass:'YSCN'}">异术超能</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'M',bookClass:'XHXZ'}">玄幻修真</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'M',bookClass:'LSJK'}">历史架空</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'M',bookClass:'XYLYM'}">悬疑灵异</a></li>
+		   		 			<li><a [routerLink]="['/bookLibrary']" [queryParams]="{bookCategory:'M',bookClass:'QTFLM'}">其他分类</a></li>
+		   		 		</ul>
+		   		 	</div>
+	   		 	</div>
+	   		</div>
+		    <div class="navRight fr">
+		  		<a href="#" class="b-v-m" routerLink="/active">
+		  			<i class="welfare b-v-m"></i><span class="b-v-m">福利</span>
+		  		</a>
+		  		<a class="b-v-m m-l-30" (click)="authorzoneJudge()" routerLinkActive="on">
+		  			<i class="author b-v-m"></i><span class="b-v-m">作家专区</span>
+		  		</a>
+		    </div>
+	    </div>
+	</nav>
+	<div *ngIf="loginBoolean">
+		<app-login (outerLogin)="reviceLogin($event)"></app-login>
+	</div>
+	<!-- (outerLoginSuceess)="reviceLoginSuceess($event)" -->
+</section>
+<div *ngIf="authorzoneLayerBoolean">
+	<app-authorjudge (outerunauthor)="reviceunauthor($event)" [contentAuthor]="contentAuthorT" [tempUrl]="tempUrlString" [btn]="btnString"></app-authorjudge>
+</div>
+
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>

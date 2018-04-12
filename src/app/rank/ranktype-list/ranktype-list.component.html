@@ -1,0 +1,33 @@
+<div>
+	<div class="fl ml20" *ngFor="let rank of ranksLists">
+		<app-rank-list [ranklists]="rank"></app-rank-list>	
+	</div>
+	<!-- <div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div>
+	<div class="fl ml20">
+		<app-rank-list></app-rank-list>	
+	</div> -->
+</div> 
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+

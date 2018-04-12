@@ -1,0 +1,128 @@
+<div class="authorData">
+	<h1 class="title plr20">作家资料</h1>
+	<div class="dataContent">
+		<div class="bindingContent mt32">
+			<h1 class="titleTip mb16"><span>个人信息</span></h1>
+			<div class="lineBox mb16">
+				<span class="leftName">笔名</span>
+				<span class="rightValue">{{pendNameN}}</span>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">真实姓名</span>
+				<span class="rightValue">{{realNameN}}</span>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">身份证</span>
+				<span class="rightValue">{{idCardN}}</span>
+			</div>
+			<h1 class="titleTip mb16 mt24"><span>通讯信息</span></h1>
+			<div class="lineBox mb16">
+				<span class="leftName">QQ号码</span>
+				<span class="rightValue" id="qq">{{qqN?qqN:'未填写'}}</span>
+				<a class="ml24 modifyA" (click)="qqModify()">点击修改</a>
+			</div>
+			
+			<div class="lineBox mb16">
+				<span class="leftName">手机号</span>
+				<span class="rightValue">{{phoneN}}</span>
+				<!-- <a class="ml24 modifyA" (click)="phoneModify()">点击修改</a> -->
+			</div>
+			<div class="lineBox">
+				<span class="leftName">邮箱</span>
+				<span class="rightValue" id="email">{{emailN?emailN:'未填写'}}</span>
+				<a class="ml24 modifyA" (click)="emailModify()">点击修改</a>
+			</div>
+			<div class="signBox">
+				<h1 class="titleTip mb16 mt24" style="margin-right: 0;"><span>账户信息</span></h1>
+				<span class="signValue mb16 mt24">(便于平台向您支付稿酬，填写后，不可修改，请认真填写）<a class="fill ml24" (click)="accountModify()">点击填写</a></span>
+				
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">开户名</span>
+				<span class="rightValue" id="bankName">{{bankNameN?bankNameN:'未填写'}}</span>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">开户行</span>
+				<span class="rightValue" id="bank">{{bankN?bankN:'未填写'}}</span>
+			</div>
+			<div class="lineBox">
+				<span class="leftName">卡号</span>
+				<span class="rightValue" id="bankCard">{{bankCardN?bankCardN:'未填写'}}</span>
+			</div>
+			<div class="signBox mb40 clearfix">
+				<h1 class="titleTip mb16 mt24 fl"><span>签名</span></h1>
+				<span class="signValue mb16 mt24 fl" id="signature">{{signatureN?signatureN:'未填写'}}</span><a class="fill" style="margin: 24px;" id="fill" (click)="signModify()">点击修改</a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- -->
+<div class="modle-wrap" *ngIf="qqLayer||emailLayer||accountLayer||signLayer">
+	<div class="modle-container"><!-- (ngSubmit)="postAuthor()" -->
+			<form action="" [formGroup]="authorForm" > 
+			<div class="qq" *ngIf="qqLayer">
+				<h1 class="modifyTitle">修改QQ号码 
+				<img class="close fr mt5" (click)="closeLayerQq()" src="../../../assets/images/close.png" alt="" />
+				</h1>
+				<input maxlength="20" class="mt24" [(ngModel)]="qqN" formControlName="qq" type="number" placeholder="请输入QQ号码"   />
+				<p class="mt24 btnBox">
+					<button class="cancel" (click)="closeLayerQq()">取消</button>
+					<button class="save ml32" (click)="qqSave()">保存</button>
+				</p>
+			</div>
+			<div class="qq" *ngIf="emailLayer">
+				<h1 class="modifyTitle">修改邮箱
+				<img class="close fr mt5" (click)="closeLayerEmail()" src="../../../assets/images/close.png" alt="" />
+				</h1>
+				<input maxlength="35" class="mt24" [(ngModel)]="emailN" formControlName="email" type="text" placeholder="请输入邮箱" />
+				<div class="positionError"><span [class.errorauthor]="authorForm.get('email').invalid && authorForm.get('email').touched">请填入正确的邮箱号！</span></div>
+				<p class="mt24 btnBox">
+					<button class="cancel" (click)="closeLayerEmail()">取消</button>
+					<button class="save ml32" (click)="emailSave()">保存</button>
+				</p>
+			</div>
+			<div class="phone" *ngIf="accountLayer">
+				<h1 class="modifyTitle">填写账户信息
+				<img class="close fr mt5" (click)="closeLayerBank()" src="../../../assets/images/close.png" alt="" />
+				</h1>
+				<div class="lineBox mt32">
+					<span class="leftName">开户名</span>
+					<input type="text" maxlength="16" [(ngModel)]="bankNameN" formControlName="bankName"  class="longInput" placeholder="请输入开户名" />
+					<div class="positionError" ><span [class.errorauthor]="authorForm.get('bankName').invalid && authorForm.get('bankName').touched">请填写正确的开户名</span></div>
+				</div>
+				<div class="lineBox">
+					<span class="leftName">开户银行</span>
+					<input type="text" maxlength="10" [(ngModel)]="bankN" formControlName="bank" class="longInput" placeholder="请输入开户银行" />
+					<div class="positionError1"><span [class.errorauthor]="authorForm.get('bank').invalid && authorForm.get('bank').touched">请填写正确的开户银行</span></div>
+				</div>
+				<div class="lineBox">
+					<span class="leftName">卡号</span>
+					<input type="text" maxlength="19" [(ngModel)]="bankCardN" formControlName="bankCard" class="longInput" placeholder="请输入银行卡卡号" />
+					<div class="positionError"><span [class.errorauthor]="authorForm.get('bankCard').invalid && authorForm.get('bankCard').touched">请填写正确的卡号</span></div>
+				</div>
+				<p class="mt24 btnBox">
+					<button class="cancel" (click)="closeLayerBank()">取消</button>
+					<button class="save ml32" (click)="bankSave()">保存</button>
+				</p>
+			</div>
+			<div class="sign" *ngIf="signLayer">
+				<h1 class="modifyTitle">修改签名
+				<img class="close fr mt5" (click)="closeLayerSignature()" src="../../../assets/images/close.png" alt="" />
+				</h1>
+				<textarea [(ngModel)]="signatureN" formControlName="signature" class="signTextarea mt24" placeholder="请输入签名信息"></textarea>
+				<p class="mt24 btnBox">
+					<button class="cancel" (click)="closeLayerSignature()">取消</button>
+					<button class="save ml32" (click)="signSave()">保存</button>
+				</p>
+			</div>
+		</form>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+

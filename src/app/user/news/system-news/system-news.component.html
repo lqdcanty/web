@@ -1,0 +1,35 @@
+<div class="plr20">
+	<ul class="newsContent">
+		<li class="clearfix ptb20" *ngFor="let new of sysMes">
+			<div class="icon fl"></div>
+			<div class="right fr">
+				<div class="top clearfix">
+					<a class="fl" href="javascript:viod(0)">{{new.msgTitle}}</a>
+					<!-- <div class="updataBox fl">
+						<b></b>
+						<span class="updataCharpter">更新至七卷第九章 冲喜</span>
+					</div> -->
+					<span class="updataTime fr">{{new.msgTime}}</span>
+				</div>
+				<div class="newsWord mt16">
+					{{new.msg}}
+				</div>
+				<div class="seeDetail clearfix">
+					<a href="javascript:viod(0)" class="fr" href="{{new.url}}"> 
+						<span>查看详情</span>
+						<i class="icon"></i>
+					</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="mt24 mb24">
+		<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

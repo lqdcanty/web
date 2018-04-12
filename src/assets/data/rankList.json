@@ -1,0 +1,54 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+     "data":{
+            "pageNum":1,
+            "pageSize":3,
+            "total":6,
+            "list":[
+               {
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "wordNum":12321712,
+                    "bookMark":"总裁",
+                    "bookStatus" :"1",
+                    "concernFlag":"1"
+                },
+                {
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "wordNum":12321712,
+                    "bookMark":"总裁",
+                    "bookStatus" :"2",
+                    "concernFlag":"2"
+                },
+                {
+                    "bookId":1,
+                    "bookName":"言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction":"小说简介,最长可以设置两行",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "wordNum":12321712,
+                    "bookMark":"总裁",
+                    "bookStatus" :"2",
+                    "concernFlag":"1"
+                }
+            ]
+        }
+}

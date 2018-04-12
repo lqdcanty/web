@@ -1,0 +1,63 @@
+.headerSection{
+	padding: 24px 0;
+}
+.headerSection .logo{
+	width: 192px;
+	height: 36px;
+	margin-right: 208px;
+}
+.headerSection .searchBox{
+	width: 400px;
+	height: 36px;
+	position: relative;
+}
+.headerSection .search{
+	width: 100%;
+	line-height:36px; 
+	height: 36px;
+	border: 1px solid rgb(11,195,147);
+	padding-left: 20px;
+	color: rgb(177,177,177);
+
+}
+.headerSection .loginAndRegister{
+	height: 36px;
+	color: rgb(230,230,230);
+	position: relative;
+}
+.headerSection .loginAndRegister a{
+	line-height: 36px;
+	color: rgb(68,68,68);
+	font-size: 16px;
+	margin:0 15px;
+}
+.headerSection .loginAndRegister a:hover{
+	color:rgb(11,195,147);
+}
+.searchBtn{
+	display: block;
+	position: absolute;
+	right: 16px;
+	top: 9px;
+	width: 18px;
+	height: 18px;
+}
+.searchBtn img{
+	width: 100%;
+	height: 100%;
+}
+.headerSection .loginAndRegister a.userName{
+	margin-right: 60px;
+}
+.headerSection .loginAndRegister a.userImage{
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	right: 0;
+	top: -5px;
+	margin:0;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}

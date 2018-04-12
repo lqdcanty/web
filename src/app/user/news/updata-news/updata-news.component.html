@@ -1,0 +1,29 @@
+<div class="plr20">
+	<ul class="newsContent">
+		<li class="clearfix ptb20" *ngFor="let new of updataMes">
+			<div class="icon fl"></div>
+			<div class="right fr">
+				<div class="top clearfix">
+					<a class="fl" href="javascript:viod(0)">{{new.bookName}}</a>
+					<div class="updataBox fl">
+						<b></b>
+						<span class="updataCharpter">{{new.chapterName}}</span>
+					</div>
+					<span class="updataTime fr">{{new.msgTime}}</span>
+				</div>
+				<div class="newsWord mt16">
+					{{new.msg}}
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="mt24 mb24">
+		<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

@@ -1,0 +1,83 @@
+<div class="creatwork">
+	<h1 class="title plr20">创建作品</h1>
+	<div class="creatworkContent clearfix ">
+		<div class="contentLeft fl">
+			<div class="bookCover">
+				<img id="bookCover" src="" alt="" />
+			</div>
+			<label class="updataBtn mt24" >
+				上传封面
+				<input class="file" type="file" id="file" name="myfile" (change)="uploadFile($event)" />
+        <!-- 		<input class="button" type="button" value="上传封面"/> -->
+			</label>
+			 <!-- ng2FileSelect [uploader]="uploader" -->
+			<p class="mt8">尺寸比例为180*254,请按照比例上传图片避免影响美观</p>
+		</div>
+		<div class="contentRight fl ml50">
+			<form action="post" [formGroup]="createWork">
+				<div class="lineBox clearfix">
+					<span class="name fl">作品名称</span>
+					<div class="lineBoxRight fl">
+						<input class="long" formControlName="bookName" type="text" placeholder="请输入作品名称" />
+					</div>
+					<div class="errorBox fl"><span [class.error]="createWork.get('bookName').invalid && createWork.get('bookName').touched">作品名称为1-60个字符</span></div>
+				</div>
+				<div class="lineBox mt16 clearfix">
+					<span class="name fl">作品类型</span>
+					<div class="lineBoxRight fl">
+						<select (change)="bookCategoryChange()" class="select fl" id="bookCategory" formControlName="bookCategory" style="width: 200px;" name="" id="">
+							<option value="M" selected="selected">男频</option> 
+							<option value="F">女频</option>
+						</select>
+						<select id="bookClassName" (click)="bookClassClick()" *ngIf="bookClassBoolean" formControlName="bookClass" class="select fl ml24" style="width: 230px;">
+							<option *ngFor="let class of classes" value="{{class.bookClass}}">{{class.bookClassName}}</option>
+						</select>
+						<div class="errorBox fl"><span [class.error]="createWork.get('bookCategory').invalid && createWork.get('bookCategory').touched||createWork.get('bookClass').invalid && createWork.get('bookClass').touched">请选择类型</span></div>
+					</div>
+				</div>
+				<div class="lineBox mt16 clearfix">
+					<span class="name fl">连载状态</span>
+					<div class="lineBoxRight fl">
+						<span class="name">连载中</span>
+					</div>
+				</div>
+				<div class="lineBox mt16 clearfix">
+					<span class="name fl">作品标签</span>
+					<div class="lineBoxRight fl clearfix">
+						<textarea class="long fl" readonly="true" id="labelMore" formControlName="bookMark" placeholder="请选择标签" ></textarea> 
+						<ul id="labelId" class="labelUl">
+							<li *ngFor="let label of labelList"><b><input type="checkbox" value="{{label}}"  /></b> <span>{{label}}</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="lineBox mt16 clearfix">
+					<span class="name fl">作品简介</span>
+					<div class="lineBoxRight fl">
+						<textarea maxlength="300" formControlName="bookDes" [(ngModel)]="bookDes" class="textarea" name="" id="">请输入作品简介，限定字数300字。</textarea>
+					</div>
+					<div class="errorBox fl"><span [class.error]="createWork.get('bookDes').invalid && createWork.get('bookDes').touched">作品简介为15-300个字符</span></div>
+				</div>
+				<div class="lineBox mt16 clearfix">
+					<span class="name fl">短简介</span>
+					<div class="lineBoxRight fl">
+						<input maxlength="15" formControlName="subheading" [(ngModel)]="subheading" class="long fl" type="text" placeholder="可用于第三方销售，请限制在15字以内。" />
+					</div>
+					<div class="errorBox fl"><span [class.error]="createWork.get('subheading').invalid && createWork.get('subheading').touched">短简介为4-15个字符</span></div>
+				</div>
+				<div class="lineBox mt40 mb32 clearfix">
+					<span class="name fl"></span>
+					<div class="lineBoxRight fl">
+						<button class="cancel" (click)="cancel()">取消</button>
+						<button class="submit ml32" (click)="postCreat()">提交</button>
+					</div>
+				</div>
+			</form>
+		</div> 
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

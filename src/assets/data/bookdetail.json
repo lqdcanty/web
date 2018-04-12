@@ -1,0 +1,30 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+        "bookId":1,
+        "bookName":"继承者的千万新娘",
+        "author":"作者",
+        "authorCode":"abc",
+        "bookClass":"都市青春",
+        "bookClassCode":"DSQC",
+        "wordNum":"10291020",
+        "bookStatus":"已完结",
+        "bookCover":"../../assets/images/zu29.png",
+        "concernNum":7948,
+        "comment":8948,
+        "introduction":"作品简介",
+        "concernFlag":"1",
+        "readFlag":"1",
+        "bookMark":"总裁,豪门",
+        "chapter":{
+        	"chapterName":"268章 鞭策中前行",
+        	"updateTime":"2018-01-15 15:53:23",
+        	"chapterContent":[
+        		"一招错信，死无全尸。重生！彼所谓，皆要还！这不是宫斗，而是血",
+        		"一招错信，死无全尸。重生！彼所谓，皆要还！这不是宫斗，而是血"
+        	]
+        }
+    }
+}

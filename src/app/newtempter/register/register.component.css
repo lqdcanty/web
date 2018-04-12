@@ -1,0 +1,231 @@
+.header{
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid rgb(242,242,242);
+}
+.contentArea{
+	width: 1200px;
+	margin:0 auto;
+}
+.header .logo,.header span{
+	float: left;
+}
+.header .logo{
+	width: 192px;
+	height: 38px;
+	margin-top: 16px;
+}
+.header .logo img{
+	width: 100%;
+	height: 100%;
+}
+.header span{
+	font-size: 22px;
+	color: rgb(68,68,68);
+	line-height: 30px;
+	border-left: 1px solid rgb(230,230,230);
+	padding: 0 18px;
+	margin-top: 25px;
+}
+.tipBox{
+	font-size: 0;
+	text-align: center;
+}
+.tipBox span{
+	display: inline-block;
+	vertical-align: middle;
+	width: 197px;
+	height: 46px;
+	font-size: 18px;
+	line-height: 46px;
+	color: rgb(153,153,153);
+	background:url(../../../assets/images/gray.png) no-repeat center center/cover;
+}
+.tipBox span.on{
+	color: #fff;
+	background:url(../../../assets/images/greenbg.png) no-repeat center center/cover;
+}
+.bindingContent{
+	border: 1px solid rgb(229,229,229);
+	padding: 40px 240px;
+	min-height: 600px;
+}
+.bindingContent .titleTip{
+	font-size: 18px;
+	font-weight: bold;
+	color: rgb(68,68,68);
+	line-height: 26px;
+	width: 100%;
+}
+.bindingContent .titleTip span{
+	display: block;
+	width: 160px;
+	text-align: right;
+}
+.bindingContent .lineBox{
+	font-size: 0;
+	height: 42px;
+}
+.bindingContent .lineBox .leftName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 42px;
+	color: rgb(68,68,68);
+	font-size: 14px;
+	text-align: right;
+	width: 160px;
+	margin-right: 28px;
+}
+.bindingContent .lineBox .longInput{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	text-align: right;
+	width: 360px;
+	border: 1px solid rgb(229,229,229);
+	text-align: left;
+	padding-left: 16px;
+} 
+.bindingContent .lineBox .rightBox{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.bindingContent .lineBox .rightBox .longInput{
+	 color: rgb(11,195,147); 
+	 border-color:rgb(11,195,147);  
+}
+.bindingContent .lineBox .rightBox .animate{
+	position: absolute;
+	left: 120px;
+	top: 15px;
+}
+/* 
+	animation: myfirst 1s linear infinite;
+	-moz-animation: myfirst 1s linear infinite;	Firefox
+	-webkit-animation: myfirst 1s linear infinite;	Safari 和 Chrome
+	-o-animation: myfirst 1s linear infinite;	Opera */
+
+/* @keyframes myfirst
+{
+0%   {height: 15px;margin-top:8px;}
+60% {height: 21px;margin-top:6px;}
+}
+
+@-moz-keyframes myfirst Firefox
+{
+0%   {height: 17px;}
+60% {height: 21px;}
+}
+
+@-webkit-keyframes myfirst Safari 和 Chrome
+{
+0%   {height: 17px;}
+60% {height: 21px;}
+}
+
+@-o-keyframes myfirst Opera
+{
+0%   {height: 17px;}
+60% {height: 21px;}
+}  */
+
+
+.bindingContent .lineBox .rightBox .longInput{
+	background:#fff;
+	text-align: center;
+}
+.bindingContent .lineBox .rightBox .smallInput{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	text-align: right;
+	width: 200px;
+	border: 1px solid rgb(229,229,229);
+	text-align: left;
+	padding-left: 16px;
+}
+.bindingContent .lineBox .rightBox .getCode{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(11,195,147);
+	font-size: 14px;
+	text-align: center;
+	width: 140px;
+	border: 1px solid rgb(11,195,147);
+	background-color: #fff;
+	cursor: pointer;
+}
+.bindingContent .lineBox .rightBox .getCode:active{
+	background-color: rgba(11,195,147,0.1);
+}
+.bindingContent .lineBox.botton{
+	height: auto;
+}
+.bindingContent .lineBox.botton .desc{
+	color: rgb(153,153,153);
+	font-size: 0;
+}
+.bindingContent .lineBox.botton .desc input,
+.bindingContent .lineBox.botton .desc b,
+.bindingContent .lineBox.botton .desc img,
+.bindingContent .lineBox.botton .desc span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.bindingContent .lineBox.botton .desc span{
+	line-height: 22px;
+	font-size: 14px;
+}
+.bindingContent .lineBox.botton .desc input{
+	width: 16px;
+	height: 16px;
+	border:1px solid #e5e5e5;
+}
+.bindingContent .lineBox.botton .desc b img{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.bindingContent .lineBox.botton .desc b{
+	position: relative;
+}
+.bindingContent .lineBox.botton .desc b.on img{
+	display: inline-block;
+}
+.bindingContent .lineBox.botton .desc a{
+	color: rgb(11,195,147);
+}
+.bindingContent .lineBox.botton .bindingBtn{
+	width: 168px;
+	height: 36px;
+	color: #fff;
+	background: rgb(11,195,147);
+	outline: none;
+	border: 0;
+}
+.bindingContent .lineBox.botton .bindingBtn:active{
+	background: rgba(11,195,147,0.8);
+}
+.bindingContent .lineBox.botton .leftName{
+	height: 50px;
+}
+.slide{
+	display: inline-block;
+	position: absolute;
+	background: #fff;
+	left: 50px;
+	top: -150px;
+	padding: 20px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+}

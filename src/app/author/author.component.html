@@ -1,0 +1,80 @@
+<app-nav></app-nav>
+<section>
+	<div class="contentArea">
+		<div class="top mt24 ptb20">
+			<div class="photo" [ngStyle]="{'backgroundImage':'url('+authorInfo.icon+')'}"></div>
+			<h1 class="name mt8">{{authorInfo.author}}</h1>
+			<h2 class="sign mt16">{{authorInfo.sign}}</h2>
+		</div>
+	  	<div class="clearfix mt24">
+			<div class="leftWork plr20 fl">
+				<h1 class="herWork">Ta的作品</h1>
+				<div class="descriptBox">
+					<div class="descriptLine mt16 pt6">
+						<span class="descriptName">作品总数</span>
+						<span class="descriptValue ml16">{{authorInfo.bookCount}}</span>
+					</div>
+					<div class="descriptLine mt16">
+						<span class="descriptName">累计字数</span>
+						<span class="descriptValue ml16">{{authorInfo.wordNum}}</span>
+					</div>
+				</div>
+				<ul class="herWorkList pdb40" >
+					<li class="workOne mt24" *ngFor="let work of authorInfo.bookList">
+						<div class="bookCover" [ngStyle]="{'backgroundImage':'url('+work.bookCover+')'}" [routerLink]="['/bookDetail',work.bookId]"></div>
+						<h1 class="bookName mt16" [routerLink]="['/bookDetail',work.bookId]">{{work.bookName}} </h1>
+						<div class="keyword mt8">
+							<span>{{work.bookClass}}</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="rightCollect fr">
+				<div class="bookListBox fr">
+					<h1 class="typeTitle"><a>Ta的书架</a></h1>
+					<input type="hidden" id="totalPage" value="{{total}}" />
+					<input type="hidden" id="pageNum" value="{{pageNum}}" (change)="pageNumValue($event)" />
+					<div class="bookDescribe clearfix ptb24" *ngFor="let read of authorInfo.reading.list">
+						<div class="bookLeftCover fl">
+							<a  [ngStyle]="{'backgroundImage':'url('+read.bookCover+')'}" [routerLink]="['/bookDetail',read.bookId]"></a>
+						</div>
+						<div class="bookCenterDetail pl15 fl">
+							<h1 class="bookTitle mb10"><a [routerLink]="['/bookDetail',read.bookId]">{{read.bookName}}</a></h1>
+							<div class="bookMessage mb16">
+								<i class="icon"></i>
+								<span class="author">{{read.author}}</span>
+								<b class="dict"></b>
+								<span>{{read.bookMark}}</span>
+								<b class="dict"></b>
+								<span>{{read.bookStatus==="1" ? "连载中":"已完结"}}</span>
+							</div>
+							<div class="bookIntroduction">
+								{{read.introduction}}
+							</div>
+							<div class="wordAndTime mt10">
+								<span>{{read.wordNum}}字</span>
+								<b class="dict"></b>
+								<span>{{read.updateTime}}更新</span>
+							</div>
+						</div>
+						<div class="bookRightButton fr">
+							<button class="on" [routerLink]="['/bookDetail',read.bookId]">作品详情</button>
+							<button [class.on1]="read.concernFlag==='1'">{{read.concernFlag=="1" ? "已在书架":"加入书架"}}</button>
+						</div>
+					</div>
+					<!-- <div class="page" id="page"></div> -->
+					<div class="mt24 mb24">
+						<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mt40">
+		<app-foot></app-foot>
+	</div>
+</section>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+

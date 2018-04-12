@@ -1,0 +1,66 @@
+<div class="info">
+	<h1 class="title plr20">个人信息</h1>
+	<form action="" [formGroup]="personInfo">
+		<div class="infoContent ptb24">
+			<div class="lineBox mb16">
+				<span class="leftName">昵称</span>
+				<div class="rightBox">
+					<input type="text" class="longInput" [(ngModel)]="userName"  formControlName="userName" class="longInput" placeholder="我是昵称" />
+				</div>
+				<div class="errorBox"><span [class.error]="personInfo.get('userName').invalid && personInfo.get('userName').touched">昵称不能为空</span></div>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">元气号</span>
+				<div class="rightBox">
+					<span class="yqh">{{userCode}}</span>
+				</div>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">头像</span>
+				<div class="rightBox mt8">
+					<img class="img"  src="{{imgUrl?imgUrl:'../../../assets/images/tx.png'}}" id="imgUrl" alt="" />
+					<p class="tipp mt8">支持png、jpg公司图片，大小不超过3MB，尺寸需要大于100*100.。</p>
+					<label class="updataBtn mt8" >
+						本地上传
+						<input class="file" (change)="uploadFile($event)" type="file" id="file" name="myfile" />
+						<input type="hidden" id="sendImg" [(ngModel)]="imgUrl" formControlName="imgUrl" />
+					</label>
+				</div>
+				<div class="errorBox" style="text-align: right;"><span [class.error]="personInfo.get('imgUrl').invalid && personInfo.get('imgUrl').touched">图片上传不成功</span></div>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">性别</span>
+				<div class="rightBox">
+					<div class="boy sameSex" (click)="sexFun('1')">
+						<b [class.on]="sexOn=='1'"></b>
+						<span>男</span>
+					</div>
+					<div class="girl sameSex ml24" (click)="sexFun('2')">
+						<b [class.on]="sexOn=='2'"></b>
+						<span>女</span>
+					</div>
+				</div>
+				<input type="hidden" [(ngModel)]="sex"  formControlName="sex" />
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">个性签名</span>
+				<div class="rightBox ">
+					<textarea [(ngModel)]="signature" formControlName="signature" class="sign" name="" id="" placeholder="我是个性签名"></textarea>
+				</div>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName"></span>
+				<div class="rightBox">
+					<button class="btn" (click)="postSend()">保存</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+

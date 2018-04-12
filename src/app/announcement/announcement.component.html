@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<section>
+	<div class="contentArea">
+		<div class="breadNav">
+			<a href="javascript:void(0)">首页</a>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<a href="javascript:void(0)">公告</a>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<a href="javascript:void(0)">{{title}}~</a>
+		</div>
+		<div class="announcementContent mt10">
+			<h1 class="title">{{title}}~</h1>
+			<div class="author">
+				<span>{{author}}</span>
+				<b></b>
+				<span>{{publish_time}}</span>
+			</div>
+			<div class="content mt8">
+				{{content}}
+				<!-- <img src="../../assets/images/announcement.jpg" alt="" /> -->
+			</div>
+		</div>
+	</div>
+	<div class="mt40">
+		<app-foot></app-foot>
+	</div>
+</section>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>

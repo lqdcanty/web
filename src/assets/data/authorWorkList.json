@@ -1,0 +1,53 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "pageNum":1,
+            "pageSize":3,
+            "total":6,
+            "list":[
+               {
+                    "bookId":1,
+                    "bookName":"言情小说1",
+                    "bookCover":"../../../assets/images/zu29.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "readPermission":"all",
+                    "bookStatus":"1",
+                    "bookCode":"B0000000001",
+                    "chapterName":"最新章节"
+                },
+                {
+                    "bookId":2,
+                    "bookName":"言情小说2",
+                    "bookCover":"../../../assets/images/zu30.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "readPermission":"all",
+                    "bookStatus":"1",
+                    "bookCode":"B0000000001",
+                    "chapterName":"最新章节"
+                },
+                {
+                    "bookId":3,
+                    "bookName":"言情小说3",
+                    "bookCover":"../../../assets/images/zu31.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "readPermission":"vip",
+                    "bookStatus":"1",
+                    "bookCode":"B0000000001",
+                    "chapterName":"最新章节"
+                },
+                {
+                    "bookId":4,
+                    "bookName":"言情小说4",
+                    "bookCover":"../../../assets/images/zu31.png",
+                    "updateTime":"2018-01-15 13:33:00",
+                    "readPermission":"vip",
+                    "bookStatus":"2",
+                    "bookCode":"B0000000001",
+                    "chapterName":"最新章节"
+                }
+            ]
+        }
+}
+

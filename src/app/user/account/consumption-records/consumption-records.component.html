@@ -1,0 +1,25 @@
+<div class="consumption plr20">
+	<table>
+		<tr>
+			<th class="bookName">作品名称</th>
+			<th>消费金额(元)</th>
+			<th>消费时间</th>
+		</tr>
+		<tbody>
+			<tr *ngFor="let history of historyList">
+				<td><a>{{history.bookName}}</a></td>
+				<td class="YQValue">{{history.money}}</td>
+				<td>{{history.time}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="mt24 mb24">
+		<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

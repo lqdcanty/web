@@ -1,0 +1,22 @@
+.yuanqiCon p{
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 26px;
+	padding-right: 100px;
+	text-indent: 2em;
+}
+.yuanqiBox h1{
+	font-size: 22px;
+	line-height: 30px;
+	border-bottom:1px solid #e5e5e5;
+}
+.yuanqiBox h1 a{
+	border-bottom: 3px solid rgb(11,195,147);
+	line-height: 26px;
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-bottom: -1px;
+}
+.yuanqiBox{
+	min-height: 600px;
+}

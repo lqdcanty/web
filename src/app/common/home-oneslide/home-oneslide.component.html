@@ -1,0 +1,19 @@
+<div id="index_tpic" alog-group="index_01_bigcover" data-zlog="100" class="clearfix">
+	<div id="index_tpic_big" >
+        <a *ngFor="let banner of homeSlide;let x=index" [class.on]="x==currentIndex" href="{{banner.bannerUrl}}" data-ack="100_0|100"><img alt="{{banner.bannerTitle}}" src="{{banner.bannerCover}}"></a>
+    </div>
+    <div id="index_tpic_tab">
+    	<a *ngFor="let banner of homeSlide;let i=index" [class.active]="i==currentIndex" href="{{banner.bannerUrl}}" data-ack="100_5|100">	
+    		<img alt="{{banner.bannerTitle}}" (mouseenter)="changeSlide(i)" (mouseleave)="changeSlideLeave(i)" src="{{banner.bannerCover}}"><!--  -->
+    	</a>
+    </div>
+    <div class="cl10"></div>
+    <div id="index_tpic_binfo"><!-- [class.on]="y==currentIndex" -->
+    	<div class="index_tpic_info" *ngFor="let banner of homeSlide;let y=index" >
+    		<div *ngIf="y==currentIndex">
+                <h3 class="tc"><a class="fb fs14" href="{{banner.bannerUrl}}" title="{{banner.bannerTitle}}" target="_blank" data-ack="100_10|100">{{banner.bannerTitle}}</a></h3>
+                <p class="info"><a href="{{banner.bannerUrl}}" target="_blank" data-ack="100_11|100">{{banner.bannerDes}}</a></p>      
+            </div>
+    	</div>
+    </div>
+</div>

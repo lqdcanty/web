@@ -1,0 +1,48 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":
+    {
+        "pageNum": 1,
+        "pageSize": 3,
+        "total": 6,
+        "list": [
+            {
+                "userId": 1,
+                "userName": "谷铃兰",
+                "imgUrl": "../../../assets/images/photo.png",
+                "time": "2017年09月05日",
+                "commentId": 1,
+                "content": "评论内容评论内容评论内容评论内容",
+                "likeNum": 345,
+                "likeFlag": false,
+                "comments": [
+                    {
+                        "userId": 1,
+                        "userName": "谷铃兰1",
+                        "imgUrl": "../../../assets/images/photo.png",
+                        "time": "2017年09月05日",
+                        "commentId": 1,
+                        "content": "评论内容222",
+                        "likeNum": 345,
+                        "likeFlag": false
+                    }
+                ]
+            },
+            {
+                "userId": 2,
+                "userName": "谷铃兰2",
+                "imgUrl": "../../../assets/images/photo.png",
+                "time": "2017年09月05日",
+                "commentId": 1,
+                "content": "评论内容333",
+                "likeNum": 345,
+                "likeFlag": true,
+                "comments": [
+                    
+                ]
+            }
+        ]
+    }
+}

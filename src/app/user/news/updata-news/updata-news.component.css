@@ -1,0 +1,63 @@
+.newsContent .icon{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url(../../../../assets/images/userUpdata.png) no-repeat center center/cover;
+}
+.newsContent li{
+	border-bottom: 1px solid #e5e5e5;
+}
+.newsContent li:hover{
+	border-color: rgb(11,195,147);
+}
+.newsContent li:hover .right .top a{
+	color: rgb(11,195,147);
+}
+.newsContent li .right{
+	width: 835px;
+}
+.newsContent li .right .top{
+	font-size: 0;
+}
+.newsContent li .right .top a{
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 16px;
+	color: rgb(68,68,68);
+	line-height: 24px;
+	width: 300px;
+	padding-right: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.newsContent li .right .top .updataBox{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+.newsContent li .right .top .updataCharpter,
+.newsContent li .right .top b{
+	display: inline-block;
+	vertical-align: middle;
+}
+.newsContent li .right .top b{
+	width: 4px;
+	height: 4px;
+	background:rgb(11,195,147);
+	margin-right: 5px;
+}
+.newsContent li .right .top .updataCharpter{
+	font-size: 12px;
+	line-height: 24px;
+}
+.newsContent li .right .top .updataTime{
+	font-size: 12px;
+	color: rgb(153,153,153);
+}
+.newsContent li .right .newsWord{
+	font-size: 14px;
+	line-height: 26px;
+	color: rgb(68,68,68);
+} 

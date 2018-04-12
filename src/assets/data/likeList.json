@@ -1,0 +1,45 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+     "data":{
+            "bookList":[
+               {
+                    "bookId":1,
+                    "bookName":"言情小说1",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "authorCode": "作者编号",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png"
+                },
+                {
+                    "bookId":1,
+                    "bookName":"言情小说2",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "authorCode": "作者编号",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png"
+                },
+                {
+                    "bookId":1,
+                    "bookName":"言情小说3",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "authorCode": "作者编号",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png"
+                },
+                {
+                    "bookId":1,
+                    "bookName":"言情小说4",
+                    "author":"作者",
+                    "authorCode":"abc",
+                    "authorCode": "作者编号",
+                    "bookClass":"玄幻仙侠",
+                    "bookCover":"../../../assets/images/zu30.png"
+                }
+            ]
+        }
+}

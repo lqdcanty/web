@@ -1,0 +1,69 @@
+<div class="user-nav">
+	<div class="top pt28">
+		<span class="photo" routerLink="./personInfo" [style.background-image]="'url('+ imgUrl +')'"></span>
+		<span class="userId mt20">元气号：{{userCode}}</span>
+	</div>
+	<div class="leftNav pt20 pb25">
+		<ul class="navUl">
+			<li class="bookstroe" routerLinkActive="on" routerLink="./bookStore">
+				<a href="javascript:void(0)" >
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>我的书架</span>
+				</a>
+			</li>
+			<li class="account" routerLinkActive="on" routerLink="./account">
+				<a href="javascript:void(0)">
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>我的账户</span>
+				</a>
+			</li>
+			<li class="subscribe" routerLinkActive="on" routerLink="./mySubscription">
+				<a href="javascript:void(0)">
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>我的订阅</span>
+				</a>
+			</li>
+			<li class="userComment" routerLinkActive="on" routerLink="./myBookreview">
+				<a href="javascript:void(0)">
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>我的书评</span>
+				</a>
+			</li>
+			<li class="security" routerLinkActive="on" routerLink="./security">
+				<a href="javascript:void(0)">
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>安全中心</span>
+				</a>
+			</li>
+			<li class="userMessage" routerLinkActive="on" routerLink="./news">
+				<a href="javascript:void(0)">
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>我的消息</span>
+				</a>
+			</li>
+			<li class="userAuthor" (click)="authorzoneJudge()">
+				<a href="javascript:void(0)">
+					<i class="icon"></i>
+					<i class="icon"></i>
+					<span>作家专区</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+<div *ngIf="authorzoneLayerBoolean">
+	<app-authorjudge (outerunauthor)="reviceunauthor($event)" [contentAuthor]="contentAuthorT"></app-authorjudge>
+</div>

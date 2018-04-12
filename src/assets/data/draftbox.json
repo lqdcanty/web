@@ -1,0 +1,29 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+        "list":[
+           {
+                "chapterId":1,
+                "chapterName":"第一章 涅槃归来1",
+                "time":"2018-01-16 17:27:32"
+            },
+            {
+                "chapterId":2,
+                "chapterName":"第一章 涅槃归来2",
+                "time":""
+            },
+            {
+                "chapterId":3,
+                "chapterName":"第一章 涅槃归来3",
+                "time":"2018-01-16 17:27:32"
+            },
+            {
+                "chapterId":4,
+                "chapterName":"第一章 涅槃归来4",
+                "time":"2018-01-16 17:27:32"
+            }
+        ]
+    }
+}

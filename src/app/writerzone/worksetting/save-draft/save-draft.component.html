@@ -1,0 +1,36 @@
+<div class="published mt24">
+	<div class="chapters" *ngIf="!modifyChapter">
+		<ul class="volumeList mt8 clearfix">
+			<li *ngFor="let draf of drafList">
+				<span class="chapter">{{draf.chapterName}}</span>
+				<a class="ml16" (click)="editorFunction(draf)">编辑</a>
+				<span class="timeBox ml16" *ngIf="draf.time">
+					<img src="../../../assets/images/time.png" alt="" />
+					<span class="time ml5">{{draf.time}}</span>
+				</span>
+			</li>
+			
+		</ul>
+<!-- 		<div class="page" id="page"></div> -->
+	</div>
+	<div *ngIf="modifyChapter">
+		<app-draft-chapter [chapterParam]="chapterParam" [btnShow]="btnShowBoolean" (outerDraftChapter)="reviceDraftChapter($event)"></app-draft-chapter>
+	</div>
+</div>
+<div class="modle-wrap" *ngIf="setTimeBoolean">
+	<div class="modle-container">
+		<div class="tipsLayer p16_24" >
+			<h1 class="clearfix">
+				<img class="close fr" (click)="closeBoolean()" src="../../../assets/images/close.png" alt="" />
+			</h1>
+			<p class="tips mt40">已设置定时发布，继续编辑将使定时发布失效的提示</p>
+			<p class="btnBox mt40">
+				<button (click)="closeBoolean()">取消</button>
+				<button class="ml32" (click)="modufyFunction()">继续</button>
+			</p>
+		</div>
+	</div>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

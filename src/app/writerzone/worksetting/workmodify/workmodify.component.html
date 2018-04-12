@@ -1,0 +1,134 @@
+<div class="unmodify clearfix mt24" *ngIf="modifiedBoolen">
+	<div class="contentLeft fl">
+		<div class="bookCover">
+			<img src="{{bookCover}}" alt="" />
+		</div>
+	</div>
+	<div class="contentRight fl ml50">
+		<div class="lineBox clearfix">
+			<span class="name fl">作品名称</span>
+			<div class="lineBoxRight fl">
+				<span class="valueText">{{bookName}}</span>
+			</div>
+		</div>
+		<div class="lineBox mt16 clearfix">
+			<span class="name fl">作品类型</span>
+			<div class="lineBoxRight fl">
+				<span class="valueText">{{bookCategory}}</span>
+				<span class="valueText">{{bookClass}}</span>
+			</div>
+		</div>
+		<div class="lineBox mt16 clearfix">
+			<span class="name fl">连载状态</span>
+			<div class="lineBoxRight fl">
+				<span class="valueText">连载中</span>
+			</div>
+		</div>
+		<div class="lineBox mt16 clearfix">
+			<span class="name fl">作品标签</span>
+			<div class="lineBoxRight fl">
+				<span class="valueText">{{bookMark}}</span>
+			</div>
+		</div>
+		<div class="lineBox mt16 clearfix">
+			<span class="name fl">作品简介</span>
+			<div class="lineBoxRight fl">
+				<span class="valueText on mt10">{{bookDes}}</span>
+			</div>
+		</div>
+		<div class="lineBox mt16 clearfix">
+			<span class="name fl">短简介</span>
+			<div class="lineBoxRight fl">
+				<span class="valueText on mt10">{{subheading}} </span>
+			</div>
+		</div>
+		<div class="lineBox mt40 mb32 clearfix">
+			<span class="name fl"></span>
+			<div class="lineBoxRight fl">
+				<button class="submit" (click)="modify()">修改</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modified clearfix mt24" *ngIf="!modifiedBoolen">
+	<form [formGroup]="modifyWorkForm">
+		<div class="contentLeft fl">
+			<div class="bookCover">
+				<img id="bookCover" src="{{bookCover}}" alt="" />
+			</div>
+			<label class="updataBtn mt24" >
+				上传封面
+				<input class="file" type="file" id="file" name="myfile" (change)="uploadFile($event)" />
+        		<input type="hidden" [(ngModel)]="bookCover" formControlName="bookCover" />
+			</label>
+			<p class="mt8">尺寸比例为180*254,请按照比例上传图片避免影响美观</p>
+			<div class="errorBox" style="text-align: right;"><span [class.error]="modifyWorkForm.get('bookCover').invalid && modifyWorkForm.get('bookCover').touched">图片上传不成功</span></div>
+		</div>
+		<div class="contentRight fl ml50">
+			<div class="lineBox clearfix">
+				<span class="name fl">作品名称</span>
+				<div class="lineBoxRight fl">
+					<input class="long" [(ngModel)]="bookName"  formControlName="bookName" type="text" readonly placeholder="请输入作品名称" />
+				</div>
+			</div>
+			<div class="lineBox mt16 clearfix">
+				<span class="name fl">作品类型</span>
+				<div class="lineBoxRight fl"><!-- [(ngModle)]="bookCategory" -->
+					<select (change)="bookCategoryChange()"  class="select fl" id="bookCategory" [(ngModel)]="changeafter" formControlName="bookCategory" style="width: 200px;">
+						<option value="M">男频</option> 
+						<option value="F">女频</option>
+						<!-- (click)="bookClassClick()" -->
+					</select><!-- [(ngModle)]="bookClass" -->
+					<select id="bookClassName" [(ngModel)]="bookClass"  formControlName="bookClass" class="select fl ml24" style="width: 230px;">
+						<option *ngFor="let class of classes" value="{{class.bookClassName}}" id="{{class.bookClass}}">{{class.bookClassName}}</option>
+					</select>
+					<div class="errorBox fl"><span [class.error]="modifyWorkForm.get('bookCategory').invalid && modifyWorkForm.get('bookCategory').touched||modifyWorkForm.get('bookClass').invalid && modifyWorkForm.get('bookClass').touched">请选择类型</span></div>
+				</div>
+			</div>
+			<div class="lineBox mt16 clearfix">
+				<span class="name fl">连载状态</span>
+				<div class="lineBoxRight fl">
+					<span class="value">连载中</span>
+				</div>
+			</div>
+			<div class="lineBox mt16 clearfix">
+				<span class="name fl">作品标签</span>
+				<div class="lineBoxRight fl clearfix">
+					<input type="text" class="long fl" [(ngModel)]="bookMark" (click)="labelClick()" id="labelMore" formControlName="bookMark" placeholder="请选择标签" />
+					<ul id="labelId" class="labelUl" (mouseout)="mouseoutF()" (mouseover)="mouseoverF()">
+						<li *ngFor="let label of labelList"><b><input type="checkbox" value="{{label}}"  /></b> <span>{{label}}</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="lineBox mt16 clearfix">
+				<span class="name fl">作品简介</span>
+				<div class="lineBoxRight fl">
+					<div class="lineBoxRight fl">
+						<textarea [(ngModel)]="bookDes" formControlName="bookDes" class="textarea" name="" id=""></textarea>
+					</div>
+					<div class="errorBox fl"><span [class.error]="modifyWorkForm.get('bookDes').invalid && modifyWorkForm.get('bookDes').touched">简介为15-300个字符</span></div>
+				</div>
+			</div>
+			<div class="lineBox mt16 clearfix">
+				<span class="name fl">短简介</span>
+				<div class="lineBoxRight fl">
+					<input [(ngModel)]="subheading" formControlName="subheading" class="long fl" type="text" placeholder="可用于第三方销售，请限制在15字以内。" />
+				</div>
+				<div class="errorBox fl"><span [class.error]="modifyWorkForm.get('subheading').invalid && modifyWorkForm.get('subheading').touched">短简介为4-15个字符</span></div>
+				</div>
+			<div class="lineBox mt40 mb32 clearfix">
+				<span class="name fl"></span>
+				<div class="lineBoxRight fl">
+					<button class="cancel" (click)="cancel()">取消</button>
+					<button class="submit ml32" (click)="submitModify()">提交</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>

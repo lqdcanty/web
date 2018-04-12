@@ -1,0 +1,38 @@
+<div class="rankList fl">
+	<h1 class="title">{{ranklistName}}</h1>
+	<ul>
+        <li class="bookList" [class.green]="i<3?true:false" [class.on]="currindex==i" *ngFor="let ranklist of ranklists;let i=index" (mouseenter)="mouseenterON(i)">
+            <a href="javascript:void(0)" target="_blank" class="line-a" [routerLink]="['/bookDetail',ranklist.bookId]">
+                <div class="l-view">
+                    <span class="Index no_1">{{i+1}}</span>
+                    <span class="bookName">{{ranklist.bookName}}</span>
+                </div>
+            </a>
+            <div class="b-view clearfix">
+                <a [routerLink]="['/bookDetail',ranklist.bookId]" class="bookCover fl" [ngStyle]="{'backgroundImage':'url('+ranklist.bookCover+')'}" >
+	                <div class="bookIndex">
+	                	0{{i+1}}
+	                </div>
+                </a>
+                <a target="_blank" class="bookDetailBox fl">
+                    <h1 class="mb15"><a [routerLink]="['/bookDetail',ranklist.bookId]">{{ranklist.bookName}}</a></h1>
+                    <p class="textAuthor">
+                    	<i class="icon"></i>
+                    	<span class="author"><a [routerLink]="['/author',ranklist.authorCode]" >{{ranklist.author}}</a></span>
+                    </p>
+                    <p class="type mt10">
+                    	<span>{{ranklist.bookMark}}</span>
+                    	<!-- <b></b>
+                      <span>{{ranklist.bookType[1]}}</span> -->
+                    </p>
+                </a>
+            </div>
+        </li>    
+    </ul>
+    <div class="bookListMore">
+    	<b>
+    		<span class="more" [routerLink]="['/rank/moreBooklist']" [queryParams]="{rankingId:ranklistId,rankingName:ranklistName}">更多</span>
+    		<span class="icon"></span>
+    	</b>
+    </div>
+</div>

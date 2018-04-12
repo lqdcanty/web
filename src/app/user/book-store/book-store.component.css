@@ -1,0 +1,92 @@
+/* .bookStore{
+	border: 1px solid #e5e5e5;
+} */
+.bookStore .bookStoreNav{
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	border-bottom: 0;
+	font-size: 0;
+	height: 50px;
+}
+.bookStore .bookStoreNav a{
+	display: inline-block;
+	font-size: 22px;
+	line-height: 47px;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+	padding:0 5px;
+}
+.bookStore .bookStoreNav a+a{
+	margin-left: 30px;
+}
+.bookStore .bookStoreNav a.on{
+	border-bottom: 3px solid rgb(11,195,147);
+}
+.recommend{
+	border-bottom: 1px solid #e5e5e5;
+}
+.recommend .recommendList li{
+	width: 134px;
+}
+.recommend .recommendList li a{
+	display: block;
+	width: 134px;
+}
+.recommend .recommendList li a:hover .bookCover .coverTop{
+	display: block;
+}
+.recommend .recommendList li+li{
+	margin-left: 50px;
+}
+.recommend .recommendList li a:hover .bookName{
+	color: rgb(11,195,147);
+}
+.recommend .recommendList li .bookCover{
+	width: 134px;
+	height: 188px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.2);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+.recommend .recommendList li .bookCover .coverTop{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 134px;
+	height: 188px;
+	background:rgba(0,0,0,0.4);
+	display:block;
+	text-align:center;
+	display: none;
+}
+.recommend .recommendList li .bookCover .coverTop span{
+	display:inline-block;
+    vertical-align: middle;
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 10px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+.recommend .recommendList li .bookName{
+	font-size: 16px;
+	display: block;
+	color: rgb(68,68,68);
+	line-height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.recommend .collect{
+	width: 108px;
+	height: 36px;
+	color: rgb(11,195,147);
+	border: 1px solid rgb(11,195,147);
+	outline: none;
+	background: #fff;
+}
+

@@ -1,0 +1,48 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":
+    {
+        "top3": [
+        {
+            "userId": 1,
+            "icon": "../../../assets/images/photo.png"
+        },
+        {
+            "userId": 1,
+            "icon": "../../../assets/images/photo.png"
+        },
+        {
+            "userId": 1,
+            "icon": "../../../assets/images/photo.png"
+        }],
+        "list": [
+            {
+                "nickName": "毛毛虫1",
+                "yuanqi": "800",
+                "time": "2018-01-17 14:53:13"
+            },
+            {
+                "nickName": "毛毛虫2",
+                "yuanqi": "8434",
+                "time": "2018-01-17 14:53:13"
+            },
+            {
+                "nickName": "毛毛虫3",
+                "yuanqi": "5888",
+                "time": "2018-01-17 14:53:13"
+            },
+            {
+                "nickName": "毛毛虫4",
+                "yuanqi": "4564",
+                "time": "2018-01-17 14:53:13"
+            },
+            {
+                "nickName": "毛毛虫5",
+                "yuanqi": "888",
+                "time": "2018-01-17 14:53:13"
+            }
+        ]
+    }
+}

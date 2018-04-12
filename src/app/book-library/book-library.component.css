@@ -1,0 +1,400 @@
+.leftContent{
+	width: 880px;
+}
+.leftContent .allType{
+	width: 100%;
+	border: 1px solid #e5e5e5; 
+}
+.leftContent .allType .allTypeNav{
+	border-bottom: 1px solid #e5e5e5; 
+	font-size: 0;
+}
+.leftContent .allType .allTypeNav a{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height:22px;
+	padding: 8px 10px;
+	color: rgb(68,68,68); 
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+}
+.leftContent .allType .allTypeNav a+a{
+	margin-left: 15px;
+}
+.leftContent .allType .allTypeNav a.on{
+	color: rgb(11,195,147);
+	margin-bottom: -1px;
+	border-bottom: 3px solid rgb(11,195,147);
+}
+/* .leftContent .allType .allTypeNav a:hover{
+	color: rgb(11,195,147);
+} */
+.leftContent .allType .classAll{
+	padding-top: 28px;
+	padding-bottom: 10px;
+}
+.leftContent .allType .classAll li{
+	font-size:0;
+}
+.leftContent .allType .classAll li a,
+.leftContent .allType .classAll li b{
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: normal;
+	font-size: 14px;
+	color:rgb(68,68,68);
+	line-height: 28px;
+}
+.leftContent .allType .classAll li .labelDiv{
+	width: 730px;
+}
+.leftContent .allType .classAll li .labelHide{
+	height: 30px;
+	overflow:hidden;
+	width: 100%;
+}
+.leftContent .allType .classAll li .labelHide.show{
+	height: auto!important;
+	overflow-y: visible;
+}
+.leftContent .allType .classAll li .labelDiv .labelMore{
+	color: rgb(11,195,147);
+	font-size: 14px;
+	line-height: 20px;
+	display: block;
+	text-align: right;
+	cursor:pointer;
+}
+.leftContent .allType .classAll li .labelDiv .labelMore.on{
+	display: none;
+}
+.leftContent .allType .classAll li b{
+	width: 96px;
+}
+.leftContent .allType .classAll li a{
+	padding: 0 8px;
+}
+.leftContent .allType .classAll li a+a{
+	margin-left: 10px;
+}
+.leftContent .allType .classAll li+li{
+	margin-top: 20px;
+}
+.leftContent .allType .classAll li a:hover{
+	color:rgb(11,195,147); 
+}
+.leftContent .allType .classAll li a.on{
+	background:rgb(11,195,147);
+	color: #fff;
+}
+.allBookList{
+	border: 1px solid #e5e5e5;
+	padding: 0 20px;
+}
+.leftContent .allBookList li{
+	width: 419px;
+	height: 239px; 
+	float: left;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 24px 0;
+}
+.leftContent .allBookList li .leftImg{
+	width: 134px;
+	height: 188px;
+}
+.leftContent .allBookList li:hover .leftImg a{
+	box-shadow: 3px 3px 3px rgba(11,195,147,0.2);
+}
+.leftContent .allBookList li .leftImg a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-size: cover;
+	position: relative;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+.leftContent .allBookList li .rightContent1{
+	width: 249px;
+}
+.leftContent .allBookList li .rightContent1 .title{
+	width: 100%;
+	line-height: 22px;
+	font-size: 0px;
+	font-weight: 900;
+}
+.leftContent .allBookList li .rightContent1 .title a{
+	display: inline-block;
+	line-height: 22px;
+	font-size: 18px;
+	color: rgb(68,68,68);
+}
+/* .leftContent .allBookList li:hover .rightContent1 .title a{
+	color: rgb(11,195,147);
+} */
+ .leftContent .allBookList li .rightContent1 .title a:hover{
+	color: rgb(11,195,147);
+} 
+.leftContent .allBookList li .rightContent1 .authorWord{
+	font-size: 0;
+}
+.leftContent .allBookList li .rightContent1 .authorWord i,
+.leftContent .allBookList li .rightContent1 .authorWord b,
+.leftContent .allBookList li .rightContent1 .authorWord span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.leftContent .allBookList li .rightContent1 .authorWord .icon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../assets/images/icon_user.png) no-repeat center center/cover;
+}
+.leftContent .allBookList li .rightContent1 .authorWord span{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	display: inline-block;
+	margin-left: 8px;
+}
+.leftContent .allBookList li .rightContent1 .authorWord span a{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	display: inline-block;
+}
+.leftContent .allBookList li .rightContent1 .authorWord span a:hover{
+	color: rgb(11,195,147);
+}
+.leftContent .allBookList li .rightContent1 .dict{
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background:rgb( 129,129,129);
+	margin:0 5px; 
+}
+
+.leftContent .allBookList li .rightContent1 .descript{
+	font-size: 16px;
+	line-height: 28px;
+	color: rgb(102,102,102);
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+.leftContent .allBookList li .rightContent1 .wordAndTime span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 16px;
+}
+
+
+.rankList{
+	width: 280px;
+	height: 630px;
+}
+.rankList .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 60px;
+	height: 60px;
+	font-size: 22px;
+	font-weight: 900;
+}
+.rankList ul{
+	margin-top: 18px;
+	height: 540px;
+	overflow:hidden;
+}
+.rankList .bookList{cursor: pointer}
+.rankList .bookList.green .l-view .Index{
+	background:rgb(11,195,147);
+	color: #fff;
+}
+.rankList .bookList .l-view .Index{
+	background:rgb(196,196,196);
+	color: #fff;
+	font-size: 12px;
+}
+.rankList .bookList .l-view .Index{
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.rankList .bookList .line-a{
+	height: 26px;
+	display: block;
+	color: rgb(68,68,68);
+	font-size: 0;
+}
+.rankList .bookList .line-a .l-view{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height: 26px;
+}
+.rankList .bookList .line-a .l-view .bookName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 26px;
+	width: 233px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rankList .bookList .b-view{
+	width: 100%;
+	position: relative;
+}
+.rankList .bookList .b-view .bookCover{
+	display: block;
+	width: 134px;
+	height: 188px;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-size: cover;
+	position: relative;
+}
+.rankList .bookList .b-view .bookCover .bookIndex{
+	position: absolute;
+	width: 36px;
+	height: 30px;
+	color: #fff;
+	line-height: 24px;
+	left: 0;
+	top: -3px;
+	font-size: 12px;
+	padding-left: 8px;
+}
+.rankList .bookList.green .b-view .bookCover .bookIndex{
+	background: url(../../assets/images/tag1.png) no-repeat center center/cover;
+}
+.rankList .bookList .b-view .bookCover .bookIndex{
+	background: url(../../assets/images/tag2.png) no-repeat center center/cover;
+}
+.rankList .bookList .b-view .bookDetailBox{
+	display: block;
+	width: 116px;
+	margin-left: 14px;
+}
+.rankList .bookList .b-view .bookDetailBox h1{
+	border: none;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 900;
+}
+.rankList .bookList .b-view .bookDetailBox h1 a{
+	color:rgb(68,68,68);
+	display: inline-block;
+	max-width: 116px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rankList .bookList .b-view:hover .bookDetailBox h1 a{
+	color:rgb(11,195,147); 
+}
+
+.rightContent .rankList .bookList .b-view .bookDetailBox p{
+	font-size: 0;
+}
+.rightContent .rankList ul li{
+	margin-bottom: 12px;
+}
+.rightContent .rankList .bookList .b-view .bookDetailBox p .icon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../assets/images/icon_user.png) no-repeat center center/cover;
+}
+.rightContent .rankList .bookList.on .b-view{
+	display: block;
+}
+.rightContent .rankList .bookList.on .line-a{
+	display: none;
+}
+.rightContent .rankList .bookList .b-view .bookDetailBox p .author{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: middle;
+	max-width: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rightContent .rankList .bookList .b-view .bookDetailBox p .author a{
+	color: rgb( 129,129,129);
+}
+.rightContent .rankList .bookList .b-view .bookDetailBox p .author:hover a{
+	color: rgb(11,195,147);
+}
+.rightContent .rankList .bookList .b-view .bookDetailBox .type span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+}
+.rightContent .rankList .bookList .b-view .bookDetailBox .type b{
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background:rgb( 129,129,129); 
+	margin:0 5px;
+}
+.b-view{
+	display: none;
+}
+.rightContent .rankList .bookListMore{
+	font-size: 0px;
+	line-height: 22px;
+	text-align: right;
+}
+.rightContent .rankList .bookListMore b{
+	font-weight: 100;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+}
+.rightContent .rankList .bookListMore span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.rightContent .rankList .bookListMore .more{
+	color: rgb(192,192,192);
+}
+.rightContent .rankList .bookListMore .icon{
+	width:6px;
+	height: 12px;
+	margin-left: 10px;
+	background: url(../../assets/images/arrow_nh.png) no-repeat center center/cover;
+}
+.rightContent .rankList .bookListMore b:hover .more{
+	color: rgb(11,195,147);
+}
+.rightContent .rankList .bookListMore b:hover .icon{
+	background: url(../../assets/images/arrow_py.png) no-repeat center center/cover;
+}
+
+
+

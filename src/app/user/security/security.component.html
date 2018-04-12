@@ -1,0 +1,25 @@
+<div class="secrity plr20">
+	<div class="bindingWX ptb40" *ngIf="phoneBind">
+		<h3 class="tipsH3">账号存在安全隐患</h3>
+		<h1 class="mt40">建议进行以下操作</h1>
+		<div class="content clearfix" >
+			<img class="icon" src="../../../assets/images/wei.png" alt="" />
+			<p>未绑定手机：重要操作时进行身份验证，可接收异常通知</p>
+			<button class="fr" routerLink="/phonebind">立即绑定</button>
+		</div>
+	</div>
+	<div class="changePassword ptb40" *ngIf="!phoneBind">
+		<h1>修改密码</h1>
+		<div class="content clearfix">
+			<img class="icon" src="../../../assets/images/changepassword.png" alt="" />
+			<p>定期修改您的密码，可确保您的账号始终处于安全状态。</p>
+			<button class="fr" routerLink="../rechangePassword">立即修改</button>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

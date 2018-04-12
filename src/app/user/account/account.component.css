@@ -1,0 +1,73 @@
+.account{
+	width: 920px;
+}
+.account .myYQ{
+	border: 1px solid #e5e5e5;
+}
+.account .myYQ .title{
+	line-height: 50px;
+	height: 50px;
+	font-size: 22px;
+	color: rgb(68,68,68);
+	font-weight: bold;
+	border-bottom: 1px solid #e5e5e5;
+}
+.account .YQBox .left{
+	width: 500px;
+}
+.account .YQBox .left h1{
+	line-height: 20px;
+	font-size: 16px;
+	color: rgb(68,68,68);
+}
+.account .YQBox .left b{
+	font-size: 48px;
+	color: rgb(68,68,68);
+	line-height: 52px;
+	display: block;
+}
+.account .YQBox .left p{
+	font-size: 14px;
+	color: rgb(153,153,153);
+	line-height: 18px;
+	display: block;
+}
+.account .YQBox .right button{
+	display: block;
+	width: 108px;
+	height: 36px;
+	background:rgb(11,195,147);
+	color: #fff;
+	font-size: 14px;
+	border: 0;
+	outline: none;
+} 
+.account .YQBox .right button:active{
+	background:rgba(11,195,147,0.8);
+}
+.mt50{
+	margin-top: 50px;
+}
+.accountBox {
+	border: 1px solid #e5e5e5;
+}
+.accountBox .accountNav{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 0;
+	height: 50px;
+}
+.accountBox .accountNav a{
+	display: inline-block;
+	font-size: 22px;
+	line-height: 47px;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+	padding:0 5px;
+}
+.accountBox .accountNav a+a{
+	margin-left: 30px;
+}
+.accountBox .accountNav a.on{
+	border-bottom: 3px solid rgb(11,195,147);
+}

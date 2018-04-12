@@ -1,0 +1,107 @@
+.header{
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid rgb(242,242,242);
+}
+.contentArea{
+	width: 1200px;
+	margin:0 auto;
+}
+.header .logo,.header span{
+	float: left;
+}
+.header .logo{
+	width: 192px;
+	height: 38px;
+	margin-top: 16px;
+}
+.header .logo img{
+	width: 100%;
+	height: 100%;
+}
+.header span{
+	font-size: 22px;
+	color: rgb(68,68,68);
+	line-height: 30px;
+	border-left: 1px solid rgb(230,230,230);
+	padding: 0 18px;
+	margin-top: 25px;
+}
+
+.loginAndRegister{
+	height: 44px;
+	color: rgb(68,68,68);
+	position: relative;
+	font-size: 0;
+}
+.loginAndRegister a{
+	line-height: 36px;
+	color: rgb(68,68,68);
+	font-size: 16px;
+	margin:0 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+/*.loginAndRegister span{
+	color: rgba(153,153,153，0.5);
+	font-size: 16px;
+	line-height: 36px;
+}*/
+.loginAndRegister a:hover{
+	color:rgb(11,195,147);
+}
+.loginAndRegister span{
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+	width: 1px;
+	background: rgb(229,229,229);
+}
+.loginAndRegister a.newsNuber{
+	font-size: 16px;
+	color: rgb(68,68,68);
+}
+.loginAndRegister a.userName{
+	margin-right: 60px;
+}
+.loginAndRegister a.userImage{
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	right: 0;
+	top: -5px;
+	margin:0;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: rgb(11,195,147);
+}
+.header .homeAndCenter{
+	font-size: 18px;
+	color: rgb(68,68,68);
+}
+.header .homeAndCenter a{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+.header .homeAndCenter a:hover{
+	color: rgb(11,195,147);
+}
+.back{
+	position: absolute;
+    width: 68px;
+    height: 28px;
+    background-color: #e5e5e5;
+    color: rgb(68,68,68);
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    right: 0;
+    -webkit-box-shadow: 0 0 3px rgba(153,153,153,0.3);
+    box-shadow: 0 0 3px rgba(153,153,153,0.3);
+    top: 40px;
+    z-index: 10;
+    cursor: pointer;
+}

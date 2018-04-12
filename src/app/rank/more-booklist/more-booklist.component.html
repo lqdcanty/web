@@ -1,0 +1,44 @@
+<div class="bookListBox" >
+	<h1 class="typeTitle">{{rankingName}}</h1>
+	<div class="bookDescribe clearfix ptb24" [class.green]='i<3'  *ngFor="let rank of moreRank let i=index">
+		<div class="bookLeftCover fl">
+			<a [ngStyle]="{'backgroundImage':'url('+rank.bookCover+')'}" [routerLink]="['/bookDetail',rank.bookId]">
+				<div class="rankIndex"><span>0{{i+1}}</span></div>
+			</a>
+		</div>
+		<div class="bookCenterDetail pl15 fl">
+			<h1 class="bookTitle mb10"><a [routerLink]="['/bookDetail',rank.bookId]">{{rank.bookName}}</a></h1>
+			<div class="bookMessage mb16">
+				<i class="icon"></i>
+				<span class="author" [routerLink]="['/author',rank.authorCode]">{{rank.author}}</span>
+				<b class="dict"></b>
+				<span>{{rank.bookMark}}</span>
+				<b class="dict"></b>
+				<span>{{rank.bookStatus=="1"?"连载中":"已完结"}}</span>
+			</div>
+			<div class="bookIntroduction">
+				{{rank.introduction}}
+			</div>
+			<div class="wordAndTime mt10">
+				<span>{{rank.wordNum}}字</span>
+				<b class="dict"></b>
+				<span>{{rank.updateTime}}更新</span>
+			</div>
+		</div>
+		<div class="bookRightButton fr">
+			<button class="on" [routerLink]="['/bookDetail',rank.bookId]">作品详情</button>
+			<button [class.on1]="rank.concernFlag==='1'" (click)="addbookLibray(rank)">{{rank.concernFlag==="1"?"已在书架":"加入书架"}}</button>
+		</div>
+	</div>
+</div>
+<div class="mt24 mb24">
+	<app-page [pageParams]="{pageSize:pageSize,totalNum:totalNum,curPage:curPage,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)"></app-login>
+</div>
+
+

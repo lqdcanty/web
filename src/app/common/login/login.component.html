@@ -1,0 +1,49 @@
+<div class="modle-wrap">
+	<div class="modle-container">
+		<div class="loginLayer">
+			<img class="close" (click)="loginClose()" src="../../../assets/images/close.png" alt="" />
+			<div class="title mt8">
+				<a>账户登录</a>
+			</div>
+			<div class="accountLogin mt10">
+				<form action="post" [formGroup]="loginForm" (ngSubmit)="postDate()">
+					<div class="inputLine">
+						<i class="iconUser"></i>
+						<input  type="text" formControlName="phone" (blur)="phoneBlur()" maxlength="11" placeholder="手机号" />
+						<div  [class.error]="loginForm.get('phone').invalid && loginForm.get('phone').touched">
+				        
+				    	</div>
+					</div>
+					<div class="errorBox fl"><span class="timeTrue" id="timeTrue"></span><span [class.errorl]="loginForm.get('phone').invalid && loginForm.get('phone').touched">请输入正确的手机号</span></div>
+					<div class="inputLine mt20">
+						<i class="iconPassword"></i>
+						<input type="password" maxlength="21" formControlName="pwd" placeholder="密码" />
+					</div>
+					<div class="errorBox fl"><span class="timeTrue" id="timeTrue"></span><span [class.errorl]="loginForm.get('pwd').invalid && loginForm.get('pwd').touched">密码长度在6-20数字与字母组成</span></div>
+					<div class="line clearfix mt10">
+						<div class="left fl" (click)="rememberPassword()" [class.on]="rememberPasswordBoolean">
+							<b>
+								<img src="../../../assets/images/gou.png" alt="" />
+							</b>
+							<span class="autoLogin ml5">自动登录</span>
+						</div>
+						<a class="fr forgetPassword" [routerLink]="['/forgetpassword']">忘记密码</a>
+					</div>
+					
+					<button class="loginBtn mt24" >登录</button>
+					<p class="freeRegister mt10" [routerLink]="['/register']"><a>免费注册</a></p>
+				</form>
+				<div class="sanLogin">
+					<h1>或</h1>
+					<div class="tudiao">
+						<a class="qq" (click)="QQ()"></a>
+						<a class="weixin" (click)="weixin()"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>

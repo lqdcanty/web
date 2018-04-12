@@ -1,0 +1,30 @@
+<div class="header">
+	<div class="contentArea clearfix">
+		<div class="fl">
+			<a href="javascript:void(0)" class="logo mr16">
+				<img src="../../../assets/images/logo.png" alt="" />
+			</a>
+			<span class="homeAndCenter">
+				<a routerLink="/home">首页</a>
+				<a class="ml32" routerLink="/user">会员中心</a>
+			</span>
+		</div>
+		<div class="loginAndRegister mt18 b-v-m fr" *ngIf="!loginSuccess">
+			<a class="login" (click)="login()">登录</a>|<a class="register" routerLink="/register">注册</a>
+		</div>
+		<div class="loginAndRegister mt18 b-v-m fr" *ngIf="loginSuccess" (mouseleave)="imgMouserOut()">
+			<a href="javascript:void(0)" class="newsNuber" routerLink="/user/news">消息({{meassageCount}})</a>
+				<!-- <span></span> -->
+			<a href="javascript:void(0)" class="userName" routerLink="/user">{{userInfo.userName}}</a>
+			<a href="javascript:void(0)" class="userImage" routerLink="/user" [ngStyle]="{'backgroundImage':'url('+userInfo.imgUrl+')'}" (mouseenter)="imgMouser()"></a>
+			<div class="back" *ngIf="cancelBoolean" (mouseenter)="imgMouser()" (mouseleave)="imgMouserOut()" (click)="backFunction()">退出</div>
+		</div>
+	</div>		
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+

@@ -1,0 +1,73 @@
+<div class="modle-wrap">
+	<div class="modle-container">
+		<div class="exceptionalLayer">
+			<h1>打赏 <img class="fr" (click)="sendToParent()" src="../../assets/images/close.png" alt="" /></h1>
+			<ul class="clearfix mt40 exceptionalType" id="exceptionalType">
+				<li (click)="vlaueFunction(18,188)" [class.on]="18==productId">
+					<a class="pd12">
+						<div class="img">
+							<img src="../../assets/images/188.png" alt="" />
+						</div>
+						<p>188元气</p>
+					</a>
+					<input type="hidden" value="18" data-type="188" />
+				</li>
+				<li (click)="vlaueFunction(19,588)" [class.on]="19==productId">
+					<a class="pd12">
+						<div class="img">
+							<img src="../../assets/images/588.png" alt="" />
+						</div>
+						<p>588元气</p>
+					</a>
+					<input type="hidden" value="19" data-type="588" />
+				</li>
+				<li (click)="vlaueFunction(20,888)" [class.on]="20==productId">
+					<a class="pd12">
+						<div class="img">
+							<img src="../../assets/images/888.png" alt="" />
+						</div>
+						<p>888元气</p>
+					</a>
+					<input type="hidden" value="20" data-type="888" />
+				</li>
+				<li (click)="vlaueFunction(21,1288)" [class.on]="21==productId">
+					<a class="pd12">
+						<div class="img">
+							<img src="../../assets/images/1288.png" alt="" />
+						</div>
+						<p>1288元气</p>
+					</a>
+					<input type="hidden" value="21" data-type="1288" />
+				</li>
+				<li (click)="vlaueFunction(22,5888)" [class.on]="22==productId">
+					<a class="pd12">
+						<div class="img">
+							<img src="../../assets/images/5888.png" alt="" />
+						</div>
+						<p>5888元气</p>
+					</a>
+					<input type="hidden" value="22" data-type="5888" />
+				</li>
+				<li (click)="vlaueFunction(23,8888)" [class.on]="23==productId">
+					<a class="pd12">
+						<div class="img">
+							<img src="../../assets/images/8888.png" alt="" />
+						</div>
+						<p>8888元气</p>
+					</a>
+					<input type="hidden" value="23" data-type="8888" />
+				</li>
+			</ul>
+			<p class="all">价值<b id="dsyq">0</b>元气</p>
+			<input type="hidden"  value="{{bookIdChild}}" id="bookIdChild" />
+			<p class="button mt16 pb16"><button class="btn" (click)="exceptionalBtn()">打赏</button></p>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

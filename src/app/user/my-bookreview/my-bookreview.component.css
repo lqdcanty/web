@@ -1,0 +1,71 @@
+.bookreview{
+	border: 1px solid #e5e5e5;
+}
+.bookreview .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	height: 50px;
+	font-size: 22px;
+	color: rgb(68,68,68);
+	line-height: 50px;
+}
+.bookreview .workTitle{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	padding-top: 5px;
+}
+.bookreview .workTitle li{
+	float: left;
+	line-height: 36px;
+	font-size: 16px;
+	color: rgb(153,153,153);
+	padding-right: 10px;
+}
+.bookreview .workTitle li:nth-child(1){
+	width: 240px;
+}
+.bookreview .workTitle li:nth-child(2){
+	width: 240px;
+}
+.bookreview .workTitle li:nth-child(3){
+	width: 200px;
+}
+.bookreview .workTitle li:nth-child(4){
+	width: 198px;
+}
+.bookreview .content .workContent li{
+	border-bottom: 1px solid #e5e5e5;
+}
+.bookreview .content .workContent li:hover{
+	border-color: rgb(11,195,147);
+}
+.bookreview .content .workContent li div{
+	float: left;
+	padding-right: 16px;
+	padding: 16px 0;
+}
+.bookreview .content .workContent li .bookName{
+	font-size:16px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	width: 240px; 
+}
+.bookreview .content .workContent li .comment{
+	font-size:14px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	width: 240px; 
+	padding-right:32px;
+}
+.bookreview .content .workContent li .authorContent{
+	font-size:14px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	width: 200px; 
+}
+.bookreview .content .workContent li .updataTime{
+	font-size:14px;
+	color: rgb(153,153,153);
+	line-height: 22px;
+	width: 198px; 
+}

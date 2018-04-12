@@ -1,0 +1,73 @@
+<div class="mystore">
+	<div class="recommend plr20 clearfix">
+		<div class="leftRecommend fl pd30 pt24">
+			<ul class="recommendList clearfix">
+				<li class="fl" *ngFor="let book of recommendList">
+					<a>
+						<div class="bookCover" [ngStyle]="{'backgroundImage':'url('+book.bookCover+')'}">
+							<div class="coverTop">
+								<span (click)="addStore(book.bookId)">加入书架</span>
+							</div>
+						</div>
+						<span class="bookName mt8">{{book.bookName}}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<button class="fr collect mt120" (click)="collect(recommendList)">一键收藏</button>
+	</div>
+	<div class="plr24">
+		<div class="bookDescribe ptb24 clearfix" *ngFor="let book of myBookStore">
+			<div class="select selectBook fl mr24" (click)="selectBook(book.bookId)">
+				<input type="hidden"  value="{{book.bookId}}" />
+				<b></b>
+			</div>
+			<div class="bookLeftCover fl" >
+				<a [ngStyle]="{'backgroundImage':'url('+book.bookCover+')'}" [routerLink]="['/bookDetail',book.bookId]"></a>
+			</div>
+			<div class="bookCenterDetail pl15 fl">
+				<h1 class="bookTitle mb10"><a [routerLink]="['/bookDetail',book.bookId]">{{book.bookName}}</a></h1>
+				<div class="bookMessage mb16">
+					<i class="icon"></i>
+					<span class="author" [routerLink]="['/author',book.authorCode]">{{book.author}}</span>
+					<b class="dict"></b>
+					<span>{{book.bookMark}}</span>
+					<b class="dict"></b>
+					<span>{{book.bookStatus=='1'?'连载中':'已完结'}}</span>
+				</div>
+				<div class="bookIntroduction">
+					{{book.introduction}}
+				</div>
+				<div class="wordAndTime mt10">
+					<span>{{book.wordNum}}字</span>
+					<b class="dict"></b>
+					<span>{{book.updateTime}}</span>
+				</div>
+			</div>
+			<div class="bookRightButton fr mr24">
+				<button class="on" [routerLink]="['/bookContent',book.bookId+'_-1']">继续阅读</button>
+				<div class="zAnds mt20">
+					<a (click)="toTop(book.bookId)">置顶</a>
+					<a (click)="delete(book.bookId)">删除</a>
+				</div>
+			</div>
+		</div>
+		<div class="mt24 mb24">
+			<app-page [pageParams]="{pageSize:10,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+		</div>
+	</div>
+</div>
+<div class="allDelect clearfix mt32">
+	<label class="select fl" for="all" (click)="allSelect()">
+		<input type="hidden" value="" />
+		<b class="" id="allSelectOn"></b>
+	</label>
+	<span class="text ml16" id="all" (click)="allSelect()">全选</span>
+	<span class="text ml16" (click)="allDelete()">删除</span>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

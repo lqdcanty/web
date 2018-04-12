@@ -1,0 +1,173 @@
+.header{
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid rgb(242,242,242);
+}
+.contentArea{
+	width: 1200px;
+	margin:0 auto;
+}
+.header .logo,.header span{
+	float: left;
+}
+.header .logo{
+	width: 192px;
+	height: 38px;
+	margin-top: 16px;
+}
+.header .logo img{
+	width: 100%;
+	height: 100%;
+}
+.header span{
+	font-size: 22px;
+	color: rgb(68,68,68);
+	line-height: 30px;
+	border-left: 1px solid rgb(230,230,230);
+	padding: 0 18px;
+	margin-top: 25px;
+}
+.toupContent{
+	border: 1px solid rgb(229,229,229);
+	padding: 40px 60px;
+	min-height: 600px;
+}
+.bindingOkBox .balance{
+	font-size: 18px;
+	line-height: 26px;
+	color: rgb(68,68,68);
+}
+.bindingOkBox .balance span{
+	color: rgb(252,99,56);
+}
+.bindingOkBox .toup{
+	font-size: 16px;
+	line-height: 26px;
+	color: rgb(68,68,68);
+}
+.bindingOkBox .toupType{
+	width: 100%;
+}
+.bindingOkBox .toupType .type{
+	width: 140px;
+	height: 48px;
+	border: 1px solid rgb(229,229,229);
+	font-size: 0;
+	position: relative;
+}
+.bindingOkBox .toupType .type .icon{
+	width: 28px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.bindingOkBox .toupType .type .typeName{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height: 26px;
+	color: rgb(68,68,68);
+	font-weight: bold;
+	line-height: 48px;
+}
+.bindingOkBox .toupType .type .ok{
+	position: absolute;
+	width: 20px;
+	right: 0px;
+	top: 0;
+	display: none;
+}
+.bindingOkBox .toupType .type.on{
+	border-color:rgb(252,99,56);
+}
+.bindingOkBox .toupType .type.on .ok {
+	display: block;
+}
+.bindingOkBox .toupValue ul{
+	width: 650px;
+}
+.bindingOkBox .toupValue li{
+	float: left;
+	border: 1px solid rgb(229,229,229);
+	width: 290px;
+	height: 56px;
+	padding: 0 20px;
+	position: relative;
+	font-size: 0;
+	line-height: 56px;
+	color: rgb(68,68,68);
+	margin-right: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.bindingOkBox .toupValue li span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+}
+.bindingOkBox .toupValue li .money{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 26px;
+}
+.bindingOkBox .toupValue li .ok{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+.bindingOkBox .toupValue li.on{
+	border-color: rgb(252,99,56);
+}
+.bindingOkBox .toupValue li.on .ok{
+	display: block;
+}
+.bindingOkBox .uptoBtn p{
+	font-size: 14px;
+	line-height: 26px;
+	color: rgb(153,153,153);
+}
+.bindingOkBox .uptoBtn button{
+	width: 168px;
+	height: 36px;
+	background:rgb(252,99,56);
+	color: #fff;
+	border: none;
+	outline: none;
+}
+.bindingOkBox .uptoBtn button:active{
+	background:rgba(252,99,56,.8);
+}
+.bindingOkBox .toupValue .weixinerweima{
+	max-width: 250px;
+	min-height: 250px;
+}
+.bindingOkBox .toupValue .weixinerweima.on{
+	border:1px solid #e5e5e5;
+	margin-top: 16px;
+}
+.bindingOkBox .toupValue .weixinerweima{
+
+}
+.bindingOkBox .toupValue .weixinerweima .erweimaTu{
+	width:250px;
+	height: 250px;
+	display: block; 
+}
+.bindingOkBox .toupValue .weixinerweima .erweimaTip{
+	width: 200px;
+	display: block;
+	margin-left: 25px;
+}
+.tipsBox{
+	padding: 30px;
+}
+.tips{
+	width: 100%;
+	font-size: 14px;
+	color: rgb(102,102,102);
+	line-height: 26px;
+	text-align: center;
+}
+.btnBox{
+	text-align: center;
+}

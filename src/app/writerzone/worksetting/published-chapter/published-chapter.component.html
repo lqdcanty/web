@@ -1,0 +1,30 @@
+<div class="published mt24">
+	<div class="chapters" *ngIf="!modifyChapter">
+		<div *ngFor="let volume of publishNew">
+			<h1 class="title mt16">{{volume.volumeName}}</h1>
+			<ul class="volumeList mt8 clearfix">
+				<li *ngFor="let chapter of volume.publishList">
+					<span class="chapter1">{{chapter.chapterName}}</span>
+					<a class="ml16" (click)="editorFunction(chapter)">编辑</a>
+					<a class="ml16" (click)="applyVipFunction(chapter)" [class.setVip]="chapter.applyVip!='1'"><!-- {{chapter.applyVip=='1'?'申请开V':'VIP'}}
+					 -->
+						<span *ngIf="chapter.readPermission=='all'&&chapter.applyVip=='1'">申请开V</span>
+						<span *ngIf="chapter.readPermission=='all'&&chapter.applyVip=='3'">审核中</span>
+						<span *ngIf="chapter.readPermission=='vip'&&chapter.applyVip=='-1'">VIP</span>
+						<span *ngIf="chapter.readPermission=='all'&&chapter.applyVip=='-1'">免费阅读</span>
+					</a>
+					<a class="tipss" *ngIf="chapter.chapterStatus=='4'">章节审核未通过,请编辑修改</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div *ngIf="modifyChapter">
+		<app-newchapter [chapterParam]="chapterParam" [btnShow]="btnShowBoolean" (outerChapter)="reviceChapter($event)"></app-newchapter>
+	</div>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>

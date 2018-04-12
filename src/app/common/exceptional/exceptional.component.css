@@ -1,0 +1,70 @@
+/* 弹层 */
+.exceptionalLayer{
+	width: 720px;
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -360px; 
+	top: 200px;
+	padding: 20px;
+}
+.exceptionalLayer h1{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: rgb(68,68,68);
+	margin-top: 5px;
+}
+.exceptionalLayer .exceptionalType{
+	width: 100%;
+}
+.exceptionalLayer .exceptionalType li{
+	width: 200px;
+	height: 128px;
+	border: 1px solid #e5e5e5;
+	float: left;
+	margin-right: 34px;
+	margin-bottom: 22px;
+}
+.exceptionalLayer .exceptionalType li.on{
+	border-color: rgb(11,195,147);
+}
+.exceptionalLayer .exceptionalType li:nth-child(3n){
+	margin-right: 0;
+}
+.exceptionalLayer .exceptionalType li a{
+	display: block;
+}
+.exceptionalLayer .exceptionalType li a .img{
+	height: 80px;
+	width: 100%;
+}
+.exceptionalLayer .exceptionalType li a .img{
+	width: 100%;
+	height: 100%;
+}
+.exceptionalLayer .exceptionalType li a p{
+	text-align: center;
+	font-size: 18px;
+	line-height: 22px;
+}
+.exceptionalLayer .all{
+	font-size: 18px;
+	line-height: 22px;
+	color: rgb(68,68,68);
+}
+.exceptionalLayer .all b{
+	color: rgb(252,99,56);
+	font-weight: 100;
+}
+.exceptionalLayer .button .btn{
+	width: 108px;
+	height: 36px;
+	color: #fff;
+	background:rgb(252,99,56);
+	border:0;
+}
+.exceptionalLayer .button{
+	text-align: center;
+}

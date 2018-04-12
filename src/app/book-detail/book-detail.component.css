@@ -1,0 +1,393 @@
+.breadNav{
+	width: 100%;
+	padding:14px 0 4px 0;
+}
+.breadNav span,.breadNav img{
+	display: inline-block;
+	vertical-align: middle;
+	margin:0 5px;
+}
+.breadNav img{
+	height:12px;
+}
+.breadNav span{
+	font-size: 12px;
+	line-height: 16px;
+	color: rgb(68,68,68);
+}
+.breadNav{
+	font-size: 16px;
+}
+.workContentBox{
+	border: 1px solid #e5e5e5;
+}
+.workContentBox .leftWorkCover{
+	width: 180px;
+	height: 254px; 
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-size: cover;
+	position: relative;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+.workContentBox .workRightContent{
+	width: 944px;
+	height: 254px; 
+}
+.workContentBox .workRightContent .workTitle{
+	font-size: 0;
+	height: 30px;
+}
+.workContentBox .workRightContent .workTitle span{
+	color: rgb(68,68,68);
+}
+.workContentBox .workRightContent .workTitle span.author{
+	cursor: pointer;
+}
+.workContentBox .workRightContent .workTitle span.author:hover{
+	color: rgb(11,195,147);
+}
+.workContentBox .workRightContent .workTitle span:nth-child(1){
+	font-size: 0;
+	height: 30px;
+	font-size: 28px;
+	font-weight: 900;
+	display: inline-block;
+	vertical-align: top;
+}
+.workContentBox .workRightContent .workTitle span:nth-child(2){
+	font-size:14px;
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 16px;
+	margin-left: 30px;
+}
+.workContentBox .workRightContent .label a{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 24px;
+	border:1px solid rgb(11,195,147);
+	border-radius: 12px;
+	padding: 0 10px;
+	color: rgb(11,195,147);
+}
+.workContentBox .workRightContent .label a+a{
+	margin-left: 16px;
+}
+.workContentBox .workRightContent .workData{
+	color: #e5e5e5;
+	font-size: 14px;
+}
+.workContentBox .workRightContent .workData b{
+	font-weight: 100;
+	color: rgb(68,68,68);
+}
+.workContentBox .workRightContent .workData b span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.workContentBox .workRightContent .workData b .number{
+	font-size: 18px;
+	line-height: 22px;
+	color: rgb(68,68,68);
+}
+.workContentBox .workRightContent .workData b .word{
+	font-size: 12px;
+	color: rgb(153,153,153);
+}
+.workContentBox .workRightContent .workDescribe{
+	font-size: 14px;
+	line-height: 24px;
+	color: rgb(68,68,68);
+	height: 72px;
+	overflow: hidden;
+}
+.workContentBox .workRightContent button{
+	display: inline-block;
+	width: 108px;
+	height: 36px;
+	font-size:14px; 
+	background: #fff;
+	color: rgb(11,195,147);
+	outline: none;
+}
+.workContentBox .workRightContent{
+	font-size: 24px;
+}
+.workContentBox .workRightContent button.on{
+	background: rgb(11,195,147);
+	color: #fff;
+}
+.workContentBox .workRightContent button.on:active{
+	background: rgba(11,195,147,0.8);
+}
+.workContentBox .workRightContent button.on1{
+	border:1px solid rgb(11,195,147);
+}
+.workContentBox .workRightContent button.on1:active{
+	background: rgba(11,195,147,0.1);
+}
+.workContentBox .workRightContent button.gray{
+	background: rgba(153,153,153,0.4);
+	color: rgb(68,68,68);
+}
+.workContentBox .workRightContent button+button{
+	margin-left: 32px;
+}
+.workUpdate{
+	border: 1px solid #e5e5e5;
+}
+.workUpdate .upDate{
+	font-size: 0;
+}
+.workUpdate .upDate span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.workUpdate .upDate .updateCharter,
+.workUpdate .upDate .updatWorkName{
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 16px;
+}
+.workUpdate .upDate .time{
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 16px;
+	margin-left: 24px;
+}
+.workUpdate .updateWorkContent{
+	line-height: 22px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+}
+.workUpdate .updateWorkContent p{
+	margin:0;
+	padding: 0;
+	line-height: 22px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+}
+.workDetailNav{
+	font-size: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+.workDetailNav a{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height:22px;
+	padding: 8px 10px;
+	color: rgb(68,68,68); 
+	border-bottom: 3px solid #fff;
+	font-weight: bold;
+}
+.workDetailNav a+a{
+	margin-left: 15px;
+}
+.workDetailNav a.on{
+	color: rgb(11,195,147);
+	border-color: rgb(11,195,147); 
+}
+
+
+.rankList{
+	width: 280px;
+	height: 630px;
+}
+.rankList .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 60px;
+	height: 60px;
+	font-size: 22px;
+	font-weight: 900;
+}
+.rankList ul{
+	margin-top: 18px;
+}
+.rankList .bookList{cursor: pointer}
+.rankList .bookList.green .l-view .Index{
+	background:rgb(11,195,147);
+	color: #fff;
+}
+.rankList .bookList .l-view .Index{
+	background:rgb(196,196,196);
+	color: #fff;
+	font-size: 12px;
+}
+.rankList .bookList .l-view .Index{
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.rankList .bookList .line-a{
+	height: 26px;
+	display: block;
+	color: rgb(68,68,68);
+	font-size: 0;
+}
+.rankList .bookList .line-a .l-view{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height: 26px;
+}
+.rankList .bookList .line-a .l-view .bookName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 26px;
+	width: 233px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rankList .bookList .b-view{
+	width: 100%;
+	position: relative;
+}
+.rankList .bookList .b-view .bookCover{
+	display: block;
+	width: 134px;
+	height: 188px;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-size: cover;
+	position: relative;
+}
+.rankList .bookList .b-view .bookCover .bookIndex{
+	position: absolute;
+	width: 36px;
+	height: 30px;
+	color: #fff;
+	line-height: 24px;
+	left: 0;
+	top: -3px;
+	font-size: 12px;
+	padding-left: 8px;
+}
+.rankList .bookList.green .b-view .bookCover .bookIndex{
+	background: url(../../assets/images/tag1.png) no-repeat center center/cover;
+}
+.rankList .bookList .b-view .bookCover .bookIndex{
+	background: url(../../assets/images/tag2.png) no-repeat center center/cover;
+}
+.rankList .bookList .b-view .bookDetailBox{
+	display: block;
+	width: 116px;
+	margin-left: 14px;
+}
+.rankList .bookList .b-view .bookDetailBox h1{
+	border: none;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 900;
+}
+.rankList .bookList .b-view .bookDetailBox h1 a{
+	color:rgb(68,68,68);
+	display: inline-block;
+	max-width: 116px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rankList .bookList .b-view:hover .bookDetailBox h1 a{
+	color:rgb(11,195,147); 
+}
+/* .rankList .bookList .b-view .bookDetailBox h1 a:hover{
+	color:rgb(11,195,147); 
+} */
+.SimilarWork .rankList .bookList .b-view .bookDetailBox p{
+	font-size: 0;
+}
+.SimilarWork .rankList ul li{
+	margin-bottom: 12px;
+}
+.SimilarWork .rankList .bookList .b-view .bookDetailBox p .icon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../assets/images/icon_user.png) no-repeat center center/cover;
+}
+.SimilarWork .rankList .bookList.on .b-view{
+	display: block;
+}
+.SimilarWork .rankList .bookList.on .line-a{
+	display: none;
+}
+.SimilarWork .rankList .bookList .b-view .bookDetailBox p .author{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: middle;
+	max-width: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.SimilarWork .rankList .bookList .b-view .bookDetailBox p .author a{
+	color: rgb( 129,129,129);
+}
+.SimilarWork .rankList .bookList .b-view .bookDetailBox p .author:hover a{
+	color: rgb(11,195,147);
+}
+.SimilarWork .rankList .bookList .b-view .bookDetailBox .type span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+}
+.SimilarWork .rankList .bookList .b-view .bookDetailBox .type b{
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background:rgb( 129,129,129); 
+	margin:0 5px;
+}
+.b-view{
+	display: none;
+}
+.SimilarWork .rankList .bookListMore{
+	font-size: 0px;
+	line-height: 22px;
+	text-align: right;
+}
+.SimilarWork .rankList .bookListMore b{
+	font-weight: 100;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+}
+.SimilarWork .rankList .bookListMore span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.SimilarWork .rankList .bookListMore .more{
+	color: rgb(192,192,192);
+}
+.SimilarWork .rankList .bookListMore .icon{
+	width:6px;
+	height: 12px;
+	margin-left: 10px;
+	background: url(../../assets/images/arrow_nh.png) no-repeat center center/cover;
+}
+.SimilarWork .rankList .bookListMore b:hover .more{
+	color: rgb(11,195,147);
+}
+.SimilarWork .rankList .bookListMore b:hover .icon{
+	background: url(../../assets/images/arrow_py.png) no-repeat center center/cover;
+}
+

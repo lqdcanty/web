@@ -1,0 +1,113 @@
+<div class="workInteraction mt24">
+	<div class="exceptional clearfix">
+		<div class="exceptionalbox fl">
+			<h1>打赏</h1>
+			<div class="border pd48">
+				<img alt="" src="../../../assets/images/exceptional.png"  />
+				<button class="exceptionalBtn" (click)="exceptional()">打赏作者</button>
+			</div>
+		</div>
+		<div class="exceptionalRank fr mr20">
+			<h1 class="mt16">打赏榜</h1>
+			<div class="photo mt20">
+				<!-- <div class="phoneBox" [ngStyle]="{'backgroundImage':'url('+top1+')'}" *ngIf="top1">
+					<img src="../../../assets/images/no1.png" alt="" />
+				</div> -->
+				<div class="phoneBox" [style.background-image]="'url('+top1+')'" *ngIf="top1">
+					<img src="../../../assets/images/no1.png" alt="" />
+				</div>
+				<div class="phoneBox" [style.background-image]="'url('+top2+')'" *ngIf="top2">
+					<img src="../../../assets/images/no2.png" alt="" />
+				</div>
+				
+				<div class="phoneBox" [style.background-image]="'url('+top3+')'" *ngIf="top3">
+					<img src="../../../assets/images/no3.png" alt="" />
+				</div>
+			</div>
+			<!-- <app-detail-slide [lists]="exceptDetails" [listsLength]="listslength"></app-detail-slide> -->
+			<div class="slide2" style="margin-top: 10px;">
+				<div class="swiperWrapper">
+					<div class="swiperSlide" id="swiperSlide" *ngFor="let list of listsNew" >
+						<a href="javascript:void(0);" class="clearfix" >
+							<span class="fl">{{list.nickName}}打赏作者{{list.yuanqi}}元气</span>
+							<span class="fr">{{list.time}}</span>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="comment mt24">
+		<h1 class="title">书友评论
+			<div class="writeComment" (click)="comment()">
+				<i class="icon"></i>
+				<span>写评论</span>
+			</div>
+		</h1>
+		<div class="commentBox clearfix pt20 pb20 borderb" *ngFor="let comment of comments">
+			<div class="commentPhoto fl">
+				<img src="{{comment.imgUrl?comment.imgUrl:'../../../assets/images/200.png'}}" alt="" />
+			</div>
+			<div class="commentContent fr">
+				<div class="read">
+					<h1 class="commentAuthor mt10">{{comment.userName}}</h1>
+					<div class="commentWord mt10">
+						{{comment.content}}
+					</div>
+					<div class="time mt10">
+						<span class="commentTime">{{comment.time}}</span>
+						<span class="commentZan" (click)="commentZanReader(comment)">
+							<img [class.on]="!comment.likeFlag" src="../../../assets/images/zan_n.png" alt="" />
+							<img [class.on]="comment.likeFlag" src="../../../assets/images/zan_p.png" alt="" />
+							<b class="number" id="commentZanNumber">{{comment.likeNum}}</b>
+							<b>赞</b>
+						</span>
+					</div>
+				</div>
+				<div class="write mt16" *ngIf="comment.comments">
+					<div class="commentBox clearfix pd20">
+						<div class="commentPhoto fl">
+							<img src="{{comment.comments.imgUrl?comment.comments.imgUrl:'../../../assets/images/200.png'}}" alt="" />
+						</div>
+						<div class="commentContent fr">
+							<div class="read">
+								<h1 class="commentAuthor mt10">{{comment.comments.userName}}</h1>
+								<div class="commentWord mt10">
+									{{comment.comments.content}}
+								</div>
+								<div class="time mt10">
+									<span class="commentTime">{{comment.comments.time}}</span>
+									<span class="commentZan" (click)="commentZanAuthor(comment.comments)">
+										<img [class.on]="!comment.comments.likeFlag" src="../../../assets/images/zan_n.png" alt="" />
+										<img [class.on]="comment.comments.likeFlag" src="../../../assets/images/zan_p.png" alt="" />
+										<b class="number">{{comment.comments.likeNum}}</b>
+										<b>赞</b>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mt24 mb24">
+			<app-page [pageParams]="{pageSize:6,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+		</div>
+	</div>
+</div>
+<div *ngIf="exceptionalBoolean">
+	<app-exceptional (outerExcept)="receiveExcept($event)" [bookIdChild]="bookIdChildValue"></app-exceptional>
+</div>
+<div *ngIf="commentBoolean">
+	<app-comment-layer (outer)="receive($event)" [paramsId]="bookIdParam" [paramsUrl]="urlParams" ></app-comment-layer>
+</div>
+<!-- (outercomment)="receivecomment($event)" -->
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)"></app-login>
+</div>
+

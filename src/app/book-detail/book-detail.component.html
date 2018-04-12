@@ -1,0 +1,114 @@
+<app-nav></app-nav>
+<section>
+	<div class="contentArea">
+		<div class="breadNav">
+			<span>首页</span>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<span>{{readFlag=='M'?'男频':'女频'}}</span>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<span>{{bookClass}}</span>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<span>{{bookName}}</span>
+		</div>
+		<div class="workContentBox clearfix pd24 mt10">
+		<!-- [ngStyle]="{'backgroundImage':'url('+bookDetailContent.bookCover+')'}" -->
+			<div class="leftWorkCover fl" [style.background-image]="'url(' + bookCover+ ')'">
+
+				<!-- <img style="width: 100%;height: 100%;" src="{{bookDetailContent.bookCover}}" alt="" /> -->
+			</div>
+			<div class="workRightContent fl ml24">
+				<h1 class="workTitle">
+					<span>{{bookName}}</span>
+					<span class="author" [routerLink]="['/author',authorCodeString]">{{author}} </span><span>著</span>
+				</h1>
+				<div class="label mt20">
+					<a href="javascript:viod(0)" *ngFor="let label of bookMark">{{label}}</a>
+					<!-- <a href="javascript:viod(0)">豪门世家</a>
+					<a href="javascript:viod(0)">豪门世家</a> -->
+				</div>
+				<div class="workData mt20">
+					<b class="mr10">
+						<span class="number">{{wordNum}}</span>
+						<span class="word">字</span>
+					</b>|
+					<b class="ml10">
+						<span class="number">{{concernNum}}</span>
+						<span class="word">收藏</span>
+					</b>
+				</div>
+				<div class="workDescribe mt10">
+					{{introduction}} 
+				</div>
+				<!-- [routerLink]="['/bookContent']" [queryParams]="{bookId:bookIdNumber,chapterId:-1}" -->
+				<div class="workButton mt10">
+					<button class="on" [routerLink]="['/bookContent',bookIdNumber + '_-1']">{{readFlag==="1"?"免费试读":"继续阅读"}}</button>
+					<button [class.on1]="concernFlag=='2'" [class.gray]="concernFlag=='1'" (click)="collectFunction(concernFlag)">{{concernFlag=="1"?"已在书架":"加入书架"}}</button>
+				</div>
+			</div>
+		</div>
+		<div class="workUpdate pd24 mt24">
+			<div class="upDate">
+				<span class="updateCharter">更新至</span>
+				<span class="updatWorkName">{{chapterName}}</span>
+				<span class="time">{{updateTime}}</span>
+			</div>
+			<div class="updateWorkContent mt20" >
+				<p *ngFor="let chapter of chapterContent">{{chapter}}</p>
+			</div>
+		</div>
+		<div class="workDetailNav mt24" id="workDetailNav">
+			<a [routerLink]="['./workInteraction',bookIdNumber]" routerLinkActive="on" id="interaction">作品互动</a>
+			<a [routerLink]="['./workDirectory',bookIdNumber]" routerLinkActive="on">目录</a>
+		</div>
+		<div class="clearfix">
+			<div class="fl WorkRouterBox" *ngIf="oneWorkInteraction">
+				<app-work-interaction></app-work-interaction>
+			</div>
+			<div class="fl WorkRouterBox">
+				<router-outlet></router-outlet>
+			</div>
+			<div class="SimilarWork no_rank1 fr mt24">
+				<div class="rankList fl">
+					<h1 class="title">相似作品</h1>
+					<ul>
+				        <li class="bookList" [class.green]='i<3?true:false' [class.on]='currindex==i' *ngFor="let list of likeList;let i=index" (mouseenter)="mouseenterON(i)">
+				            <a href="javascript:void(0)" target="_blank" class="line-a" (click)="detailRouter(list.bookId)">
+				                <div class="l-view">
+				                    <span class="Index no_1">{{i+1}}</span>
+				                    <span class="bookName">{{list.bookName}}</span>
+				                </div>
+				            </a>
+				            <div class="b-view clearfix">
+				           <!-- [routerLink]="['/bookDetail',list.bookId]" -->
+				                <a  class="bookCover fl" [style.background-image]="'url(' + list.bookCover+ ')'" (click)="detailRouter(list.bookId)">
+					                <div class="bookIndex">
+					                	{{i<9?'0'+(i+1):i+1}}
+					                </div>
+				                </a>
+				                <a class="bookDetailBox fl">
+				                    <h1 class="mb15"><a (click)="detailRouter(list.bookId)">{{list.bookName}}</a></h1>
+				                    <p class="textAuthor">
+				                    	<i class="icon"></i>
+				                    	<span class="author"><a [routerLink]="['/author',list.authorCode]">{{list.author}}</a></span>
+				                    </p>
+				                    <p class="type mt10">
+				                    	<span>{{list.bookMark}}</span>
+				                    </p>
+				                </a>
+				            </div>
+				        </li>              
+				    </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mt40">
+		<app-foot></app-foot>
+	</div>
+</section>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

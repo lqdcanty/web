@@ -1,0 +1,102 @@
+<div class="header">
+	<div class="contentArea clearfix">
+		<a href="javascript:void(0)" class="logo mr16" routerLink="/home">
+			<img src="../../../assets/images/logo.png" alt="" />
+		</a>
+		<span>作家专区</span>
+	</div>		
+</div>
+<div class="wrap">
+	<div class="contentArea">
+		<form action="" [formGroup]="fillinformationForm" (ngSubmit)="postDate()">
+		<div class="tipBox mt50">
+			<span class="validation on">1、接受协议</span>
+			<span class="bindingOk on">2、填写材料</span>
+			<span class="bindingOk">3、提交成功</span>
+		</div>
+		<div class="bindingContent mt60">
+			<h1 class="titleTip mb16"><span>个人信息</span></h1>
+			<div class="lineBox mb16">
+				<span class="leftName"><b>*</b>笔名</span>
+				<input type="text" formControlName="penName" id="penName" maxlength="16" class="longInput" placeholder="请输入笔名" />
+				<div  [class.error]="fillinformationForm.get('penName').invalid && fillinformationForm.get('penName').touched">
+			        笔名长度在2-16个字符；
+			    </div>
+			</div>
+
+			<div class="lineBox mb16">
+				<span class="leftName"><b>*</b>真实姓名</span>
+				<input type="text" formControlName="realName" id="realName" maxlength="16" class="longInput" placeholder="请输入真实姓名名" />
+				<div  [class.error]="fillinformationForm.get('realName').invalid && fillinformationForm.get('realName').touched">
+			       请填上正确的姓名
+			    </div>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName"><b>*</b>身份证</span>
+				<input type="text" formControlName="idCard" maxlength="18" id="idCard" class="longInput" placeholder="请输入身份证号" />
+				<div  [class.error]="fillinformationForm.get('idCard').invalid && fillinformationForm.get('idCard').touched">
+			        <!-- <p [hidden]="!fillinformationForm.hasError('required','idCard')"> -->请填入正确的身份证<!-- </p> -->
+			    </div>
+			</div>
+			<h1 class="titleTip mb16 mt24"><span>通讯信息</span></h1>
+			<div class="lineBox mb16">
+				<span class="leftName">QQ号码</span>
+				<input type="text" formControlName="qq" maxlength="20" id="qq" class="longInput" placeholder="请输入QQ号码" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
+
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName">邮箱</span>
+				<input type="text" formControlName="email" maxlength="35" id="email" class="longInput" placeholder="请输入邮箱" />
+				
+			</div>
+			<div class="lineBox mb16">
+			<!-- disabled="defaultPhone?true:false" -->
+				<span class="leftName"><b>*</b>手机号</span>
+				<input type="text" [(ngModel)]="defaultPhone" maxlength="11" formControlName="phone" id="phone" class="longInput" placeholder="请输入手机号"  />
+				<div  [class.error]="fillinformationForm.get('phone').invalid && fillinformationForm.get('phone').touched">
+			        请填入正确的手机号
+			    </div>
+			</div>
+			<div class="lineBox mb16" >
+				<span class="leftName"><b>*</b>验证码</span>
+				<div class="rightBox">
+					<input type="button" class="longInput color" value="点击开始验证" id="slideFun" />
+					<img class="animate" src="../../../assets/images/validationA.png" alt="" />
+					<div class="slide">
+						<div id="mpanel4"></div>
+					</div>
+				</div>
+			</div>
+			<div class="lineBox mb16">
+				<span class="leftName"><b>*</b>短信验证</span>
+				<div class="rightBox">
+					<input type="text" maxlength="6" formControlName="authCode" id="authCode" class="smallInput" placeholder="请输入验证码" />
+					<span class="getCode ml20" (click)="authCodeClick()" id="getCode">获取验证码</span>
+					<div  [class.error]="fillinformationForm.get('authCode').invalid && fillinformationForm.get('authCode').touched">
+				        请填入正确的验证码
+				    </div>
+				</div>
+			</div>
+			<h1 class="titleTip mb16 mt24"><span>写作信息</span></h1>
+			<div class="lineBox heightAuto mb16">
+				<div class="validation">
+					<span class="leftName"><b>*</b>作品信息</span>
+					<textarea  class="rightTextarea" formControlName="bookInfo" id="bookInfo" placeholder="请上传不低于2000字的作品文字，用于编辑审核。"></textarea> 
+				</div>
+				<div  [class.error]="fillinformationForm.get('bookInfo').invalid && fillinformationForm.get('bookInfo').touched">
+			        作品文字不低于2000字
+			    </div>
+			</div>
+		</div>
+		<p class="mt40 btnBox">
+			<button class="bindingBtn ml40">立即注册</button>
+		</p>
+		</form>
+	</div>
+</div>
+<div class="mt40">
+	<app-foot></app-foot>
+</div>
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>

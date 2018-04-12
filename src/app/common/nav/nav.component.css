@@ -1,0 +1,211 @@
+.showHeader{
+	display: none;
+}
+.headerSection{
+	padding: 24px 0;
+}
+.headerSection .logo{
+	width: 192px;
+	height: 36px;
+	margin-right: 208px;
+	outline: none;
+}
+.headerSection .searchBox{
+	width: 400px;
+	height: 36px;
+	position: relative;
+}
+.headerSection .search{
+	width: 100%;
+	line-height:36px; 
+	height: 36px;
+	border: 1px solid rgb(11,195,147);
+	padding-left: 20px;
+	color: rgb(177,177,177);
+
+}
+.headerSection .loginAndRegister{
+	height: 44px;
+	color: rgb(68,68,68);
+	position: relative;
+	font-size: 12px;
+}
+.headerSection .loginAndRegister a{
+	line-height: 36px;
+	color: rgb(68,68,68);
+	font-size: 16px;
+	margin:0 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.headerSection .loginAndRegister span{
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+	width: 1px;
+	background: rgb(229,229,229);
+}
+.headerSection .loginAndRegister a:hover{
+	color:rgb(11,195,147);
+}
+.searchBtn{
+	display: block;
+	position: absolute;
+	right: 16px;
+	top: 9px;
+	width: 18px;
+	height: 18px;
+	background: url(../../../assets/images/search.png) no-repeat center center/cover;
+}
+/* .searchBtn img{
+	width: 100%;
+	height: 100%;
+} */
+.headerSection .loginAndRegister span{
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+	width: 1px;
+	background: rgb(229,229,229);
+}
+.headerSection .loginAndRegister a.newsNuber{
+	font-size: 16px;
+	color: rgb(68,68,68);
+}
+.headerSection .loginAndRegister a.userName{
+	margin-right: 60px;
+}
+.headerSection .loginAndRegister a.userImage{
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	right: 0;
+	top: -5px;
+	margin:0;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: rgb(11,195,147);
+}
+.back{
+	position: absolute;
+    width: 68px;
+    height: 28px;
+    background-color: #e5e5e5;
+    color: rgb(68,68,68);
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    right: 0;
+    -webkit-box-shadow: 0 0 3px rgba(153,153,153,0.3);
+    box-shadow: 0 0 3px rgba(153,153,153,0.3);
+    top: 40px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+nav{
+	width: 100%;
+	height: 46px;
+	background: rgb(11,195,147);
+}
+.nav{
+	position: relative;
+}
+.nav .navLeft{
+	height: 46px;
+	font-size: 0;
+}
+nav .navLeft a.on{
+	border-color: #fff;
+}
+nav .navLeft a{
+	font-size: 18px;
+	line-height: 46px;
+	height: 46px;
+	display: inline-block;
+	color: #fff;
+	border-bottom:2px solid rgb(11,195,147);
+}
+nav .navLeft a:hover{
+	border-color: #fff;
+}
+nav .navLeft a+a{
+	margin-left:50px;
+}
+
+ nav .navRight .welfare{
+	width: 20px;
+	height: 23px;
+	 background: url('../../../assets/images/welfare.png') no-repeat center center/cover; 
+	 margin-right: 6px;
+}
+nav .navRight .author{
+	width: 23px;
+	height: 18px;
+	 background: url('../../../assets/images/icon_author.png') no-repeat center center/cover; 
+	 margin-right: 6px;
+}  
+nav .navRight{
+	font-size: 0;
+}
+nav .navRight a{
+	font-size: 18px;
+	color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 46px;
+	height: 46px;
+	border-bottom:2px solid rgb(11,195,147);
+}
+nav .navRight a:hover{
+	border-color: #fff;
+}
+nav .navHomeLayerBox{
+	position: absolute;
+	background: #fff;
+	left: 0;
+	top: 46px;
+	z-index: 105;
+	display: none;
+}
+nav .navHomeLayer{
+	background: rgb(11,195,147);
+	padding: 30px 0;
+}
+nav .navHomeLayerSame{
+	text-align: center;
+	color:#fff;
+	padding: 0 10px;
+}
+nav .navHomeLayerSame ul li{
+	width: 100px;
+	font-size: 16px;
+	line-height: 40px;
+}
+nav .navHomeLayerSame ul li+li{
+	margin-top: 8px;
+}
+nav .navHomeLayerSame ul li a{
+	text-align: center;
+	color:#fff;
+	display: block;
+}
+nav .navHomeLayerSame ul li a:hover{
+	background: rgba(0,0,0,0.1);
+}
+nav .navHomeLayerSame span{
+	display: block;
+	margin-bottom: 16px;
+}
+nav .girlBox{
+	border-right: 1px solid #fff;
+}
+nav .sjx{
+	margin-left: 20px;
+	width: 12px;
+	height: 6px;
+	background: url('../../../assets/images/ajx.png') no-repeat center center/cover;
+} 

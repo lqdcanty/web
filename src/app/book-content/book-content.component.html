@@ -1,0 +1,225 @@
+<app-nav></app-nav>
+<div class="bookContentColor">
+<!-- 关于文章左导航 -->
+	<div class="contentNav">
+		<ul>
+			<li class="dirctory" [class.on]="dirctoryBoolean" (click)="dirctory()">
+				<a (click)="dirctory()"> 
+					<i class="icon">
+						<img src="../../../assets/images/directoryC.png" alt="" />
+						<img src="../../../assets/images/directoryCA.png" alt="" />
+					</i>
+					<span>目录</span>
+				</a>
+			</li>
+			<li class="seting" [class.on]="setingBoolean" (click)="seting()"> 
+				<a (click)="seting()">
+					<i class="icon">
+						<img src="../../../assets/images/setingC.png" alt="" />
+						<img src="../../../assets/images/setingCA.png" alt="" />
+					</i>
+					<span>设置</span>
+				</a>
+			</li>
+			<li class="detail"> 
+				<a [routerLink]="['/bookDetail',bookId]">
+					<i class="icon">
+						<img src="../../../assets/images/detailC.png" alt="" />
+						<img src="../../../assets/images/detailCA.png" alt="" />
+					</i>
+					<span>详情页</span>
+				</a>
+			</li>
+			<li class="addStore" [class.on]="addStoreBoolean" (click)="addStore(shelfFlag)">
+				<a>
+					<i class="icon">
+						<img src="../../../assets/images/addStore.png" alt="" />
+						<img src="../../../assets/images/addStoreA.png" alt="" />
+					</i>
+					<span>{{shelfFlag=='1'?'已在书架':'加入书架'}}</span>
+				</a>
+			</li>
+			<li class="phone" [class.on]="phoneBoolean" (click)="phone()" id="phone"> 
+				<a (click)="phone()">
+					<i class="icon">
+						<img src="../../../assets/images/phoneC.png" alt="" />
+						<img src="../../../assets/images/phoneCA.png" alt="" />
+					</i>
+					<span>手机阅读</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 关于文章右导航 -->
+	<div class="rightNav">
+		<ul>
+			<li class="exceptionalt" (click)="exceptional()">
+				<a>
+					<i class="icon">
+						<img src="../../../assets/images/exceptionC.png" alt="" />
+						<img src="../../../assets/images/exceptionCA.png" alt="" />
+					</i>
+					<span>打赏</span>
+				</a>
+			</li>
+			<li class="commentt" (click)="commentt()"> 
+				<a>
+					<i class="icon">
+						<img src="../../../assets/images/commentC.png" alt="" />
+						<img src="../../../assets/images/commentCA.png" alt="" />
+					</i>
+					<span>评论</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 关于目录内容 -->
+	
+	<div class="directoryLayer" *ngIf="dirctoryBoolean">
+		<div class="whiteK"></div>
+		<div class="directoryLayerContent">
+			<h1 class="clearfix mb16">目录 <img (click)="closeLayer()" class="fr closeLayer" src="../../assets/images/close.png" alt="" /></h1>
+			<div class="scrollContent">
+				<div class="workDirectory" *ngFor="let volume of volumeListEs">
+					<div class="volumeName">
+						<span class="volumeNameWord">{{volume.volumeName}}</span>
+					</div>
+					<ul class="charpter pd16 clearfix">
+						<li *ngFor="let vol of volume.chapterList" (click)="directoryPage(vol)"><a href="javascript:void(0)">{{vol.chapterName}}</a><span class="volumeNameImg ml10" [class.on]="vol.readPermission=='vip' && vol.purchased==false"></span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 关于设置内容 -->
+	<div class="settingLayer" *ngIf="setingBoolean">
+		<div class="whiteK"></div>
+		<div class="settingLayerContent">
+			<h1 class="clearfix">设置<img (click)="closeLayer()" class="fr closeLayer" src="../../assets/images/close.png" alt="" /></h1>
+			<p class="settingLine mt32">
+				<span class="settingName">背景颜色</span>
+				<span class="settingValue" id="settingValue">
+					<b [class.on]="i==colorIndex" *ngFor="let color of colorList let i=index" [ngStyle]="{'background-image':'url('+color.colorString+')'}" (click)="setingColor(color.colorString,i)"></b>
+				</span>
+			</p>
+			<p class="settingLine mt32">
+				<span class="settingName">字体大小</span>
+				<span class="font litter" (click)="litterFun()"></span>
+				<span class="font more ml32" (click)="moreFun()"></span>
+			</p>
+			<p class="settingLine mt50">
+				<span class="settingName"></span>
+				<button class="btn" (click)="setSave()">恢复默认</button>
+			</p>
+		</div>
+	</div>
+	<!-- 关于手机阅读 -->
+	<div class="phoneReadLayer" *ngIf="phoneBoolean" id="phoneBoolean">
+		<div class="whiteK"></div>
+		<h1 class="clearfix">
+			<img class="fr mt5 closeLayer" (click)="closeLayer()" src="../../assets/images/close.png" alt="" />
+		</h1>
+		<div class="erweimaBox">
+			<img src="../../assets/images/mainerweima.jpg" alt="" />
+			<p>请微信扫码，关注<span>yuanqixsw</span></p>
+			<p>微信公众号。</p>
+		</div>
+	</div>
+	<div class="contentBox">
+		<div class="breadNav">
+			<span>首页</span>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<span>{{bookCategory}}</span>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<span>{{bookClass}}</span>
+			<img src="../../assets/images/arrow_NP.png" alt="" />
+			<span>{{bookName}}</span>
+		</div>
+		<div class="white" oncontextmenu="return false" onselectstart="return false" 
+ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+			<div class="contentAddBox" id="showdiv">
+				<div class="content pd40" id="content">
+					<h1 class="title">{{chapterName}}</h1>
+					<div class="author">
+						<span [routerLink]="['/author',authorCode]">作者：{{author}}</span>
+						<span class="ml20">字数：{{wordNum}}字</span>
+						<span class="ml20">时间：{{updateTime}}</span>
+					</div>
+					<div class="chapterContent mt32">
+						<p *ngFor="let p of contents">{{p}}</p>   
+					</div>
+					<div class="vipTip" *ngIf="readPermission=='vip' && purchased=='false'">
+						<p class="mb8">本章是收费章节，需要订阅后才能阅读</p>
+						<div class="subscribeBox " (click)="palyFunction(chapterId)">
+							<p>订阅本章节</p>
+							<p>{{fee}}元气</p>
+						</div>
+						<div class="radioBox mt8"> <!-- (click)="AutoCircleFun()" -->
+							<div class="radioBoxLabel" id="radioBoxLabel" (click)="AutoCircleFun()" >
+								<div class="em">	
+									<input type="checkbox">
+									<b id="bb" [class.on]="AutoCircle"></b>
+								</div>
+								<span>自动购买之后章节</span>
+							</div>
+						</div>
+					</div>
+					<div id="showVip">
+						<div class="authorSay mt40">
+							<div class="border">
+								<span>作者有话说:</span>
+								<p class="authorSayContent">{{remark}}</p>
+							</div>
+						</div>
+						<div class="exceptional">
+							<div class="exceptionalBtn" (click)="exceptional(nextChapterId)">
+								<span>赞赏</span>
+								<b id="exceptLength">0</b>
+							</div>
+							<div class="exceptionalPerson mt32 mb20">
+								<span *ngFor="let imgcover of listIcon" [style.background-image]="'url(' + imgcover.icon+ ')'"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div *ngIf="exceptionalBoolean">
+			<app-exceptional (outerExcept)="receiveExcept($event)" [bookIdChild]="bookIdChildValue"></app-exceptional>
+		</div>
+		<div *ngIf="commentBoolean" >
+			<app-comment-layer (outer)="receive($event)" [paramsId]="bookIdParam" [paramsUrl]="urlParams" (outercomment)="receivecomment($event)"></app-comment-layer>
+		</div>
+	</div>
+</div>
+<div *ngIf="tipLayerBoolean" >
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)"></app-login>
+</div>
+<div *ngIf="yueeLayer" id="yueeLayer">
+	<app-authorjudge (outerunauthor)="reviceunauthor($event)" [contentAuthor]="contentAuthorWord" [tempUrl]="tempUrlString" [btn]="btnString"></app-authorjudge>
+</div>
+<!-- <div id="yueeLayer">
+	<div class="modle-wrap">
+		<div class="modle-container">
+			<div class="isAuthorLayer p16_24">
+				<h1 class="clearfix">
+					<img class="close fr" (click)="sendToParent()" src="../../../assets/images/close.png" alt="" />
+				</h1>
+				<p class="tips mt40">余额不足请充值</p>
+				<p class="btnBox mt40">
+					<a class="on" id="urlA" target="_blank" href="{{tempUrlString}}">去充值</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+
+
+                                   

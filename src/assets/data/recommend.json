@@ -1,0 +1,27 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":[
+        {
+            "bookId":1,
+            "bookName":"言情小说1",
+            "bookCover":"../../../assets/images/zu29.png"
+        },
+        {
+            "bookId":1,
+            "bookName":"言情小说2",
+            "bookCover":"../../../assets/images/zu30.png"
+        },
+        {
+            "bookId":1,
+            "bookName":"言情小说3",
+            "bookCover":"../../../assets/images/zu31.png"
+        },
+        {
+            "bookId":1,
+            "bookName":"言情小说4",
+            "bookCover":"../../../assets/images/zu29.png"
+        }
+    ]
+}

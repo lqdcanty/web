@@ -1,0 +1,253 @@
+/* .bindingContent{
+	border: 1px solid #e5e5e5;
+	padding: 40px 100px;
+	min-height: 600px;
+} */
+.authorData{
+	border: 1px solid #e5e5e5;
+}
+.authorData .title{
+	height: 52px;
+	font-size: 22px;
+	line-height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.bindingContent .titleTip{
+	font-size: 18px;
+	font-weight: bold;
+	color: rgb(68,68,68);
+	line-height: 26px;
+	width: 100%;
+}
+.bindingContent .titleTip span{
+	display: block;
+	width: 160px;
+	text-align: right;
+}
+.bindingContent .lineBox{
+	font-size: 0;
+	height: 42px;
+}
+.bindingContent .lineBox .leftName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 42px;
+	color: rgb(68,68,68);
+	font-size: 14px;
+	text-align: right;
+	width: 160px;
+	margin-right: 28px;
+}
+.bindingContent .lineBox .leftName b{
+	color: rgb(252,99,56);
+}
+.bindingContent .lineBox .rightValue{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	text-align: right;
+}
+.bindingContent .signBox{
+	font-size: 0;
+}
+.dataContent .bindingContent .signBox .titleTip{
+	display: inline-block;
+	vertical-align: middle;
+	width: 160px;
+	margin-right: 28px;
+}
+.bindingContent .signBox .signValue{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 26px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	max-width: 600px;
+}
+.bindingContent .signBox .signValue #fill{
+	display: inline-block;
+    vertical-align: middle;
+    color: rgb(11,195,147);
+    font-size: 14px;
+    line-height: 26px;
+    text-decoration: underline;
+    margin:24px!important;
+}
+.bindingContent .lineBox .modifyA{
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(11,195,147);
+	font-size: 14px;
+	line-height: 40px;
+	text-decoration: underline;
+} 
+.bindingContent .signBox .fill{
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(11,195,147);
+	font-size: 14px;
+	line-height: 26px;
+	text-decoration: underline;
+}
+.bindingContent .lineBox .modify{
+	background: #fff;
+	color: rgb(11,195,147);
+}
+.bindingContent .lineBox .modify:active{
+	background:rgb(11,195,147,0.1);
+}
+.qq{
+	width: 400px;
+	height: 200px;
+	background:#fff;
+	position: fixed;
+	left: 50%;
+	margin-left: -200px;
+	top: 200px;
+	padding: 16px 24px;
+}
+ .modifyTitle{
+	font-size: 16px;
+	color: rgb(68,68,68);
+	line-height: 26px;
+}
+.qq input{
+	width: 100%;
+	height: 42px;
+	line-height: 40px;
+	border: 1px solid #e5e5e5;
+	padding: 0 20px;
+}
+.btnBox{
+	text-align: center;
+}
+.btnBox button.save{
+	background: rgb(11,195,147);
+	color: #fff;
+}
+.btnBox button.save:active{
+	background: rgba(11,195,147,0.8);
+}
+.btnBox button.cancel:active{
+	background: rgba(11,195,147,0.1);
+}
+.phone{
+	width: 500px;
+	height: 350px;
+	background: #fff;
+	position: fixed;
+	left: 50%;
+	margin-left: -300px;
+	top: 250px;
+	padding: 16px 24px;
+}
+.phone .leftName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 42px;
+	color: rgb(68,68,68);
+	font-size: 14px;
+	text-align: right;
+	width: 60px;
+	margin-right: 28px;
+}
+.phone .longInput{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	text-align: right;
+	width: 315px;
+	border: 1px solid rgb(229,229,229);
+	text-align: left;
+	padding-left: 16px;
+}
+.phone .lineBox .rightBox{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.phone .lineBox .rightBox .longInput{
+	 color: rgb(11,195,147); 
+	 border-color:rgb(11,195,147);  
+}
+.phone .lineBox .rightBox .animate{
+	position: absolute;
+	left: 100px;
+	top: 15px;
+}
+.phone .lineBox .rightBox .longInput{
+	background:#fff;
+	text-align: center;
+}
+.phone .lineBox .rightBox .smallInput{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	text-align: right;
+	width: 150px;
+	border: 1px solid rgb(229,229,229);
+	text-align: left;
+	padding-left: 16px;
+}
+.phone .lineBox .rightBox .getCode{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgb(11,195,147);
+	font-size: 14px;
+	text-align: center;
+	width: 140px;
+	border: 1px solid rgb(11,195,147);
+}
+.sign{
+	width: 400px;
+	height: 300px;
+	background:#fff;
+	position: fixed;
+	left: 50%;
+	margin-left: -200px;
+	top: 200px;
+	padding: 16px 24px;
+}
+.sign .signTextarea{
+	width: 100%;
+	height: 140px;
+	border: 1px solid #e5e5e5;
+	outline: none;
+	resize: none;
+	color: rgb(153,153,153);
+	font-size: 14px;
+	line-height: 22px;
+	padding: 8px 16px;
+}
+.positionError{
+	height: 20px;
+	padding-left: 100px;
+}
+.positionError span{
+	font-size: 0;
+	
+}
+.positionError1{
+	height: 20px;
+	padding-left: 20px;
+}
+.positionError1 span{
+	font-size: 0;
+	
+}
+.positionError .errorauthor{
+	display: inline-block;
+	vertical-align: middle;
+    padding-right: 45px;
+    font-size: 12px;
+    line-height: 16px;
+    height: 20px;
+    color: red;
+}

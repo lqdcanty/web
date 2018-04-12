@@ -1,0 +1,19 @@
+
+<div class="banner">
+    <div class="b_main">
+        <div class="b_m_pic">
+            <ul>
+                <li *ngFor="let banner of banners;let in=index" [class.on]="currentPic==in">
+                     <a href="{{banner.bannerUrl}}">
+                         <img src="{{banner.bannerCover}}" alt="{{banner.bannerTitle}}" />
+                     </a>
+                 </li>
+             </ul>
+         </div>
+    </div>
+    <div class="b_list">
+         <ul>
+             <li [class.l_click]="currentPic==i" *ngFor="let banner of banners;let i=index" (click)="changebanner(i)" ></li>
+         </ul>
+    </div>
+</div>

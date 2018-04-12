@@ -1,0 +1,68 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+            "pageNum":1,
+            "pageSize":3,
+            "total":6,
+            "list":[
+               {
+                    "volumeName":"卷一",
+                    "chapterId":1,
+                    "chapterName":"第一章 涅槃归来",
+                    "readPermission":"all",
+                    "purchased":"true",
+                    "reading":"true"
+                },
+                {
+                    "volumeName":"卷一",
+                    "chapterId":2,
+                    "chapterName":"第二章 涅槃归来第二章 涅槃归来第二章 涅槃归来第二章 涅槃归来",
+                    "readPermission":"all",
+                    "purchased":"false",
+                    "reading":"true"
+                },
+                {
+                    "volumeName":"卷一",
+                    "chapterId":3,
+                    "chapterName":"第三章 涅槃归来",
+                    "readPermission":"vip",
+                    "purchased":"true",
+                    "reading":"true"
+                },
+                {
+                    "volumeName":"卷一",
+                    "chapterId":4,
+                    "chapterName":"第四章 涅槃归来",
+                    "readPermission":"vip",
+                    "purchased":"true",
+                    "reading":"true"
+                },
+                {
+                    "volumeName":"卷二",
+                    "chapterId":5,
+                    "chapterName":"第一章 涅槃归来",
+                    "readPermission":"vip",
+                    "purchased":"false",
+                    "reading":"true"
+                },
+                {
+                    "volumeName":"卷二",
+                    "chapterId":6,
+                    "chapterName":"第二章 涅槃归来",
+                    "readPermission":"all",
+                    "purchased":"true",
+                    "reading":"true"
+                },
+                {
+                    "volumeName":"卷二",
+                    "chapterId":7,
+                    "chapterName":"第三章 涅槃归来",
+                    "readPermission":"all",
+                    "purchased":"true",
+                    "reading":"true"
+                }
+            ]
+        }
+}

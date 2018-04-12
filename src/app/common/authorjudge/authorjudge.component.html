@@ -1,0 +1,28 @@
+<!-- <div class="modle-wrap">
+	<div class="modle-container">
+		<div class="isAuthorLayer p16_24">
+			<h1 class="clearfix">
+				<img class="close fr" (click)="sendToParent()" src="../../../assets/images/close.png" alt="" />
+			</h1>
+			<p class="tips mt40">{{contentAuthor}}</p>
+			<p class="btnBox mt40">
+				<button class="on" routerLink="/acceptAgreement">去申请</button>
+			</p>
+		</div>
+	</div>
+</div> -->
+<!-- routerLink={{tempUrl}} -->
+<!--  -->
+<div class="modle-wrap">
+	<div class="modle-container">
+		<div class="isAuthorLayer p16_24">
+			<h1 class="clearfix">
+				<img class="close fr" (click)="sendToParent()" src="../../../assets/images/close.png" alt="" />
+			</h1>
+			<p class="tips mt40">{{contentAuthor}}</p>
+			<p class="btnBox mt40">
+				<button class="on" (click)="tempUrlClick()">{{btn}}</button>
+			</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+.consumption {
+	width: 920px;
+}
+.consumption table{
+	width: 100%;
+}
+.consumption table tr{
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+}
+.consumption table tr .bookName{
+	width: 400px;
+	padding-right: 10px;
+}
+.consumption table tr .YQValue{
+	width: 300px;
+	padding-right: 10px;
+}
+.consumption table tr td{
+	padding: 10px 0;
+	line-height: 24px;
+	font-size: 16px;
+	color: rgb(68,68,68);
+}
+.consumption table tr th{
+	font-size: 16px;
+	line-height: 30px;
+	color: rgb(153,153,153);
+	padding-top: 16px;
+} 

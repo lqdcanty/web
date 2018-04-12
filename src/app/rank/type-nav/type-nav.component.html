@@ -1,0 +1,21 @@
+<div class="leftNav pt20 pb25 fl">
+	<ul class="navUl">
+		
+		<li [routerLink]="['./ranktypeList']" routerLinkActive="on">
+			<a href="javascript:void(0)">
+				<i class="icon" style="background-image: url(../../assets/images/all.png);"></i>
+				<i class="icon" style="background-image: url(../../assets/images/allA.png);"></i>
+				<span>全部榜单</span>
+			</a>
+		</li><!-- [class.on]="typeNav.rankingId==currNav"-->
+		
+		<li *ngFor="let typeNav of ranksLists"  (click)="bookType(typeNav)" routerLinkActive="on" [routerLink]="['./moreBooklist']" [queryParams]="{rankingId:typeNav.rankingId,rankingName:typeNav.rankingName}">
+			<a href="javascript:void(0)"  >
+			<!--  -->
+				<i class="icon" [ngStyle]="{'background-image': 'url('+typeNav.img+')'}"></i>
+				<i class="icon" [ngStyle]="{'background-image': 'url('+typeNav.imgOn+')'}"></i>
+				<span>{{typeNav.rankingName}}</span>
+			</a>
+		</li>
+	</ul>
+</div>

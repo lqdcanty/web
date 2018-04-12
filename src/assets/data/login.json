@@ -1,0 +1,12 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+     "data":{
+            "userId":1,
+            "userName":"落落米",
+            "imgUrl":"../../assets/images/photo.png",
+            "token":"sdjhsa",
+            "isAuthor":"2"
+        }
+}

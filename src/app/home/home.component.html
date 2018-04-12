@@ -1,0 +1,149 @@
+<app-nav></app-nav>
+<div>
+	<div class="contentArea mt24">
+		<div class="wrap clearfix">
+			<app-home-oneslide [homeSlide]="homeSlideArray"></app-home-oneslide>
+			<div class="centerList fl ml32">
+				<div class="coverBox">
+					<a *ngFor="let banner of bannersList | homeType:'bannerType' : '6'" href="{{banner.bannerUrl}}"  [ngStyle]="{'backgroundImage':'url('+banner.bannerCover+')'}" ></a>
+				</div>
+				<ul class="bookList" *ngFor="let ranks of rankingList | homeType:'rankingType' : '4'">
+					<li *ngFor="let rank of ranks.bookList">
+						<div class="outlineborder" [routerLink]="['/bookDetail', rank.bookId]">
+							<b></b><a><span class="bookName">{{rank.bookName}}：</span><span class="describes">{{rank.bookDes}}</span></a>
+						</div>
+					</li>
+				</ul>
+				<!-- notice -->
+				<div class="announcement clearfix mt26">
+					<div class="announcementImg fl">
+						<img src="../../assets/images/icon_ads.png" alt="" class="img1 fl" />
+						<img src="../../assets/images/ads_adot.png" alt="" class="img2 fl" />
+					</div>
+					<div class="announcementContent fr">
+						<ul>
+							<li *ngFor="let notice of noticesList"><a [routerLink]="['/announcement',notice.noticeId]">{{notice.noticeTitile}}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="no_rank1">
+				<app-homerank [ranklistId]="rankingRank1Id" [ranklistName]="rankingRank1Name" [ranklists]="rankingRank1"></app-homerank>
+			</div>
+
+		</div>
+		<div class="wrap">
+		  <app-home-slide [banners]="bannersImg"></app-home-slide>
+		</div>
+		<div class="wrap mt30 clearfix">
+			<div class="fl">
+				<app-homerank [ranklistId]="rankingRank2Id" [ranklistName]="rankingRank2Name" [ranklists]="rankingRank2"></app-homerank>
+			</div>
+			<div class="fl">
+				<div class="bookType clearfix">
+				 	<div class="typeList fl" *ngFor="let rank of rankingList | homeType:'rankingType' : '6'">
+				 		<h1 class="title">{{rank.rankingName}}
+				 			<i class="icon" [ngStyle]="{'backgroundImage':'url('+rank.rankingIcon+')'}"></i>
+				 		</h1>
+				 		<ul>
+				 	        <li class="typeListLi" [class.on]="i===0" *ngFor="let rankChild of rank.bookList;let i=index">
+				 	            <a class="line-a" [routerLink]="['/bookDetail',rankChild.bookId]"> 
+				 	                <div class="l-view">
+				 	                    <span class="Index no_1">{{i+1}}</span>
+				 	                    <span class="bookName">{{rankChild.bookName}}</span>
+				 	                </div>
+				 	            </a>
+				 	            <div class="b-view clearfix">
+				 	           		<a class="bookDetailBox fl">
+				 	                    <h1 class="mb10 clearfix"><span class="index fl">0{{i+1}}</span><a class="fl name" [routerLink]="['/bookDetail',rankChild.bookId]">{{rankChild.bookName}}</a></h1>
+				 	                    <p>
+				 	                    	<i class="icon"></i>
+				 	                    	<span class="author" ><a [routerLink]="['/author',rankChild.authorCode]">{{rankChild.author}}</a></span>
+				 	                    </p>
+				 	                    <p class="type mt10">
+				 	                    	<span>{{rankChild.bookMark}}</span>
+				 	                    	<!-- <b></b>
+				 	                    	<span>豪门</span> -->
+				 	                    </p>
+				 	                </a>
+				 	                <div class="tranform fr">
+					 	                <a class="bookCover" [routerLink]="['/bookDetail',rankChild.bookId]">
+					 	                	<img src="{{rankChild.bookCover}}" alt="" />
+					 	                </a>
+					 	                <span></span>
+				 	                </div>
+				 	            </div>
+				 	        </li>  
+				 	    </ul>
+				 	</div> 
+				</div>
+			</div>
+			<div class="fr">
+				<app-homerank [ranklistId]="rankingRank3Id" [ranklistName]="rankingRank3Name" [ranklists]="rankingRank3"></app-homerank>
+			</div>
+		</div>
+		<div class="wrap clearfix mt30 thematicBookBox">	
+			<div class="thematicBook fl" *ngFor="let banner of bannersList | homeType:'bannerType' : '5'">
+				<a href="{{banner.bannerUrl}}" [ngStyle]="{'backgroundImage':'url('+banner.bannerCover+')'}" ></a>
+			</div>
+			<div class="thematicBook fl" *ngFor="let banner of bannersList | homeType:'bannerType' : '7'">
+				<a href="{{banner.bannerUrl}}" [ngStyle]="{'backgroundImage':'url('+banner.bannerCover+')'}" ></a>
+			</div>
+		</div>
+		<div class="wrap mt30">
+			<div class="fl">
+				<app-homerank [ranklistId]="rankingRank4Id" [ranklistName]="rankingRank4Name" [ranklists]="rankingRank4"></app-homerank>
+			</div>
+			<div class="fl ml26">
+				<app-homerank [ranklistId]="rankingRank5Id" [ranklistName]="rankingRank5Name" [ranklists]="rankingRank5"></app-homerank>
+			
+			</div>
+			<div class="fl ml27">
+				<app-homerank [ranklistId]="rankingRank6Id" [ranklistName]="rankingRank6Name" [ranklists]="rankingRank6"></app-homerank>
+			</div>
+			<div class="fl ml26">
+				<app-homerank [ranklistId]="rankingRank7Id" [ranklistName]="rankingRank7Name" [ranklists]="rankingRank7"></app-homerank>
+			
+			</div>
+		</div>
+		<div class="wrap clearfix mt30">
+			<div class="updates fl">
+				<h1 class="title">
+					<span>最近更新
+						<i class="icon" style="background: url(../../assets/images/new.png);"></i>
+					</span>
+				</h1>
+				<ul class="updatesList">
+					<li class="clearfix" *ngFor="let recenty of homeRecntlyList">
+						<a>
+							<span class="updatesBookType fl">[{{recenty.bookClass}}]</span>
+							<span class="updatesBookName fl" [routerLink]="['/bookDetail',recenty.bookId]">{{recenty.bookName}}</span>
+							<span class="updatesBookChapter fl" [routerLink]="['/bookContent',recenty.bookId+'_'+ recenty.chapterId]">{{recenty.chapterName}}</span>
+							<span class="updatesBookAuthor fl">{{recenty.author}}</span>
+							<span class="updatesBookTime fl">{{recenty.updateTime}}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fr">
+				<div class="ban8">
+					<app-homerank [ranklistId]="rankingRank8Id" [ranklistName]="rankingRank8Name" [ranklists]="rankingRank8"></app-homerank>
+				</div>
+
+				<div class="cl10"></div>
+				<div class="contactBox mt10">
+					<div class="contactPhone">
+						<p>
+							客服微信：&nbsp;&nbsp;oqxiaoshuo
+						</p>
+						<p>
+							微信：&nbsp;&nbsp;yuanqixsw
+						</p>
+					</div>
+					<img src="../../assets/images/rabbit.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<app-foot></app-foot>
+</div>

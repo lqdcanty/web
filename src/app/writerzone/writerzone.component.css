@@ -1,0 +1,87 @@
+
+.leftNav{
+	width: 240px;
+	border: 1px solid #e5e5e5;
+	min-height: 300px;
+}
+.leftNav .navUl li{
+	width: 100%;
+	padding-left: 20px;
+	border-left: 3px solid #fff;
+}
+.leftNav .navUl li+li{
+	margin-top: 20px;
+}
+.leftNav .navUl li.workMan .icon:first-child{
+	width: 16px;
+	height: 18px;
+	background-image: url(../../assets/images/workMan.png);
+}
+.leftNav .navUl li.workMan .icon:nth-child(2){
+	width: 16px;
+	height: 18px;
+	background-image: url(../../assets/images/workManA.png);
+}
+.leftNav .navUl li.income .icon:first-child{
+	width: 16px;
+	height: 18px;
+	background-image: url(../../assets/images/Sellwell.png);
+}
+.leftNav .navUl li.income .icon:nth-child(2){
+	width: 16px;
+	height: 18px;
+	background-image: url(../../assets/images/SellwellA.png);
+}
+
+.leftNav .navUl li.authorData .icon:first-child{
+	width: 15px;
+	height: 18px;
+	background-image: url(../../assets/images/authorData.png);
+}
+.leftNav .navUl li.authorData .icon:nth-child(2){
+	width: 15px;
+	height: 18px;
+	background-image: url(../../assets/images/authorDataA.png);
+}
+
+
+.leftNav .navUl li a{
+	display: block;
+	font-size: 0;
+	line-height: 22px;
+	height: 22px;
+}
+.leftNav .navUl li a .icon,.leftNav .navUl li a span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.leftNav .navUl li a .icon{
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.leftNav .navUl li a span{
+	font-size: 16px;
+	color: rgb(68,68,68);
+	margin-left: 12px;
+}
+.leftNav .navUl li.on{
+	border-color:rgb(11,195,147);
+}
+.leftNav .navUl li.on a span{
+	color: rgb(11,195,147);
+}
+.leftNav .navUl li.on a i:nth-child(2){
+	display: inline-block;
+}
+.leftNav .navUl li.on a i:nth-child(1){
+	display: none;
+}
+.leftNav .navUl li a i:nth-child(2){
+	display: none;
+}
+.right{
+	width: 920px;
+}

@@ -1,0 +1,739 @@
+/* #index_tpic{float:left;width:396px; position:relative;}
+#index_tpic_big{width:324px;height:458px;float:left; overflow:hidden}
+#index_tpic_big a{position:absolute;left:0;top:0; display:none}
+#index_tpic_big a.on{display: block;}
+#index_tpic_big a img{
+	opacity: 1;
+}
+#index_tpic_big a.on img{
+	-webkit-animation-name: fadeIn; 动画名称
+ -webkit-animation-duration: 5s; 动画持续时间
+}
+#index_tpic_big img{width:324px;height:458px}
+#index_tpic_tab{ float:right;width:56px;height:458px; overflow:hidden}
+#index_tpic_tab img{ opacity:0.3;filter:alpha(opacity=30);width:56px;height:78px}
+#index_tpic_tab a.active img,#index_tpic_tab a:hover img{ float:right;width:56px;height:78px;
+	margin-bottom:57px; opacity:1;filter:alpha(opacity=100)}
+#index_tpic_tab a{float:right;width:56px;height:78px; overflow:hidden;margin-bottom:17px;}
+#index_tpic_tab a.active,#index_tpic_tab a:hover{width:56px;height:78px;border:2px solid rgb(11,195,147);}
+
+#index_tpic_binfo{padding-top: 24px;height:124px;}
+#index_tpic_binfo .index_tpic_info{
+	display: none;
+}
+#index_tpic_binfo .index_tpic_info.on{
+	display: block;
+}
+#index_tpic_binfo p{line-height:22px;color:#787878; text-indent:2em;padding-top:5px;font-size: 14px;color: rgb(68,68,68)}
+#index_tpic_binfo h3 a{color:rgb(68,68,68); line-height:24px;font-weight: 900;display: inline-block;}
+.cl10{clear: both;overflow: hidden;font-size: 0;line-height: 0;}
+#index_tpic_binfo h3{text-align: center;} */
+@-webkit-keyframes fadeIn {
+	0% {
+	   opacity: 0.5; 
+	}
+	40% {
+	   opacity: 1; 
+	}
+	100% {
+		opacity: 1; 
+	}
+}
+
+
+.wrap{width: 100%;}
+.centerList{
+	width: 464px;
+	height: 580px;
+}
+.centerList .coverBox{
+	width: 100%;
+	height: 96px;
+	margin-bottom: 26px;
+}
+.centerList .coverBox a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.centerList .bookList li{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	border: 1px solid #e5e5e5;
+	padding: 0 18px;
+	font-size: 0;
+}
+.centerList .bookList li:hover{
+	border-color: rgb(11,195,147);
+}
+.centerList .bookList li:hover a{
+	color: rgb(11,195,147);
+}
+.centerList .bookList li+li{
+	margin-top: 8px;
+}
+.centerList .bookList li div{
+	width: 100%;
+	overflow-wrap: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.centerList .bookList li span,.centerList .bookList li a,.centerList .bookList li b{
+	display: inline-block;
+	vertical-align: middle;
+}
+.centerList .bookList li b{
+	background:rgb(11,195,147);
+	width: 5px;
+	height: 5px;
+	line-height: 5px;
+	border-radius: 100%;
+	margin-right: 6px;
+}
+.centerList .bookList li a{
+	color: rgb(48,48,48);
+	font-size: 16px;
+	line-height: 46px;
+}
+.centerList .bookList li a .bookName{
+	font-weight: 900;
+}
+.announcement{
+	width: 100%;
+	height: 160px;
+	padding: 18px 25px;
+	border: 1px solid #e5e5e5;
+}
+.announcement:hover{
+	border-color:rgb(11,195,147); 
+}
+.announcementImg {
+	margin-top: 40px;
+}
+.announcementImg img{
+	display: inline-block;
+}
+.announcementImg .img2{
+	margin-top: 9px;
+	margin-left: 5px;
+	height: 15px;
+	animation: myfirst 1s linear infinite;
+	-moz-animation: myfirst 1s linear infinite;	/* Firefox */
+	-webkit-animation: myfirst 1s linear infinite;	/* Safari 和 Chrome */
+	-o-animation: myfirst 1s linear infinite;	/* Opera */
+}
+ @keyframes myfirst
+{
+0%   {height: 15px;margin-top:8px;}
+60% {height: 21px;margin-top:6px;}
+}
+
+@-moz-keyframes myfirst Firefox
+{
+0%   {height: 17px;}
+60% {height: 21px;}
+}
+
+@-webkit-keyframes myfirst Safari 和 Chrome
+{
+0%   {height: 17px;}
+60% {height: 21px;}
+}
+
+@-o-keyframes myfirst Opera
+{
+0%   {height: 17px;}
+60% {height: 21px;}
+} 
+.announcementContent{
+	width: 330px;
+}
+.announcementContent ul{
+	height: 120px;
+	overflow:hidden;
+}
+.announcementContent ul li{
+	line-height: 24px;
+	font-size: 16px;
+	color: rgb(48,48,48);
+}
+.announcementContent ul li a{
+	display: block;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.announcementContent ul li+li{
+	margin-top: 8px;
+}
+.announcementContent ul li:hover a{
+	color: rgb(11,195,147);
+}
+.no_rank1{
+	float: right;
+}
+
+
+/*中间的小列表*/
+.bookType{
+	margin-left: 40px;
+	width: 560px;
+	height: 580px;
+}
+.bookType .typeList{
+	width: 260px;
+}
+.bookType .typeList:nth-child(2n){
+	margin-left: 40px;
+}
+.bookType .typeList:nth-child(3){
+	margin-top: 8px;
+}
+.bookType .typeList:nth-child(4){
+	margin-top: 8px;
+}
+.bookType .typeList .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 60px;
+	height: 60px;
+	font-size: 22px;
+	 font-weight: 900; 
+	position: relative;
+}
+.bookType .typeList .title .icon{
+	display: block;
+	width: 48px;
+	height: 43px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	right: -8px;
+	bottom: -1px;
+
+}
+.bookType .typeList ul{
+	margin-top: 10px;
+}
+.bookType .typeList {cursor: pointer}
+.bookType .typeList .typeListLi .line-a .l-view .Index{
+	background:rgb(196,196,196);
+	color: #fff;
+	font-size: 12px;
+}
+.bookType .typeList .typeListLi .line-a .l-view .Index{
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.bookType .typeList .typeListLi .line-a{
+	height: 26px;
+	font-size: 0;
+	display: block;
+}
+.bookType .typeList .typeListLi .line-a .l-view{
+	font-size: 16px;
+	line-height: 26px;
+}
+.bookType .typeList .typeListLi .line-a .l-view .bookName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 26px;
+	width: 220px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+
+
+.bookType .typeList .typeListLi .b-view .tranform{
+	position: relative;
+    z-index: 4;
+    float: right;
+    width: 52px;
+    height: 91px;
+    text-align: center;
+    margin-right: 20px;
+}
+.bookType .typeList .typeListLi .b-view .tranform{
+	-webkit-transform: perspective(60px) rotateY(-10deg);
+    -moz-transform: perspective(60px) rotateY(-10deg);
+    /* transform: perspective(60px) rotateY(-10deg); */
+}
+.bookType .typeList .typeListLi .b-view .bookCover{
+	/* width: 52px;
+	height: 91px; */
+	/* display: block; */
+	position: relative;
+	cursor: pointer;  
+    /* overflow:hidden; */  
+    z-index: 10;
+    display: inline-block;
+    transform: translateZ(50px);
+}
+.bookType .typeList .typeListLi .b-view .bookCover img{
+	width: 52px;
+    height: 87px;
+    outline: 1px solid transparent;
+
+}
+.bookType .typeList .typeListLi .b-view .tranform:before {
+     position: absolute; 
+     z-index: 3;
+     top: 3%; 
+     left: 10%; 
+     width: 100%; 
+     height: 90%; 
+     background-color: #999;
+}
+.bookType .typeList .typeListLi .b-view .bookCover img{
+	width: 52px;
+    height: 87px;
+}
+.bookType .typeList .typeListLi .b-view .tranform:after {
+    position: absolute;
+    z-index: 2;
+    top: 2%;
+    left: 100%;
+    width: 10%;
+    height: 92%;
+    content: '';
+    -webkit-transform: perspective(60px) rotateY(30deg);
+    -moz-transform: perspective(60px) rotateY(30deg);
+    transform: perspective(60px) rotateY(30deg);
+    background-color: #efefef;
+    box-shadow: inset 0 0 5px #333;
+}
+.bookType .typeList .typeListLi .b-view .tranform span {
+    position: absolute;
+    z-index: 1;
+    top: 84.1%;
+    left: 7px;
+    width: 20px;
+    height: 10px;
+    content: '';
+    -webkit-transform: perspective(74px) rotateX(-70deg) rotateY(-5deg);
+    -moz-transform: perspective(74px) rotateX(-70deg) rotateY(-5deg);
+    -ms-transform: scale(0);
+    transform: perspective(74px) rotateX(-70deg) rotateY(-5deg);
+    box-shadow: 25px 0 5px 5px #adadad;
+}
+.bookType .typeList .typeListLi .b-view .tranform span {
+    position: absolute;
+    z-index: 1;
+}
+
+.bookType .typeList .typeListLi .b-view .bookDetailBox h1{
+	border: none;
+	font-size: 0;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox h1 span{
+	font-size: 12px;
+	color: #fff;
+	width: 34px;
+	height: 16px;
+	margin-right: 8px;
+	padding-left: 6px;
+	background:url(../../assets/images/tag3.png) no-repeat center center/cover;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox h1 span.index{
+	margin-top: 3px;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox h1 a{
+	color:rgb(68,68,68);
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 900;
+	max-width: 128px;
+	overflow:hidden;
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox h1 a:hover{
+	color:rgb(11,195,147); 
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox p{
+	font-size: 0;
+}
+.bookType .typeList ul li{
+	margin-bottom: 11px;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox p .icon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../assets/images/icon_user.png) no-repeat center center/cover;
+}
+.bookType .typeList .typeListLi .b-view{
+	display: none;
+}
+.bookType .typeList .typeListLi.on .b-view{
+	display: block;
+}
+.bookType .typeList .typeListLi.on .line-a{
+	display: none;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox p .author{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	margin-left: 8px;
+	vertical-align: middle;
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox p .author a{
+	color: rgb( 129,129,129);
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox p .author a:hover{
+	color: rgb(11,195,147);
+}
+
+.bookType .typeList .typeListLi .b-view .bookDetailBox .type span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+}
+.bookType .typeList .typeListLi .b-view .bookDetailBox .type b{
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background:rgb( 129,129,129); 
+	margin:0 5px;
+}
+
+/* 专题区域 */
+
+.thematicBook{
+	width: 580px;
+	height: 112px;
+}
+.thematicBookBox .thematicBook:last-child{
+	margin-left: 40px;
+}
+.thematicBook a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* 最近更新 */
+.updates{
+	width: 880px;
+}
+.updates .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 60px;
+	height: 60px;
+}
+.updates .title span{
+	font-size: 22px;
+	font-weight: 900;
+	line-height: 60px;
+	height: 60px;
+	display: inline-block;
+	position: relative;
+}
+.updates .title span .icon{
+	display: block;
+	width: 29px;
+	height: 26px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	right: -38px;
+	top: 16px;
+}
+.updates .updatesList {
+	padding-top: 10px;
+}
+.updates .updatesList li{
+	padding: 5px 0;
+}
+.updates .updatesList a{
+	display: block;
+}
+.updates .updatesList li span.updatesBookName:hover{
+	color: rgb(11,195,147);
+}
+.updates .updatesList li span.updatesBookChapter:hover{
+	color: rgb(11,195,147);
+}
+.updates .updatesList span{
+	display: block;
+	line-height: 22px;
+	font-size: 14px;
+	color: rgb(129,129,129);
+}
+.updates .updatesList span.updatesBookType{
+	width: 100px;
+}
+.updates .updatesList span.updatesBookName{
+	width: 225px;
+	outline: none;
+}
+.updates .updatesList span.updatesBookChapter{
+	width: 315px;
+	outline: none;
+}
+.updates .updatesList span.updatesBookAuthor{
+	width: 120px;
+}
+.updates .updatesList span.updatesBookTime{
+	width: 120px;
+	text-align: right;
+}
+
+/* 联系电话 */
+.contactBox{
+	width: 280px;
+	height: 212px;
+	padding-top: 12px;
+	position: relative;
+}
+.contactBox .contactPhone{
+	width:241px;
+	height: 123px;
+	background: url(../../assets/images/contact.png) no-repeat center center/cover;
+	padding: 20px;
+}
+.contactBox .contactPhone p{
+	font-size: 14px;
+	line-height: 30px;
+	color: #fff;
+}
+.contactBox img{
+	width: 68px;
+	height: 69px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* 关于榜单 */
+.rankList{
+	width: 280px;
+	height: 580px;
+}
+.rankList .title{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 60px;
+	height: 60px;
+	font-size: 22px;
+	font-weight: 900;
+}
+.rankList ul{
+	margin-top: 18px;
+}
+.rankList .bookList{cursor: pointer}
+.outlineborder{
+	outline: none;
+}
+.rankList .bookList.green .l-view .Index{
+	background:rgb(11,195,147);
+	color: #fff;
+}
+.rankList .bookList .l-view .Index{
+	background:rgb(196,196,196);
+	color: #fff;
+	font-size: 12px;
+}
+.rankList .bookList .l-view .Index{
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.rankList .bookList .line-a{
+	height: 26px;
+	display: block;
+	color: rgb(68,68,68);
+	font-size: 0;
+}
+.rankList .bookList .line-a .l-view{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height: 26px;
+}
+.rankList .bookList .line-a .l-view .bookName{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 26px;
+	width: 233px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rankList .bookList .b-view{
+	width: 100%;
+	position: relative;
+}
+.rankList .bookList .b-view .bookCover{
+	display: block;
+	width: 134px;
+	height: 188px;
+	background-repeat: no-repeat;
+	background-position: center center; 
+	background-size: cover;
+	position: relative;
+}
+.rankList .bookList .b-view .bookCover .bookIndex{
+	position: absolute;
+	width: 36px;
+	height: 30px;
+	color: #fff;
+	line-height: 24px;
+	left: 0;
+	top: -3px;
+	font-size: 12px;
+	padding-left: 8px;
+}
+.rankList .bookList.green .b-view .bookCover .bookIndex{
+	background: url(../../assets/images/tag1.png) no-repeat center center/cover;
+}
+.rankList .bookList .b-view .bookCover .bookIndex{
+	background: url(../../assets/images/tag2.png) no-repeat center center/cover;
+}
+.rankList .bookList .b-view .bookDetailBox{
+	display: block;
+	width: 116px;
+	margin-left: 14px;
+}
+.rankList .bookList .b-view .bookDetailBox h1{
+	border: none;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 900;
+}
+.rankList .bookList .b-view .bookDetailBox h1 a{
+	color:rgb(68,68,68);
+	display: inline-block;
+	max-width: 116px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rankList .bookList .b-view:hover .bookDetailBox h1 a{
+	color:rgb(11,195,147); 
+}
+/* .rankList .bookList .b-view .bookDetailBox h1 a:hover{
+	color:rgb(11,195,147); 
+} */
+.rankList .bookList .b-view .bookDetailBox p{
+	font-size: 0;
+}
+.rankList ul li{
+	margin-bottom: 12px;
+}
+.rankList .bookList .b-view .bookDetailBox p .icon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../assets/images/icon_user.png) no-repeat center center/cover;
+}
+.rankList .bookList.on .b-view{
+	display: block;
+}
+.rankList .bookList.on .line-a{
+	display: none;
+}
+.rankList .bookList .b-view .bookDetailBox p .author{
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: middle;
+	max-width: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rankList .bookList .b-view .bookDetailBox p .author a{
+	color: rgb( 129,129,129);
+}
+.rankList .bookList .b-view .bookDetailBox p .author:hover a{
+	color: rgb(11,195,147);
+}
+.rankList .bookList .b-view .bookDetailBox .type span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb( 129,129,129);
+}
+.rankList .bookList .b-view .bookDetailBox .type b{
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background:rgb( 129,129,129); 
+	margin:0 5px;
+}
+.b-view{
+	display: none;
+}
+.rankList .bookListMore{
+	font-size: 0px;
+	line-height: 22px;
+	text-align: right;
+}
+.rankList .bookListMore b{
+	font-weight: 100;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+}
+.rankList .bookListMore span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+.rankList .bookListMore .more{
+	color: rgb(192,192,192);
+}
+.rankList .bookListMore .icon{
+	width:6px;
+	height: 12px;
+	margin-left: 10px;
+	background: url(../../assets/images/arrow_nh.png) no-repeat center center/cover;
+}
+.rankList .bookListMore b:hover .more{
+	color: rgb(11,195,147);
+}
+.rankList .bookListMore b:hover .icon{
+	background: url(../../assets/images/arrow_py.png) no-repeat center center/cover;
+}
+.ban8{
+	height: 580px;
+}
+

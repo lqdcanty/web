@@ -1,0 +1,49 @@
+.leftNav{
+	width: 240px;
+	border: 1px solid #e5e5e5;
+}
+.leftNav .navUl li{
+	width: 100%;
+	padding-left: 20px;
+	border-left: 3px solid #fff;
+}
+.leftNav .navUl li+li{
+	margin-top: 20px;
+}
+.leftNav .navUl li a{
+	display: block;
+	font-size: 0;
+	line-height: 22px;
+	height: 22px;
+}
+.leftNav .navUl li a .icon,.leftNav .navUl li a span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.leftNav .navUl li a .icon{
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.leftNav .navUl li a span{
+	font-size: 16px;
+	color: rgb(68,68,68);
+	margin-left: 12px;
+}
+.leftNav .navUl li.on{
+	border-color:rgb(11,195,147);
+}
+.leftNav .navUl li.on a span{
+	color: rgb(11,195,147);
+}
+.leftNav .navUl li.on a i:nth-child(2){
+	display: inline-block;
+}
+.leftNav .navUl li.on a i:nth-child(1){
+	display: none;
+}
+.leftNav .navUl li a i:nth-child(2){
+	display: none;
+}

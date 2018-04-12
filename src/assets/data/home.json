@@ -1,0 +1,622 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":
+    {
+        "banners": [
+            {
+                "bannerType": "3",
+                "bannerId": 1,
+                "bannerCover": "http://static.zongheng.com/upload/cover/2017/02/1486612803041.jpg",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题1",
+                "bannerDes": "简介1"
+            },
+            {
+                "bannerType": "3",
+                "bannerId": 1,
+                "bannerCover": "http://static.zongheng.com/upload/cover/23/7e/237eef347fcf71292db77b89a5286fe3.jpeg",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题2",
+                "bannerDes": "简介2"
+            },
+            {
+                "bannerType": "3",
+                "bannerId": 1,
+                "bannerCover": "http://static.zongheng.com/upload/cover/d7/54/d7548381fcd192931918f09111d95c33.jpeg",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题3",
+                "bannerDes": "简介3"
+            },
+            {
+                "bannerType": "3",
+                "bannerId": 1,
+                "bannerCover": "http://static.zongheng.com/upload/cover/2017/06/1496737858135.jpg",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题4",
+                "bannerDes": "简介4"
+            },
+            {
+                "bannerType": "3",
+                "bannerId": 1,
+                "bannerCover": "http://static.zongheng.com/upload/cover/2016/09/1475072404496.jpg",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题5",
+                "bannerDes": "简介5"
+            },
+            {
+                "bannerType": "4",
+                "bannerId": 1,
+                "bannerCover": "../../assets/images/bannerBig.png",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题",
+                "bannerDes": "简介"
+            },
+            {
+                "bannerType": "4",
+                "bannerId": 1,
+                "bannerCover": "../../assets/images/bannerBig.png",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题",
+                "bannerDes": "简介"
+            },
+            {
+                "bannerType": "4",
+                "bannerId": 1,
+                "bannerCover": "../../assets/images/bannerBig.png",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题",
+                "bannerDes": "简介"
+            },
+            {
+                "bannerType": "5",
+                "bannerId": 1,
+                "bannerCover": "../../assets/images/thematic1.png",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题",
+                "bannerDes": "简介"
+            },
+            {
+                "bannerType": "5",
+                "bannerId": 1,
+                "bannerCover": "../../assets/images/thematic2.png",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题",
+                "bannerDes": "简介"
+            },
+            {
+                "bannerType": "6",
+                "bannerId": 1,
+                "bannerCover": "../../assets/images/banner.png",
+                "bannerUrl": "http://baidu.com",
+                "bannerTitle": "banner标题",
+                "bannerDes": "简介"
+            }
+        ],
+        "notices": [
+            {
+                "noticeId": 1,
+                "noticeTitle": "绝品宠婚即日上线，受到广大读者的热捧"
+            },
+            {
+                "noticeId": 2,
+                "noticeTitle": "绝品宠婚即日上线，受到广大读者的热捧"
+            },
+            {
+                "noticeId": 3,
+                "noticeTitle": "绝品宠婚即日上线，受到广大读者的热捧"
+            }
+        ],
+        "ranking": [
+            {
+                "rankingId": 1,
+                "rankingName": "主推榜",
+                "rankingIcon":"null",
+                "rankingType": "4",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "1言情小说的名",
+                        "bookCover": "http://xxxxxxxxxx.jpg",
+                        "author": "作者1",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠1",
+                        "bookMark": "总裁",
+                        "bookDes": "1言情小说的描述，言情小说的描述"
+
+                    },
+                    {
+                        "bookId": 2,
+                        "bookName": "2言情小说的名",
+                        "bookCover": "http://xxxxxxxxxx.jpg",
+                        "author": "作者3",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠2",
+                        "bookMark": "总裁",
+                        "bookDes": "1言情小说的描述，言情小说的描述"
+                    },
+                    {
+                        "bookId": 3,
+                        "bookName": "3言情小说的名",
+                        "bookCover": "http://xxxxxxxxxx.jpg",
+                        "author": "作者3",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠3",
+                        "bookMark": "总裁",
+                        "bookDes": "1言情小说的描述，言情小说的描述"
+                    },
+                    {
+                        "bookId": 4,
+                        "bookName": "4言情小说的名",
+                        "bookCover": "http://xxxxxxxxxx.jpg",
+                        "author": "作者4",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠4",
+                        "bookMark": "总裁",
+                        "bookDes": "1言情小说的描述，言情小说的描述"
+                    },
+                    {
+                        "bookId": 5,
+                        "bookName": "5言情小说的名",
+                        "bookCover": "http://xxxxxxxxxx.jpg",
+                        "author": "作者5",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠5",
+                        "bookMark": "总裁",
+                        "bookDes": "1言情小说的描述，言情小说的描述"
+                    }
+                ]
+            },
+            {
+                "rankingId": 1,
+                "rankingName": "玄幻1、玄幻2",
+                "rankingType": "6",
+                "rankingIcon":"../../assets/images/1.png",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "1言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "1作者",
+                        "authorCode":"abc",
+                        "bookClass": "1玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 2,
+                        "bookName": "2言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "2作者",
+                        "authorCode":"abc",
+                        "bookClass": "2玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 3,
+                        "bookName": "3言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "3作者",
+                        "authorCode":"abc",
+                        "bookClass": "3玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 4,
+                        "bookName": "4言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "4作者",
+                        "authorCode":"abc",
+                        "bookClass": "4玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 1,
+                "rankingName": "玄幻2、玄幻3",
+                "rankingIcon":"../../assets/images/2.png",
+                "rankingType": "6",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "1言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "1作者",
+                        "authorCode":"abc",
+                        "bookClass": "1玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 2,
+                        "bookName": "2言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "2作者",
+                        "authorCode":"abc",
+                        "bookClass": "2玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 3,
+                        "bookName": "3言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "3作者",
+                        "authorCode":"abc",
+                        "bookClass": "3玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 4,
+                        "bookName": "4言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "4作者",
+                        "authorCode":"abc",
+                        "bookClass": "4玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 1,
+                "rankingName": "玄幻3、玄幻4",
+                "rankingIcon":"../../assets/images/3.png",
+                "rankingType": "6",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "1言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "1作者",
+                        "authorCode":"abc",
+                        "bookClass": "1玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 2,
+                        "bookName": "2言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "2作者",
+                        "authorCode":"abc",
+                        "bookClass": "2玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 3,
+                        "bookName": "3言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "3作者",
+                        "authorCode":"abc",
+                        "bookClass": "3玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 4,
+                        "bookName": "4言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "4作者",
+                        "authorCode":"abc",
+                        "bookClass": "4玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 1,
+                "rankingName": "玄幻4、玄幻5",
+                "rankingIcon":"../../assets/images/4.png",
+                "rankingType": "6",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "1言情小说的名字可能长，1言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "1作者",
+                        "authorCode":"abc",
+                        "bookClass": "1玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 2,
+                        "bookName": "2言情小说的名字可能长，1言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "2作者",
+                        "authorCode":"abc",
+                        "bookClass": "2玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 3,
+                        "bookName": "3言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "3作者",
+                        "authorCode":"abc",
+                        "bookClass": "3玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 4,
+                        "bookName": "4言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "4作者",
+                        "authorCode":"abc",
+                        "bookClass": "4玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 11,
+                "rankingName": "榜单1",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "authorCode":"abc",                       
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 12,
+                "rankingName": "榜单2",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 13,
+                "rankingName": "榜单3",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 14,
+                "rankingName": "榜单4",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu31.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 15,
+                "rankingName": "榜单5",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 16,
+                "rankingName": "榜单6",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu29.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 17,
+                "rankingName": "榜单7",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            },
+            {
+                "rankingId": 18,
+                "rankingName": "榜单8",
+                "rankingType": "7",
+                "bookList": [
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    },
+                    {
+                        "bookId": 1,
+                        "bookName": "言情小说的名字可能长，预留一行，超过隐藏。。。",
+                        "bookCover": "../../assets/images/zu30.png",
+                        "author": "作者",
+                        "authorCode":"abc",
+                        "bookClass": "玄幻仙侠",
+                        "bookMark": "总裁"
+                    }
+                ]
+            }
+        ]
+    }
+}

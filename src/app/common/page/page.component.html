@@ -1,0 +1,22 @@
+<!--分页组件-->
+<div class="pageCss text-right margin-bottom"  *ngIf="pageParams.totalPage>1 && pageParams.totalNum>0">
+		<!-- 上一页 -->
+	 <button class="btn btn-default next prev"  (click)="changePage(pageParams.curPage-1)" [disabled]="pageParams.curPage==1" *ngIf="pageParams.curPage!=1"></button>
+		<!-- 中间的页数展示 -->
+	 <button class="btn btn-default" [class.on]="page.pageNo==pageParams.curPage" [disabled]="pageParams.curPage==page.pageNo" *ngFor="let page of getPageList(pageParams)" (click)="changePage(page.pageNo)">
+	  {{page.pageNo}}
+	 </button>
+	 
+		<!-- 下一页 -->
+	 <button class="btn btn-default next right"  (click)="changePage(pageParams.curPage-(-1))" [disabled]="pageParams.curPage==pageParams.totalPage" *ngIf="pageParams.curPage!=pageParams.totalPage"></button>
+	
+		<!-- 跳转页 -->
+	<input id="inputValue" class="btn inputBox" min="1" max="{{pageParams.totalPage}}" type="number"  />
+
+	<button class="btn btn-default over"  (click)="changePageOut(pageParams.totalPage)" [disabled]="inputValue>pageParams.totalPage">GO</button>
+
+	<a class="pull-left text-sm ml8">总计 {{pageParams.totalPage}} 页</a>
+</div>
+<div class="col-md-12 text-center text-sm text-dark-gray" *ngIf="!pageParams.totalNum">
+ 	暂时没有数据
+</div>

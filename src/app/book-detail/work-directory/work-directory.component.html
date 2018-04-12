@@ -1,0 +1,10 @@
+<div class="workDirectory mt24 pd20">
+	<div class="no_volume" *ngFor="let volume of volumeListEs">
+		<div class="volumeName">
+			<span class="volumeNameWord">{{volume.volumeName}}</span>
+		</div>
+		<ul class="charpter pd16 clearfix">
+			<li *ngFor="let vol of volume.chapterList" [routerLink]="['/bookContent',bookId+'_'+ vol.chapterId]"><a href="javascript:void(0)">{{vol.chapterName}}</a><span class="volumeNameImg ml10" [class.on]="vol.readPermission=='vip'&&vol.purchased==false"></span></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,68 @@
+.foot{
+	width: 100%;
+	background: rgb(58,58,58);
+	color: #fff;
+}
+.foot .contentArea{
+	padding: 32px 0;
+}
+.footLeft{
+	width: 900px;
+	border-right: 1px solid  rgba(235,235,235,0.5);
+}
+.foot .footLeft .blogroll{
+	font-size: 0;
+}
+.foot .footLeft .blogroll span,.foot .footLeft .blogroll a{
+	display: inline-block;
+	vertical-align: middle;
+}
+.foot .footLeft .blogroll span{
+	font-size: 14px;
+	line-height: 26px;
+}
+.foot .footLeft .blogroll a{
+	font-size: 12px;
+	line-height: 26px;
+	color: rgb(228,228,228);
+}
+.foot .footLeft .blogroll a:hover{
+	color: rgb(11,195,147);
+}
+.foot .footLeft .blogroll a:nth-child(2){
+	margin-left: 5px;
+}
+.foot .footLeft .blogroll a+a{
+	margin-left: 16px;
+}
+.foot .footLeft .footNav{
+	font-size: 16px;
+	color: rgba(230,230,230,0.5);
+	line-height: 26px;
+}
+.foot .footLeft .footNav a{
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(228,228,228);
+	margin-right: 16px;
+}
+.foot .footLeft .footNav a:hover{
+	color: rgb(11,195,147);
+}
+.foot .footLeft .footNav a+a{
+ 	margin-left: 16px; 
+}
+.foot .footLeft .record{
+	font-size: 12px;
+	line-height: 20px;
+}
+.foot  .footRight {
+	width: 300px;
+	font-size: 18px;
+	color: rgb(228,228,228);
+	text-align: center;
+}
+.foot .footRight img{
+	width: 130px;
+	height: 130px;
+}

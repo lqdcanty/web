@@ -1,0 +1,60 @@
+<div class="authorComment">
+	<div class="commentBox clearfix pt20 pb20 borderb" *ngFor="let comment of comments">
+		<div class="commentPhoto fl" [ngStyle]="{'backgroundImage':'url('+comment.imgUrl+')'}"></div>
+		<div class="commentContent fr" >
+			<div class="read">
+				<h1 class="commentAuthor mt10">{{comment.userName}}</h1>
+				<div class="commentWord mt10">
+					{{comment.content}}
+				</div>
+				<div class="time mt10">
+					<span class="commentTime">{{comment.time}}</span>
+					<span class="commentZan" (click)="commentZanReader(comment)">
+						<img [class.on]="!comment.likeFlag" src="../../../assets/images/zan_n.png" alt="" />
+						<img [class.on]="comment.likeFlag"  src="../../../assets/images/zan_p.png" alt="" />
+						<b class="number" >{{comment.likeNum}}</b>
+						<b>赞</b>
+					</span>
+					<a class="reply ml16" *ngIf="!comment.comments" (click)="replyFunction(comment.commentId)">回复</a>
+				</div>
+			</div>
+			<div class="write mt16" *ngIf="comment.comments">
+			<!-- *ngFor="let author of comment.comments" -->
+				<div class="commentBox clearfix pd20" >
+					<div class="commentPhoto fl" [ngStyle]="{'backgroundImage':'url('+comment.comments.imgUrl+')'}"></div> 
+					<div class="commentContent fr">
+						<div class="read">
+							<h1 class="commentAuthor mt10">{{comment.comments.userName}}</h1>
+							<div class="commentWord mt10">
+								{{comment.comments.content}}
+							</div>
+							<div class="time mt10">
+								<span class="commentTime">{{comment.comments.time}}</span>
+								<span class="commentZan" (click)="commentZanAuthor(comment.comments)">
+									<img [class.on]="!comment.comments.likeFlag" src="../../../assets/images/zan_n.png" alt="" />
+									<img [class.on]="comment.comments.likeFlag" class="on" src="../../../assets/images/zan_p.png" alt="" />
+									<b class="number">{{comment.comments.likeNum}}</b>
+									<b>赞</b>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 有一个分页 -->
+	<div class="mt24 mb24">
+		<app-page [pageParams]="{pageSize:6,totalNum:totalNum,curPage:1,totalPage:totalPage}" (changeCurPage)="getPageData($event)"></app-page>
+	</div>
+</div>
+<div *ngIf="commentBoolean">
+	<app-comment-layer (outer)="receive($event)" [paramsId]="commentId" [paramsUrl]="urlParams"></app-comment-layer>
+</div><!--  (outercomment)="receivecomment($event)" -->
+<div *ngIf="tipLayerBoolean">
+	<app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+
+<div *ngIf="loginBoolean">
+	<app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>

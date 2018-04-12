@@ -1,0 +1,103 @@
+<section>
+  <div class="header">
+    <div class="contentArea clearfix">
+      <a href="javascript:void(0)" class="logo mr16" routerLink="/home">
+        <img src="../../assets/images/logo.png" alt=""/>
+      </a>
+      <span>元气充值</span>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top: 40px;">
+    <div class="contentArea">
+      <div class="toupContent">
+        <div class="bindingOkBox">
+          <h1 class="balance">账户余额：<span class="ml20">{{totalBalance}}</span>&nbsp;&nbsp;元气</h1>
+          <p class="toup mt20">账户充值</p>
+          <div class="toupType clearfix mt8">
+            <div class="type pl12 fl" [class.on]="accoutType==0" (click)="accoutTypeFun(0)">
+              <img class="icon mr16" src="../../assets/images/zhifubao.png" alt=""/>
+              <span class="typeName">支付宝</span>
+              <img class="ok" src="../../assets/images/ok.png" alt=""/>
+            </div>
+            <div class="type pl12 ml20 fl" [class.on]="accoutType==1" (click)="accoutTypeFun(1)">
+              <img class="icon mr16" src="../../assets/images/weixin.png" alt=""/>
+              <span class="typeName">微信</span>
+              <img class="ok" src="../../assets/images/ok.png" alt=""/>
+            </div>
+           <!--  <div class="type pl12 ml20 fl" [class.on]="accoutType==2" (click)="accoutTypeFun(2)">
+             <img class="icon mr16" src="../../assets/images/unionpay.png" alt=""/>
+             <span class="typeName">银联</span>
+             <img class="ok" src="../../assets/images/ok.png" alt=""/>
+           </div> -->
+          </div>
+          <div class="toupValue">
+            <p class="toup mt20">账户充值</p>
+            <ul class="mt8 clearfix" *ngIf="accoutType==0||accoutType==1||accoutType==2">
+              <li [class.on]="indexCur=='5'" (click)="selectMoney('7',$event,'5','0')">
+                <span class="money">¥5</span>
+                <span>(共500元气)</span>
+                <img class="ok" src="../../assets/images/ok.png" alt=""/>
+              </li>
+              <li [class.on]="indexCur=='10'" (click)="selectMoney('9',$event,'10','0') ">
+                <span class="money">¥10</span>
+                <span>(共1000元气)</span>
+                <img class="ok" src="../../assets/images/ok.png" alt=""/>
+              </li>
+              <li [class.on]="indexCur=='20'" (click)="selectMoney('11',$event,'20','1')">
+                <span class="money">¥20</span>
+                <span>(送200元气，共2200元气)</span>
+                <img class="ok" src="../../assets/images/ok.png" alt=""/>
+              </li>
+              <li [class.on]="indexCur=='30'" (click)="selectMoney('13',$event,'30','2')">
+                <span class="money">¥30</span>
+                <span>(送300元气，共3300元气)</span>
+                <img class="ok" src="../../assets/images/ok.png" alt=""/>
+              </li>
+              <li [class.on]="indexCur=='50'" (click)="selectMoney('15',$event,'50','3')">
+                <span class="money">¥50</span>
+                <span>(送1000元气，共6000元气)</span>
+                <img class="ok" src="../../assets/images/ok.png" alt=""/>
+              </li>
+              <li [class.on]="indexCur=='80'" (click)="selectMoney('17',$event,'80','4')">
+                <span class="money">¥80</span>
+                <span>(送1600元气，共9600元气)</span>
+                <img class="ok" src="../../assets/images/ok.png" alt=""/>
+              </li>
+            </ul>
+            <div class="weixinerweima"  *ngIf="accoutType==-1" [class.on]="zhifuTips" >  
+                <div  *ngIf="!zhifuTips">
+                  <img class="erweimaTu" src="{{weixinerweimaUrl}}" alt="" />
+                  <img class="erweimaTip" src="../../assets/images/weixintip.png" alt="" />
+                </div>
+                <div class="tipsBox" *ngIf="zhifuTips">
+                  <p class="tips mt40">二维码超时，请重新获取二维码！</p>
+                  <p class="btnBox mt40">
+                    <button class="on" (click)="zhifuReload()">加载二维码</button>
+                  </p>
+                </div>
+            </div>
+          </div>
+          <div class="uptoBtn mt24">
+            <p>1、1元人民币=100元气</p>
+            <!--<button class="mt16">立即支付 ¥{{money}}</button>-->
+            <div *ngIf="accoutType!=-1"
+                 style="margin-top: 16px;width: 168px;height: 36px;background:rgb(252,99,56);color: #fff;border: none;outline: none;text-align:center;line-height:35px; ">
+              <a style="color:white" (click)="pay()">立即支付 ￥{{money}}</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt40">
+    <app-foot></app-foot>
+  </div>
+</section>
+<div *ngIf="tipLayerBoolean">
+  <app-tip-layer (outertip)=recevicetip($event) [tipMessage]="tipMessage"></app-tip-layer>
+</div>
+<div *ngIf="loginBoolean">
+  <app-login (outerLogin)="reviceLogin($event)" ></app-login>
+</div>
+

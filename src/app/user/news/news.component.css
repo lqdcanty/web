@@ -1,0 +1,23 @@
+.news{
+	border: 1px solid #e5e5e5;
+}
+.news .newsNav{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 0;
+	height: 50px;
+}
+.news .newsNav a{
+	display: inline-block;
+	font-size: 22px;
+	line-height: 47px;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+	padding:0 5px;
+}
+.news .newsNav a+a{
+	margin-left: 30px;
+}
+.news .newsNav a.on{
+	border-bottom: 3px solid rgb(11,195,147);
+}

@@ -1,0 +1,631 @@
+.contentBox{
+	background-color: #f6f6f6;
+}
+.breadNav{
+	width: 1052px;
+	margin:0 auto;
+	padding:14px 0 4px 0;
+
+}
+.breadNav span,.breadNav img{
+	display: inline-block;
+	vertical-align: middle;
+	margin:0 5px;
+}
+.breadNav img{
+	height:12px;
+}
+.breadNav span{
+	font-size: 12px;
+	line-height: 16px;
+	color: rgb(68,68,68);
+}
+.breadNav{
+	font-size: 16px;
+}
+
+.contentNav{
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	margin-left: -595px;
+	top:182px;
+	border: 1px solid rgba(0,0,0,0.2);
+	z-index: 10;
+}
+.contentNav ul li a{
+	display: block;
+	width: 58px;
+	height: 60px;
+	font-size: 0;
+	padding-top: 10px;
+}
+.contentNav ul li+li{
+	border-top:1px solid rgba(0,0,0,0.2); 
+}
+.contentNav ul li a .icon{
+	display: block;
+	height: 23px;
+}
+.contentNav ul li:hover a  span{
+	color: rgb(11,195,147);
+}
+.contentNav ul li a  span{
+	font-size: 12px;
+	line-height:26px;
+	color: rgb(153,153,153);
+	display: block;
+	text-align: center;
+}
+.contentNav ul li:nth-child(1) .icon{
+	margin:0 auto;
+	display: block;
+	padding-top: 4px;
+}
+.contentNav ul li .icon img{
+	margin:0 auto;
+	display: block;
+}
+.contentNav ul li.dirctory .icon img{
+	width: 22px;
+	height: 13px;
+} 
+.contentNav ul li.seting .icon img{
+	width: 22px;
+	height: 22px;
+} 
+.contentNav ul .seting.on .icon img:last-child{
+	display: block;
+}
+.contentNav ul .seting.on .icon img:first-child{
+	display: none;
+}
+.contentNav ul li.detail .icon img{
+	width: 17px;
+	height: 22px;
+} 
+.contentNav ul li.phone .icon img{
+	width: 13px;
+	height: 22px;
+} 
+.contentNav ul li.addStore .icon img{
+	width: 17px;
+	height: 22px;
+}
+.contentNav ul li .icon img:last-child{
+	display: none;
+}
+.contentNav ul .dirctory.on .icon img:last-child{
+	display: block;
+}
+.contentNav ul .dirctory.on .icon img:first-child{
+	display: none;
+}
+.contentNav ul .phone.on .icon img:last-child{
+	display: block;
+}
+.contentNav ul .phone.on .icon img:first-child{
+	display: none;
+}
+.contentNav ul li.on{
+	box-shadow: -0px 4px 6px rgba(0,0,0,0.2);
+}
+.contentNav ul li:hover .icon img:first-child{
+	display: none;
+}
+.contentNav ul li:hover .icon img:last-child{
+	display: block;
+}
+.contentNav ul li.on .icon img:first-child{
+	display: none;
+}
+.contentNav ul li.on .icon img:last-child{
+	display: block;
+}
+.contentNav ul li.on a  span{
+	color: rgb(11,195,147);
+}
+.contentAddBox,.white{
+	margin:0 auto;
+	width: 1052px;
+}
+.contentAddBox .content{
+	margin:0 auto;
+	width: 1052px;
+	position: relative;
+	margin-top: 12px;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+.content .title{
+	font-size: 24px;
+	color: rgb(68,68,68);
+	line-height: 28px;
+}
+.content .author{
+	font-size: 0;
+}
+.content .author span{
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(153,153,153);
+	font-size: 12px;
+	line-height: 32px;
+}
+.content .chapterContent{
+	font-size: 18px;
+	line-height: 30px;
+	color: rgb(68,68,68);
+}
+.content .chapterContent p{
+	text-indent: 2em;
+}
+.content .chapterContent p+p{
+	margin-top: 20px;
+}
+.content .authorSay{
+	background:rgba(11,195,147,.1);
+	padding: 10px;
+}  
+.content .authorSay .border{
+	border: 1px solid rgb(11,195,147);
+	padding: 8px 24px;
+}
+.content .authorSay .border span{
+	font-size: 14px;
+	color: rgb(11,195,147);
+	line-height: 30px;
+}
+.content .authorSay .border .authorSayContent{
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 30px;
+}
+.content .exceptional{
+	margin:0 auto;
+}
+.content .exceptional .exceptionalBtn{
+	border-radius: 30px;
+	width: 160px;
+	height: 60px;
+	background:rgb(11,195,147);
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	line-height: 60px;
+	position: relative;
+	margin:0 auto;
+	margin-top: 32px;
+	cursor: pointer;
+}
+.content .exceptional .exceptionalBtn:active{
+	background:rgba(11,195,147,0.8);
+}
+.content .exceptional .exceptionalBtn span{
+	display: inline-block;
+}
+.content .exceptional .exceptionalBtn b{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 12px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	border-radius: 100%;
+	background: #fff;
+	color: rgb(11,195,147);
+	position: absolute;
+	right: 40px;
+	top: 10px;
+}
+.content .exceptional .exceptionalPerson {
+	font-size: 0;
+	text-align: center;
+}
+.content .exceptional .exceptionalPerson span{
+	display: inline-block;
+	vertical-align: middle;
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.content .exceptional .exceptionalPerson span+span{
+	margin-left: 20px;
+}
+.rightNav{
+	background: #fff;
+	position: fixed;
+	right: 50%;
+	margin-right: -595px;
+	bottom: 60px;
+	z-index: 10;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+.rightNav ul li a{
+	display: block;
+	width: 58px;
+	height: 60px;
+	font-size: 0;
+	padding-top: 10px;
+}
+.rightNav ul li+li{
+	border-top:1px solid rgba(0,0,0,0.2); 
+}
+.rightNav ul li a .icon{
+	display: block;
+	height: 23px;
+}
+.rightNav ul li:hover a  span{
+	color: rgb(11,195,147);
+}
+.rightNav ul li a  span{
+	font-size: 12px;
+	line-height:26px;
+	color: rgb(153,153,153);
+	display: block;
+	text-align: center;
+}
+.rightNav ul li:nth-child(2) .icon{
+	margin:0 auto;
+	display: block;
+	padding-top: 2px;
+}
+.rightNav ul li .icon img{
+	margin:0 auto;
+	display: block;
+}
+.rightNav ul li.exceptionalt .icon img{
+	width: 22px;
+	height: 22px;
+} 
+.rightNav ul li.commentt .icon img{
+	width: 22px;
+	height: 19px;
+} 
+.rightNav ul li .icon img:last-child{
+	display: none;
+}
+.rightNav ul li:hover .icon img:first-child{
+	display: none;
+}
+.rightNav ul li:hover .icon img:last-child{
+	display: block;
+}
+
+/*弹层*/
+.settingLayer{
+	position: absolute;
+	left: 50%;
+	margin-left: -525px;
+	top: 182px;
+	box-shadow: 2px 5px 5px rgb(153,153,153);
+	width:430px;
+	height: 310px;
+	z-index: 9;
+	background:#fff;
+	padding: 20px 20px;
+}
+.settingLayer .whiteK {
+	left: -16px;
+	top: 61px;
+	height: 60px;
+	width: 17px;
+	position: absolute;
+	background:#fff;
+	z-index: 8;
+}
+.settingLayer .settingLayerContent h1{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: rgb(68,68,68);
+}
+.settingLayer .settingLayerContent h1 img{
+	width: 16px;
+	margin-top: 5px;
+}
+.settingLayer .settingLayerContent .settingLine{
+	font-size: 0;
+}
+.settingLayer .settingLayerContent .settingLine span{
+	display: inline-block;
+	vertical-align: middle;
+} 
+.settingLayer .settingLayerContent .settingLine .settingName{
+	width: 100px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 36px;
+}
+.settingLayer .settingLayerContent .settingLine .settingValue{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+.settingLayer .settingLayerContent .settingLine .settingValue b{
+	display: inline-block;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	border: 1px solid rgb(219,219,219);
+	box-shadow: 0px 0px 2px rgb(153,153,153);
+	margin-right: 16px;
+	border-radius: 100%;
+	background-repeat: repeat;
+}
+.settingLayer .settingLayerContent .settingLine .settingValue b.on{
+	border-color: rgb(11,195,147);
+}
+.settingLayer .settingLayerContent .settingLine .font{
+	width: 88px;
+	height: 28px;
+	border: 1px solid rgb(229,229,229);
+}
+.settingLayer .settingLayerContent .settingLine .litter{
+	background:url(../../assets/images/a-.png) no-repeat center center;
+}
+.settingLayer .settingLayerContent .settingLine .more{
+	background:url(../../assets/images/a+.png) no-repeat center center;
+}
+.settingLayer .settingLayerContent .settingLine .btn{
+	border: 0;
+	width: 108px;
+	height: 36px;
+	background-color: rgb(11,195,147);
+	color: #fff;
+	font-size: 14px;
+	outline: none;
+}
+
+.directoryLayer{
+	position: absolute;
+	width: 1052px;
+	left: 50%;
+	margin-left: -525px;
+	top: 182px;
+	height: auto;
+	max-height: 800px;
+	background:#fff; 
+	z-index: 100;
+	box-shadow: 2px 5px 5px rgb(153,153,153);
+}
+.directoryLayer .directoryLayerContent{
+	height: auto;
+	max-height: 800px;
+	background:#fff;
+ 	padding:20px 30px;
+}
+.directoryLayer .whiteK{
+	height: 61px;
+	width: 17px;
+	position: absolute;
+	background:#fff;
+	z-index:200;
+	left: -16px;
+	top: -1px;
+	border-top: 1px solid #e5e5e5;
+}
+.directoryLayer .directoryLayerContent .scrollContent{
+	overflow-y: scroll;
+	max-height: 705px;
+}
+.directoryLayer .directoryLayerContent h1{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: rgb(68,68,68);
+	height: 24px;
+}
+.directoryLayer .directoryLayerContent h1 img{
+	width: 16px;
+	margin-top: 5px;
+}
+.directoryLayer .directoryLayerContent .volumeName {
+	font-size: 16px;
+	color: rgb(68,68,68);
+	line-height: 22px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e5e5e5;
+	font-weight: bold;
+}
+.directoryLayer .directoryLayerContent .volumeName span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.volumeNameImg{
+	width: 34px;
+	height: 16px;
+	vertical-align: middle;
+	display: none;
+	background: url(../../assets/images/vip.png) no-repeat center center/cover;
+}
+.volumeNameImg.on{
+	display: inline-block;
+	vertical-align: middle;
+}
+#tipLayerBoolean{
+	display: none;
+}
+.directoryLayer .directoryLayerContent .charpter li{
+	padding-right: 10px;
+	width: 50%;
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	border-bottom: 1px solid #e5e5e5;
+} 
+.directoryLayer .directoryLayerContent .charpter li a{
+	display: inline-block;
+	vertical-align: middle;
+	width: 390px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+}
+.phoneReadLayer{
+	position: absolute;
+	width: 320px;
+	height: 300px;
+	box-shadow: 0 0 24px rgba(0,0,0,0.2);
+	padding: 20px;
+	left: 50%;
+	margin-left: -525px;
+	top: 305px;
+	background-color: #fff;
+	z-index: 11;
+}
+.phoneReadLayer .erweimaBox img{
+	display: block;
+	margin:0 auto;
+	width: 190px;
+}
+.phoneReadLayer .erweimaBox p{
+	text-align: center;
+	font-size: 14px;
+	color: rgb(68,68,68);
+	line-height: 24px;
+}
+.phoneReadLayer .erweimaBox p span{
+	color: rgb(11,195,147);
+}
+.phoneReadLayer .whiteK{
+	height: 61px;
+	width: 17px;
+	position: absolute;
+	background:#fff;
+	z-index:8;
+	left: -17px;
+	top: 122px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.exceptionalLayer{
+	width: 720px;
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -360px; 
+	top: 200px;
+	padding: 20px;
+}
+.exceptionalLayer h1{
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: rgb(68,68,68);
+	margin-top: 5px;
+}
+.exceptionalLayer .exceptionalType{
+	width: 100%;
+}
+.exceptionalLayer .exceptionalType li{
+	width: 200px;
+	height: 128px;
+	border: 1px solid #e5e5e5;
+	float: left;
+	margin-right: 34px;
+	margin-bottom: 22px;
+}
+.exceptionalLayer .exceptionalType li:nth-child(3n){
+	margin-right: 0;
+}
+.exceptionalLayer .exceptionalType li a{
+	display: block;
+}
+.exceptionalLayer .exceptionalType li a .img{
+	height: 80px;
+	width: 100%;
+}
+.exceptionalLayer .exceptionalType li a .img{
+	width: 100%;
+	height: 100%;
+}
+.exceptionalLayer .exceptionalType li a p{
+	text-align: center;
+	font-size: 18px;
+	line-height: 22px;
+}
+.exceptionalLayer .all{
+	font-size: 18px;
+	line-height: 22px;
+	color: rgb(68,68,68);
+}
+.exceptionalLayer .all b{
+	color: rgb(252,99,56);
+	font-weight: 100;
+}
+.exceptionalLayer .button .btn{
+	width: 108px;
+	height: 36px;
+	color: #fff;
+	background:rgb(252,99,56);
+}
+.exceptionalLayer .button{
+	text-align: center;
+}
+
+.isAuthorLayer{
+	width: 410px;
+	position: fixed;
+	top: 250px;
+	left: 50%;
+	margin-left:-205px;
+	height: 220px;
+	background: #fff; 
+}
+.isAuthorLayer .tips{
+	width: 100%;
+	font-size: 16px;
+	color: rgb(102,102,102);
+	line-height: 26px;
+	text-align: center;
+}
+.isAuthorLayer .btnBox{
+	text-align: center;
+}
+.isAuthorLayer button.on{
+	background: rgb(11,195,147);
+	color: #fff;
+}
+
+
+.isAuthorLayer{
+	width: 410px;
+	position: fixed;
+	top: 250px;
+	left: 50%;
+	margin-left:-205px;
+	height: 220px;
+	background: #fff; 
+}
+.tips{
+	width: 100%;
+	font-size: 16px;
+	color: rgb(102,102,102);
+	line-height: 26px;
+	text-align:center;
+}
+.btnBox{
+	text-align:center;
+}
+.isAuthorLayer a{
+	width: 108px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: rgb(11,195,147);
+    background: #fff;
+    display: inline-block;
+}
+.isAuthorLayer a.on{
+	background: rgb(11,195,147);
+	color: #fff;
+}
+/* #yueeLayer{
+	display: none;
+}
+ */

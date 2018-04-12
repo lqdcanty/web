@@ -1,0 +1,86 @@
+{
+    "httpCode": 200,
+    "msg": "请求成功",
+    "timestamp": 1504168489199,
+    "data":{
+        "authorCode": "作者编号",
+        "author": "作者笔名",
+        "icon": "../../assets/images/photo.png",
+        "sign": "作者签名",
+        "bookCount": 1,
+        "wordNum": 123123,
+        "bookList": [
+            {
+                "bookName": "1作品名称",
+                "bookId": 1,
+                "bookCover": "../../assets/images/zu31.png",
+                "bookClass": "作品分类"
+            },
+            {
+                "bookName": "2作品名称",
+                "bookId": 1,
+                "bookCover": "../../assets/images/zu29.png",
+                "bookClass": "作品分类"
+            }
+        ],
+        "reading":{
+            "pageNum": 1,
+            "pageSize": 3,
+            "total": 6,
+            "list": [
+                {
+                    "bookId": 1,
+                    "bookName": "1言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction": "小说简介,最长可以设置两行",
+                    "bookCover": "../../assets/images/zu31.png",
+                    "updateTime": "2018-01-15 13:33:00",
+                    "wordNum": 12321712,
+                    "bookStatus":"1",
+                    "concernFlag":"1",
+                    "author":"作者",
+                    "authorCode":"ade",
+                    "bookMark":"总裁"
+                },
+                {
+                    "bookId": 1,
+                    "bookName": "1言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction": "小说简介,最长可以设置两行",
+                    "bookCover": "../../assets/images/zu31.png",
+                    "updateTime": "2018-01-15 13:33:00",
+                    "wordNum": 12321712,
+                    "bookStatus":"1",
+                    "concernFlag":"1",
+                    "author":"作者",
+                    "authorCode":"ade",
+                    "bookMark":"总裁"
+                },
+                {
+                    "bookId": 1,
+                    "bookName": "1言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction": "小说简介,最长可以设置两行",
+                    "bookCover": "../../assets/images/zu31.png",
+                    "updateTime": "2018-01-15 13:33:00",
+                    "wordNum": 12321712,
+                    "bookStatus": "1",
+                    "concernFlag": "1",
+                    "author":"作者",
+                    "authorCode":"ade",
+                    "bookMark":"总裁"
+                },
+                {
+                    "bookId": 1,
+                    "bookName": "1言情小说的名字可能长，预留一行，超过隐藏。。。",
+                    "introduction": "小说简介,最长可以设置两行",
+                    "bookCover": "../../assets/images/zu31.png",
+                    "updateTime": "2018-01-15 13:33:00",
+                    "wordNum": 12321712,
+                    "bookStatus": "1",
+                    "concernFlag": "1",
+                    "author":"作者",
+                    "authorCode":"ade",
+                    "bookMark":"总裁"
+                }
+            ]
+        }
+    }
+}

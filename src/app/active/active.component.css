@@ -1,0 +1,8 @@
+.active{
+	width: 1000px;
+	margin:0 auto;
+	font-size: 0;
+}
+.active img{
+	width: 100%;
+}
